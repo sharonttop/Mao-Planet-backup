@@ -64,7 +64,7 @@ function MultiLevelBreadCrumb(props) {
   return (
     <>
       <nav aria-label="breadcrumb">
-        <ol className="breadcrumb my-5 p-0 bg-white">
+        <ol className="breadcrumb bg-white container-fluid px-md-5 py-md-1 mb-md-0">
           <li className="breadcrumb-item">
             <Link to="/">首頁</Link>
           </li>

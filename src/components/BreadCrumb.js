@@ -32,9 +32,9 @@ function BreadCrumb(props) {
 
   return (
     <>
-      <div className="my-3">
+      <div>
         <nav aria-label="breadcrumb">
-          <ol className="breadcrumb">
+          <ol className="breadcrumb container">
             <li className="breadcrumb-item">
               <Link to="/">首頁</Link>
             </li>

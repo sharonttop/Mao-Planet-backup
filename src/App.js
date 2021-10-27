@@ -1,10 +1,10 @@
 // 使用套件
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import React, { useState } from 'react'
-import './App.css'
+import './Styles/global.scss'
 
 // 頁面用元件
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import AdoptList from './pages/AdoptList'
 import ProductList from './pages/ProductList'
 import ProductDog from './pages/ProductDog'
@@ -38,7 +38,7 @@ function App() {
           {/* ScrollToTop是為了讓連到另一頁內容時，頁面回到最上方 */}
           <ScrollToTop>
             <Switch>
-            <Route path="/bloglist">
+              <Route path="/bloglist">
                 <BlogList />
               </Route>
               <Route path="/productlist/dog">
