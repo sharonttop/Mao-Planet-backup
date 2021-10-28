@@ -1,5 +1,10 @@
 // 使用套件
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useLocation,
+} from 'react-router-dom'
 import React, { useState } from 'react'
 import './Styles/global.scss'
 
@@ -22,7 +27,7 @@ import ScrollToTop from './components/ScrollToTop'
 //import BreadCrumb from './components/BreadCrumb'
 import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
 
-function App() {
+function App(props) {
   const [auth, setAuth] = useState(false)
 
   return (
@@ -56,7 +61,14 @@ function App() {
               <Route path="/adoptlist">
                 <AdoptList auth={auth} />
               </Route>
-              <Route path="/home">
+              <Route
+                path="/home"
+                // className={
+                //   location.pathname === '/home'
+                //     ? 'MultiLevelBreadCrumb-hidden'
+                //     : 'MultiLevelBreadCrumb-show'
+                // }
+              >
                 <Home auth={auth} />
               </Route>
               <Route path="/member">

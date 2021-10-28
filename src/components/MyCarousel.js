@@ -23,7 +23,7 @@ import {
 function MyCarousel() {
   return (
     <>
-      <Container fluid className="carouselSection p-0 mb-5 d-md-block d-none">
+      <Container fluid className="carouselSection p-0 d-md-block d-none">
         <MDBContainer fluid className="pb-5 p-0">
           <MDBCarousel
             activeItem={1}
@@ -56,7 +56,7 @@ function MyCarousel() {
                   <MDBMask overlay="black-strong" />
                 </MDBView>
                 <MDBCarouselCaption>
-                  <h1 className="h1-responsive mb-md-5">你遠行，我度假</h1>
+                  <h1 className="h1-responsive mb-md-5">你遠行，我度假。幫毛孩找個好去處</h1>
                 </MDBCarouselCaption>
               </MDBCarouselItem>
               <MDBCarouselItem itemId="3">
