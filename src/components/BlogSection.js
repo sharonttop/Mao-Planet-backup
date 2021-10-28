@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { FaPaw } from 'react-icons/fa'
 import BlogPic1 from '../images/BlogPic1_150x150.jpg'
 import BlogPic2 from '../images/BlogPic2_150x150.jpg'
 import '../Styles/BlogSection.scss'
@@ -39,8 +40,11 @@ function BlogSection(props) {
 
       <div className="d-flex justify-content-center btnSection mb-5">
         <Link to="/bloglist">
-          <Button variant="outline-primary" className="blogBtn">
-            看更多文章
+          <Button variant="outline-primary" className="YellowOutlineBtn">
+            <div>
+              <FaPaw />
+              &nbsp;&nbsp;&nbsp;看更多文章
+            </div>
           </Button>
         </Link>
       </div>

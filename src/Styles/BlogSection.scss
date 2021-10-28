@@ -18,7 +18,7 @@
 .blogIntroPic {
   width: 150px;
   height: 100%;
-  margin: 15px 15px 15px 25px;
+  margin: 15px 0px 15px 5px;
   object-fit: contain;
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@
 
 .blogIntroText {
   color: #000;
-  margin: 15px 15px 0px 0px;
+  margin: 15px 30px 0px 0px;
   // white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,16 +47,17 @@
   background-color: #f5df4d;
 }
 
-.blogBtn {
+.YellowOutlineBtn {
   width: 200px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
   background-color: #fff;
   color: #646464;
   margin: 5px 0px 25px 0px;
+  text-align: center;
 }
 
-.blogBtn:hover {
+.YellowOutlineBtn:hover {
   background-color: #f5df4d;
   border-color: #fff;
   color: white;
