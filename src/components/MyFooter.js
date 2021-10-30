@@ -80,7 +80,7 @@ function MyFooter(props) {
             <div className="col-12 d-block d-md-none d-flex justify-content-center p-0">
               <img src={logo} alt="" className="m-footerlogo" />
             </div>
-            <div className="col-12 d-block d-md-none">
+            <div className="col-12 d-block d-md-none p-0">
               <ul className="p-0">
                 <h5 className="m-footertopic">About Us</h5>
                 <li className="m-footerlink">
@@ -94,7 +94,7 @@ function MyFooter(props) {
                 </li>
               </ul>
             </div>
-            <div className="col-12 d-block d-md-none">
+            <div className="col-12 d-block d-md-none p-0">
               <ul className="p-0">
                 <h5 className="m-footertopic">Support</h5>
                 <li className="m-footerlink">
@@ -108,7 +108,7 @@ function MyFooter(props) {
                 </li>
               </ul>
             </div>
-            <div className="col-12 d-block d-md-none">
+            <div className="col-12 d-block d-md-none p-0">
               <ul className="p-0">
                 <h5 className="m-footertopic">Contact Us</h5>
                 <li className="m-footerlink">週一～週五 10:00-18:00</li>
@@ -141,7 +141,7 @@ function MyFooter(props) {
           </Row>
         </Container>
       </footer>
-      <div className="copyright container-fluid">
+      <div className="copyright container-fluid p-0">
         <p className="my-2">Copyright © Mao Planet All Rights Reserved.</p>
       </div>
     </>

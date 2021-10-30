@@ -1,14 +1,81 @@
+#adoptSection {
+  width: 100%;
+  height: 800px;
+  background-color: #e5e5e5;
+  padding: auto;
+  position: relative;
+}
+
+.AdoptBN {
+  margin: 80px 0px;
+}
+
+.AdoptBN img {
+  width: 80%;
+}
+
+.AdoptTitle {
+  position: absolute;
+  top: 20%;
+  left: 16%;
+  z-index: 20;
+}
+
+.AdoptTitle span {
+  color: #fff;
+  font-size: 3rem;
+  font-family: 'Chelsea Market', cursive;
+}
+
+.AdoptText {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  z-index: 20;
+}
+
+.AdoptText p {
+  color: #646464;
+}
+
+.m-AdoptText p{
+  color: #646464;
+}
+
+.AdoptBtn {
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  z-index: 20;
+}
+
+
+#adoptSection3Card {
+  width: 100%;
+  height: 550px;
+  background: linear-gradient(to bottom, #e5e5e5 20%, #ffffff);
+  margin-bottom:150px;
+}
+
+
 #productSection {
   margin: 100px 0px;
+  position: relative;
 }
 
 .DogProductBN {
-  position: relative;
+  padding-right: 3px;
 }
+
+.DogProductBN img{
+  width: 100%;
+}
+
 .DogBtn {
   position: absolute;
+  right: 52%;
   bottom: 5%;
-  left: 70%;
+  z-index: 10;
 }
 
 .GrayOutlineBtn {
@@ -22,18 +89,53 @@
 }
 
 .GrayOutlineBtn:hover {
-    background-color: #939597;
-    border: 2px solid #939597;
-    color: white;
-  }
+  background-color: #939597;
+  border: 2px solid #939597;
+  color: white;
+}
+
+.m-DogProductBN img{
+  width: 100%;
+}
+
+
+.m-DogBtn {
+  position: absolute;
+  right: 25%;
+  bottom: 50%;
+  z-index: 10;
+}
+
+.m-GrayOutlineBtn {
+  width: 180px;
+  border-radius: 20px;
+  border: 2px solid #939597;
+  background-color: #fff;
+  color: #646464;
+  margin: 5px 0px 25px 0px;
+  text-align: center;
+}
+
+.m-GrayOutlineBtn:hover {
+  background-color: #939597;
+  border: 2px solid #939597;
+  color: white;
+}
 
 .CatProductBN {
-  position: relative;
+  padding-left: 3px;
 }
+
+.CatProductBN img{
+  width: 100%;
+}
+
+
 .CatBtn {
   position: absolute;
+  left: 52%;
   bottom: 5%;
-  left: 4%;
+  z-index: 10;
 }
 
 .YellowOutlineBtn {
@@ -52,6 +154,33 @@
   color: white;
 }
 
+.m-CatProductBN img{
+  width: 100%;
+}
+
+.m-CatBtn {
+  position: absolute;
+  left: 25%;
+  bottom: 0%;
+  z-index: 10;
+}
+
+.m-YellowOutlineBtn {
+  width: 180px;
+  border-radius: 20px;
+  border: 2px solid #f5df4d;
+  background-color: #fff;
+  color: #646464;
+  margin: 5px 0px 25px 0px;
+  text-align: center;
+}
+
+.m-YellowOutlineBtn:hover {
+  background-color: #f5df4d;
+  border: 2px solid #f5df4d;
+  color: white;
+}
+
 #productSection3Card {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -61,6 +190,11 @@
   position: relative;
 }
 
+.NewArrCard img{
+  width: 100%;
+}
+
+
 .tag {
   width: 150px;
   height: 40px;
@@ -69,7 +203,7 @@
   align-self: center;
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 0;
 }
 
 .tag span {
@@ -83,8 +217,8 @@
   text-align: center;
   // align-items: center;
   position: absolute;
-  bottom: 10px;
-  left: 100px;
+  bottom: 10%;
+  left: 25%;
 }
 
 .NewArrCardText span {
@@ -93,43 +227,134 @@
   font-family: 'Chelsea Market', cursive;
 }
 
-#adoptSection {
+
+
+#hotelSection {
   width: 100%;
   height: 700px;
-  background-color: #e5e5e5;
-  padding: auto;
   position: relative;
 }
 
-.AdoptBN {
-  margin: 50px 0px;
+.HotelBN {
+  position: absolute;
+  top: 0;
+  left: 24%;
+  z-index: 20;
 }
 
-.AdoptTitle {
+// .HotelBN img {
+//   width: 80%;
+// }
+
+.m-HotelBN img {
+  width: 80%;
+  
+}
+
+.YellowDeco {
+  width: 450px;
+  height: 600px;
+  border-radius: 275px;
+  background: linear-gradient(to bottom, #f5df4d 20%, #ffffff);
+  position: absolute;
+  top: 0;
+  left: -8%;
+  z-index: 18;
+}
+
+.HotelTitle {
+  position: absolute;
+  top: 15%;
+  left: 60%;
+  z-index: 20;
+}
+
+.HotelTitle span {
+  color: #f5df4d;
+  font-size: 3rem;
+  font-family: 'Chelsea Market', cursive;
+}
+
+.HotelText {
+  position: absolute;
+  top: 55%;
+  left: 59%;
+  z-index: 20;
+}
+
+.HotelText p {
+  color: #646464;
+}
+
+.m-HotelText p{
+  color: #646464;
+}
+
+#salonSection {
+  width: 100%;
+  height: 650px;
+  position: relative;
+}
+
+.SalonBN {
+  position: absolute;
+  top: 0;
+  left: 46%;
+  z-index: 20;
+}
+
+.m-SalonBN img {
+  width: 80%;
+  
+}
+
+.GrayDeco {
+  width: 450px;
+  height: 600px;
+  border-radius: 275px;
+  background: linear-gradient(to bottom, #e5e5e5 20%, #ffffff);
+}
+
+.GrayDeco1 {
+  position: absolute;
+  top: 0;
+  left: -15%;
+}
+
+.GrayDeco2 {
+  position: absolute;
+  top: 0;
+  left: 80%;
+}
+
+.SalonTitle {
   position: absolute;
   top: 15%;
   left: 20%;
   z-index: 20;
 }
 
-.AdoptTitle span {
-  color: #fff;
+.SalonTitle span {
+  color: #646464;
   font-size: 3rem;
   font-family: 'Chelsea Market', cursive;
 }
 
-.AdoptText {
+.SalonText {
   position: absolute;
   top: 55%;
   left: 19%;
+  z-index: 20;
 }
 
-.AdoptText p {
+.SalonText p {
   color: #646464;
 }
 
-.AdoptBtn {
-  position: absolute;
-  bottom: 15%;
-  left: 20%;
+.m-SalonText p {
+  color: #646464;
+}
+
+.HotelBtn {
+    margin-bottom: 100px;
 }

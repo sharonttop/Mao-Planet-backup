@@ -80,6 +80,7 @@ function MyNavbar(props) {
               新用戶註冊
             </Nav.Link>
           </Nav>
+
           <Nav className="mb-4 d-flex d-none d-md-row-block px-md-2">
             <Nav.Link href="#/" className="navicon">
               <BiSearch />
