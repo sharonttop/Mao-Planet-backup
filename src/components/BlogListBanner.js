@@ -11,11 +11,11 @@ function BlogListBanner() {
         </div>
         <div className="banner-right">
           <div className="banner-text">
-            <h1>毛孩找家</h1>
+            <h1>鏟屎官大補帖</h1>
             <p>
-              你的一眼瞬間
+              身為狗奴、貓奴的你
               <br />
-              就讓我有了被愛的機會
+              不可不知的毛孩大小事
             </p>
           </div>
         </div>
