@@ -55,7 +55,7 @@ function Home(props) {
           </div>
 
           {/* mobile */}
-          <div className="m-AdoptText mx-auto col-8 d-block d-md-none p-0">
+          <div className="m-AdoptText mx-auto col-9 d-block d-md-none p-0">
             <h2>毛孩找家</h2>
             <p>
               你的一眼瞬間，就讓我有了被愛的機會，你願意帶我走，給我們一個家嗎？
@@ -203,10 +203,10 @@ function Home(props) {
           </div>
 
           {/* mobile */}
-          <div className="m-HotelBN col-12 d-block d-md-none p-0 mx-auto">
+          <div className="m-HotelBN col-12 d-block d-md-none p-0 d-flex justify-content-center">
             <img src={HotelBN1} alt="" />
           </div>
-          <div className="m-HotelText mx-auto mt-5 col-8 d-block d-md-none p-0">
+          <div className="m-HotelText mx-auto mt-5 col-9 d-block d-md-none p-0">
             <h2>毛孩旅宿</h2>
             <p>
               你即將遠行，也別讓我獨自在家苦苦等待，我可以在這裡也享受毛孩專屬的度假天堂。
@@ -235,10 +235,10 @@ function Home(props) {
           <div className="GrayDeco GrayDeco2 col-md-5 d-md-block d-none"></div>
 
           {/* mobile */}
-          <div className="m-SalonBN col-12 d-block d-md-none p-0 mx-auto">
+          <div className="m-SalonBN col-12 d-block d-md-none p-0 d-flex justify-content-center">
             <img src={HotelBN2} alt="" />
           </div>
-          <div className="m-SalonText mx-auto mt-5 col-8 d-block d-md-none p-0">
+          <div className="m-SalonText mx-auto mt-5 col-9 d-block d-md-none p-0">
             <h2>毛孩愛美</h2>
             <p>
               我雖然天生可愛，但也需要後天保養，每個月定期帶我理毛、洗澡、剪指甲吧！

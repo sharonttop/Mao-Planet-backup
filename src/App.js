@@ -15,7 +15,7 @@ import ProductList from './pages/ProductList'
 import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
 import HotelList from './pages/HotelList'
-import BlogList from './pages/BlogList'
+import BlogList from './pages/BlogList/BlogList'
 import Member from './pages/Member'
 import NotFoundPage from './pages/NotFoundPage'
 

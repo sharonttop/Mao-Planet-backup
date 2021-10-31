@@ -30,8 +30,8 @@
 }
 
 .m-avatar > img {
-    width: 100%;
-  }
+  width: 100%;
+}
 
 .adoptCardContent:hover {
   text-decoration: none;
@@ -43,6 +43,12 @@
 
 .cardText {
   font-size: 0.9rem;
+  color: #646464;
+  text-decoration: none;
+}
+
+.m-cardText {
+  font-size: 1rem;
   color: #646464;
   text-decoration: none;
 }

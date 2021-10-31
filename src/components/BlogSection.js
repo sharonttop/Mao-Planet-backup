@@ -49,12 +49,13 @@ function BlogSection(props) {
         <MobileBlogSection />
       </div>
 
+      {/* button:PC mobile共用 */}
       <div
         id="blogBtnSection"
         className="d-flex justify-content-center mb-5 pt-4 p-0"
       >
         <Link to="/bloglist">
-          <Button className="YellowOutlineBtn d-md-block d-none">
+          <Button className="m-YellowOutlineBtn">
             <div>
               <FaPaw />
               &nbsp;&nbsp;&nbsp;看更多文章

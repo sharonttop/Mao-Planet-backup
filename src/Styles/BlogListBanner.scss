@@ -1,0 +1,75 @@
+.container {
+    width: 100%;
+  }
+  
+  .banner {
+    margin-top: 1rem; //有調整
+    display: flex;
+  }
+
+  .banner-left {
+    flex: 6;
+    height: 450px;
+  }
+  .banner-left > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 275px 275px 0;
+  }
+  .banner-right {
+    flex: 4;
+    background: linear-gradient(to right, rgba(244, 244, 244, 0.4) 20%, #e5e5e5);
+    border-radius: 275px 0 0 275px;
+    position: relative;
+  }
+  .banner-text {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+  }
+
+  .banner-text > h2 {
+    text-align: end;
+  }
+  .banner-text > p {
+    font-size: 1rem;
+    color: #646464;
+    text-align: end;
+  }
+  
+  /* RWD-banner */
+.RWD-banner {
+    display: none;
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    letter-spacing: px;
+  }
+  .rwd-banner-text > p {
+    font-size: 1.5rem;
+    font-weight: medium;
+  }
+  .rwd-banner-text > h5 {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+// RWD
+
+  @media screen and (max-width: 992px){
+    .banner {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .banner-left {
+        width: 100%;
+      }
+      .banner-right {
+        display: none;
+      }
+      .RWD-banner {
+        display: block;
+        justify-content: center;
+      }
+  }

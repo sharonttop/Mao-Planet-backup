@@ -5,6 +5,7 @@
 }
 
 #m-blogSection {
+  max-width: 100%;
   background-color: #f5df4d;
   justify-content: center;
 }
@@ -30,6 +31,8 @@
 .m-blogIntroPic {
   width: 260px;
   height: 260px;
+  margin: auto;
+  justify-content: center;
 }
 
 .m-blogIntroPic img {
@@ -51,6 +54,10 @@
 }
 
 #blogBtnSection {
+  background-color: #f5df4d;
+}
+
+#m-blogBtnSection {
   background-color: #f5df4d;
 }
 
