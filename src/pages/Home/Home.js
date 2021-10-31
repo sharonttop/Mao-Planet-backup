@@ -6,11 +6,13 @@ import MyCarousel from '../../components/MyCarousel'
 import BlogSection from '../../components/BlogSection'
 import PCAdoptListCard from '../../components/PCAdoptListCard'
 import MobileAdoptListCard from '../../components/MobileAdoptListCard'
+import ProductCard from '../../components/ProductCard'
 import DogProductBN from '../../images/DogProductBN_720x600.jpg'
 import CatProductBN from '../../images/CatProductBN_720x600.jpg'
 import NewArrCard1 from '../../images/NewArrCard1_350x500.jpg'
 import NewArrCard2 from '../../images/NewArrCard2_350x500.jpg'
 import NewArrCard3 from '../../images/NewArrCard3_350x500.jpg'
+
 import AdoptBN from '../../images/AdoptBN_450x600.png'
 import HotelBN1 from '../../images/HotelBN1_450x600.png'
 import HotelBN2 from '../../images/HotelBN2_450x600.png'
@@ -179,6 +181,13 @@ function Home(props) {
           </div>
         </Row>
       </Container>
+
+      {/* 毛孩雜貨卡片 */}
+      <Container fluid id="ProductCard" className="d-flex p-0 pt-5">
+        <ProductCard />
+      </Container>
+
+
 
       {/* 毛孩旅宿 */}
       {/* PC */}
