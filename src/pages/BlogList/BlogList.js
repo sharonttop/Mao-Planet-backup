@@ -6,6 +6,7 @@ function BlogList(props) {
   return (
     <>
       <BlogListBanner />
+      
     </>
   )
 }

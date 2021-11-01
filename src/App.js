@@ -61,14 +61,7 @@ function App(props) {
               <Route path="/adoptlist">
                 <AdoptList auth={auth} />
               </Route>
-              <Route
-                path="/home"
-                // className={
-                //   location.pathname === '/home'
-                //     ? 'MultiLevelBreadCrumb-hidden'
-                //     : 'MultiLevelBreadCrumb-show'
-                // }
-              >
+              <Route path="/home">
                 <Home auth={auth} />
               </Route>
               <Route path="/member">
