@@ -36,7 +36,7 @@ function BreadCrumb(props) {
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb container">
             <li className="breadcrumb-item">
-              <Link to="/">首頁</Link>
+              <Link to="/home">首頁</Link>
             </li>
             {convertPathnameToText(location.pathname)}
           </ol>
