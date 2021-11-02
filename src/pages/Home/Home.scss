@@ -6,43 +6,43 @@
   position: relative;
 }
 
-.AdoptBN {
+.ACadoptBN {
   margin: 80px 0px;
 }
 
-.AdoptBN img {
+.ACadoptBN img {
   width: 80%;
 }
 
-.AdoptTitle {
+.ACadoptTitle {
   position: absolute;
   top: 20%;
   left: 16%;
   z-index: 20;
 }
 
-.AdoptTitle span {
+.ACadoptTitle span {
   color: #fff;
   font-size: 3rem;
   font-family: 'Chelsea Market', cursive;
 }
 
-.AdoptText {
+.ACadoptText {
   position: absolute;
   top: 60%;
   left: 15%;
   z-index: 20;
 }
 
-.AdoptText p {
+.ACadoptText p {
   color: #646464;
 }
 
-.m-AdoptText p{
+.m-ACadoptText p{
   color: #646464;
 }
 
-.AdoptBtn {
+.ACadoptBtn {
   position: absolute;
   top: 80%;
   left: 15%;
@@ -50,35 +50,35 @@
 }
 
 
-#adoptSection3Card {
+#ACadoptSection3Card {
   width: 100%;
   height: 550px;
   background: linear-gradient(to bottom, #e5e5e5 20%, #ffffff);
-  margin-bottom:150px;
+  margin-bottom:15%;
 }
 
 
-#productSection {
+#ACproductSection {
   margin: 100px 0px;
   position: relative;
 }
 
-.DogProductBN {
+.ACdogProductBN {
   padding-right: 3px;
 }
 
-.DogProductBN img{
+.ACdogProductBN img{
   width: 100%;
 }
 
-.DogBtn {
+.ACdogBtn {
   position: absolute;
   right: 52%;
   bottom: 5%;
   z-index: 10;
 }
 
-.GrayOutlineBtn {
+.ACGrayOutlineBtn {
   width: 200px;
   border-radius: 20px;
   border: 2px solid #939597;
@@ -88,25 +88,25 @@
   text-align: center;
 }
 
-.GrayOutlineBtn:hover {
+.ACGrayOutlineBtn:hover {
   background-color: #939597;
   border: 2px solid #939597;
   color: white;
 }
 
-.m-DogProductBN img{
+.m-ACdogProductBN img{
   width: 100%;
 }
 
 
-.m-DogBtn {
+.m-ACdogBtn {
   position: absolute;
   right: 25%;
   bottom: 50%;
   z-index: 10;
 }
 
-.m-GrayOutlineBtn {
+.m-ACGrayOutlineBtn {
   width: 180px;
   border-radius: 20px;
   border: 2px solid #939597;
@@ -122,23 +122,23 @@
   color: white;
 }
 
-.CatProductBN {
+.ACcatProductBN  {
   padding-left: 3px;
 }
 
-.CatProductBN img{
+.ACcatProductBN  img{
   width: 100%;
 }
 
 
-.CatBtn {
+.ACcatBtn {
   position: absolute;
   left: 52%;
   bottom: 5%;
   z-index: 10;
 }
 
-.YellowOutlineBtn {
+.ACYellowOutlineBtn {
   width: 200px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -148,24 +148,24 @@
   text-align: center;
 }
 
-.YellowOutlineBtn:hover {
+.ACYellowOutlineBtn:hover {
   background-color: #f5df4d;
   border: 2px solid #f5df4d;
   color: white;
 }
 
-.m-CatProductBN img{
+.m-ACcatProductBN img{
   width: 100%;
 }
 
-.m-CatBtn {
+.m-ACcatBtn {
   position: absolute;
   left: 25%;
   bottom: 0%;
   z-index: 10;
 }
 
-.m-YellowOutlineBtn {
+.m-ACYellowOutlineBtn {
   width: 180px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -175,27 +175,27 @@
   text-align: center;
 }
 
-.m-YellowOutlineBtn:hover {
+.m-ACYellowOutlineBtn:hover {
   background-color: #f5df4d;
   border: 2px solid #f5df4d;
   color: white;
 }
 
-#productSection3Card {
+#ACproductSection3Card {
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
-.NewArrCard {
+.ACnewArrCard {
   position: relative;
 }
 
-.NewArrCard img{
+.ACnewArrCard img{
   width: 100%;
 }
 
 
-.tag {
+.ACtag {
   width: 150px;
   height: 40px;
   background-color: #f5df4d;
@@ -206,13 +206,13 @@
   right: 0;
 }
 
-.tag span {
+.ACtag span {
   color: #646464;
   text-align: center;
   line-height: 40px;
 }
 
-.NewArrCardText {
+.ACnewArrCardText {
   color: #fff;
   text-align: center;
   font-size: 1rem;
@@ -222,7 +222,7 @@
   left: 25%;
 }
 
-.NewArrCardText span {
+.ACnewArrCardText span {
   color:#fff;
   font-size: 1.5rem;
   letter-spacing: 3px;
@@ -230,14 +230,14 @@
 }
 
 
-
-#hotelSection {
+#AChotelSection {
   width: 100%;
   height: 700px;
   position: relative;
+  margin-top: 12%;
 }
 
-.HotelBN {
+.AChotelBN {
   position: absolute;
   top: 0;
   left: 24%;
@@ -248,12 +248,12 @@
 //   width: 80%;
 // }
 
-.m-HotelBN img {
+.m-ACHotelBN img {
   width: 80%;
   
 }
 
-.YellowDeco {
+.ACYellowDeco {
   width: 450px;
   height: 600px;
   border-radius: 275px;
@@ -264,48 +264,48 @@
   z-index: 18;
 }
 
-.HotelTitle {
+.AChotelTitle {
   position: absolute;
   top: 15%;
   left: 60%;
   z-index: 20;
 }
 
-.HotelTitle span {
+.AChotelTitle span {
   color: #f5df4d;
   font-size: 3rem;
   font-family: 'Chelsea Market', cursive;
 }
 
-.HotelText {
+.AChotelText {
   position: absolute;
   top: 55%;
   left: 59%;
   z-index: 20;
 }
 
-.HotelText p {
+.AChotelText p {
   color: #646464;
 }
 
-.m-HotelText p{
+.m-AChotelText p{
   color: #646464;
 }
 
-#salonSection {
+#ACsalonSection {
   width: 100%;
   height: 650px;
   position: relative;
 }
 
-.SalonBN {
+.ACsalonBN {
   position: absolute;
   top: 0;
   left: 46%;
   z-index: 20;
 }
 
-.m-SalonBN img {
+.m-ACsalonBN img {
   width: 80%;
   
 }
@@ -329,34 +329,34 @@
   left: 80%;
 }
 
-.SalonTitle {
+.ACsalonTitle {
   position: absolute;
   top: 15%;
   left: 20%;
   z-index: 20;
 }
 
-.SalonTitle span {
+.ACsalonTitle span {
   color: #646464;
   font-size: 3rem;
   font-family: 'Chelsea Market', cursive;
 }
 
-.SalonText {
+.ACsalonText {
   position: absolute;
   top: 55%;
   left: 19%;
   z-index: 20;
 }
 
-.SalonText p {
+.ACsalonText p {
   color: #646464;
 }
 
-.m-SalonText p {
+.m-ACsalonText p {
   color: #646464;
 }
 
-.HotelBtn {
+.AChotelBtn {
     margin-bottom: 100px;
 }

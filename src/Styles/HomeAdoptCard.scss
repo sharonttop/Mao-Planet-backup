@@ -1,26 +1,27 @@
-.card1 {
+.ACcard1 {
   border: none;
   cursor: pointer;
 }
 
-.card1:hover {
+.ACcard1:hover {
   transform: scale(1.02);
   box-shadow: 1px 2px 15px rgba(94, 91, 91, 0.126);
   transition: 0.5s;
   text-decoration: none;
 }
 
-.avatar {
+.ACadoptAvatar {
   width: 200px;
   height: 200px;
   overflow: hidden;
   border-radius: 50%;
 }
-.avatar > img {
+.ACadoptAvatar > img {
   width: 100%;
 }
 
-.m-avatar {
+
+.m-ACadoptAvatar {
   width: 260px;
   height: 260px;
   overflow: hidden;
@@ -29,35 +30,35 @@
   margin: auto;
 }
 
-.m-avatar > img {
+.m-ACadoptAvatar > img {
   width: 100%;
 }
 
-.adoptCardContent:hover {
+.ACadoptCardContent:hover {
   text-decoration: none;
 }
 
-.cardTitle {
+.ACadoptcardTitle {
   color: #000;
 }
 
-.cardText {
+.ACadoptcardText {
   font-size: 0.9rem;
   color: #646464;
   text-decoration: none;
 }
 
-.m-cardText {
+.m-ACadoptcardText {
   font-size: 1rem;
   color: #646464;
   text-decoration: none;
 }
 
-.btnSection {
+.ACadoptBtnSection {
   background-color: transparent;
 }
 
-.YellowOutlineBtn {
+.ACYellowOutlineBtn {
   width: 200px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -67,17 +68,17 @@
   text-align: center;
 }
 
-.YellowOutlineBtn:hover {
+.ACYellowOutlineBtn:hover {
   background-color: #f5df4d;
   border-color: #fff;
   color: white;
 }
 
-.knowmoreBtn:hover {
+.ACknowmoreBtn:hover {
   text-decoration: none;
 }
 
-.m-YellowOutlineBtn {
+.m-ACYellowOutlineBtn {
   width: 180px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -86,7 +87,7 @@
   text-align: center;
 }
 
-.m-YellowOutlineBtn:active {
+.m-ACYellowOutlineBtn:active {
   background-color: #f5df4d;
   border-color: #fff;
   color: white;

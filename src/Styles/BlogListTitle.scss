@@ -1,0 +1,19 @@
+.ACBlogListTitle-container {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 4%;
+    width: 80%;
+  }
+  
+  .ACBlogListTitle {
+    margin: 0 10%;
+    font-size: 1.5rem;
+    color: #646464;
+    font-weight: 400; //有調整，原500
+  }
+  
+  @media (max-width: 768px) {
+    .ACBlogListTitle {
+      margin: 0 2%;
+    }
+  }

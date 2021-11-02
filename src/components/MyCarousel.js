@@ -1,14 +1,16 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
-import slider1 from '../images/slider1_1720x800.png'
-import slider2 from '../images/slider2_1720x800.png'
-import slider3 from '../images/slider3_1720x800.png'
-import sliderBar from '../images/sliderBar_800x80.svg'
-import mobileslider1 from '../images/mobileslider1_375x500.png'
+import { Link } from 'react-router-dom'
+
 import { BiHeart, BiHomeAlt, BiGift, BiCartAlt } from 'react-icons/bi'
 import { FaPaw } from 'react-icons/fa'
 import { Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+
+import slider1 from '../images/Home/slider1_1720x800.png'
+import slider2 from '../images/Home/slider2_1720x800.png'
+import slider3 from '../images/Home/slider3_1720x800.png'
+import sliderBar from '../images/Home/sliderBar_800x80.svg'
+import mobileslider1 from '../images/Home/mobileslider1_375x500.png'
 import '../Styles/MyCarousel.scss'
 
 import {
@@ -25,7 +27,7 @@ function MyCarousel() {
   return (
     <>
       {/* PC */}
-      <Container fluid className="carouselSection p-0 d-md-block d-none">
+      <Container fluid className="ACcarouselSection p-0 d-md-block d-none">
         <MDBContainer fluid className="pb-5 p-0">
           <MDBCarousel
             activeItem={1}
@@ -38,7 +40,7 @@ function MyCarousel() {
               <MDBCarouselItem itemId="1">
                 <MDBView>
                   <img
-                    className="sliderCSS d-block container-fluid"
+                    className="ACsliderCSS d-block container-fluid"
                     src={slider1}
                     alt="First slide"
                   />
@@ -51,7 +53,7 @@ function MyCarousel() {
               <MDBCarouselItem itemId="2">
                 <MDBView>
                   <img
-                    className="sliderCSS d-block container-fluid"
+                    className="ACsliderCSS d-block container-fluid"
                     src={slider2}
                     alt="Second slide"
                   />
@@ -66,7 +68,7 @@ function MyCarousel() {
               <MDBCarouselItem itemId="3">
                 <MDBView>
                   <img
-                    className="sliderCSS d-block container-fluid"
+                    className="ACsliderCSS d-block container-fluid"
                     src={slider3}
                     alt="Third slide"
                   />

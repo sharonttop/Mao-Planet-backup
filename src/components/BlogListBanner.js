@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogListBN from '../images/BlogListBN_1200x600.jpg'
+import BlogListBN from '../images/BlogList/BlogListBN_1200x600.jpg'
 import '../Styles/BlogListBanner.scss'
 
 function BlogListBanner() {

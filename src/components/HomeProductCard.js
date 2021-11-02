@@ -1,7 +1,7 @@
-import '../Styles/ProductCard.scss'
-import catImg from '../images/cat_cardPic_250X250.png'
+import '../Styles/HomeProductCard.scss'
+import catImg from '../images/Home/cat_cardPic_250X250.png'
 
-function ProductCard() {
+function HomeProductCard() {
   return (
     <div className="product-card-container">
       <div className="card-pic-area">
@@ -17,4 +17,4 @@ function ProductCard() {
   )
 }
 
-export default ProductCard
+export default HomeProductCard

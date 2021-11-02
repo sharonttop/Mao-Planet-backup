@@ -1,4 +1,4 @@
-.topYellow {
+.ACtopYellow {
   width: 100%;
   height: 15px;
   background-color: #f5df4d;
@@ -8,14 +8,14 @@
   padding: 0px;
 }
 
-.navCSS {
+.ACnavCSS {
   position: sticky;
   top: 0;
   width: 100%;
   background: #fff;
 }
 
-.navtext {
+.ACnavtext {
   color: #646464;
   font-size: 1rem;
 }
@@ -25,13 +25,13 @@
   font-size: 1rem;
 }
 
-.navicon {
+.ACnavIcon {
   color: #646464;
   font-size: 1.2rem;
 }
 
 @media screen and (max-width: 996px) {
-  .navicon{
+  .ACnavIcon{
     display: none;
   }
 }
