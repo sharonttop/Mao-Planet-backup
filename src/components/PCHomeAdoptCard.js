@@ -12,7 +12,7 @@ function PCHomeAdoptCard() {
       <Container className="py-5 d-md-block d-none">
         <Row className="d-flex justify-content-center">
           <div className="col-10 col-md-3">
-            <Card className="ACcard1 p-1">
+            <Card className="ACadoptCard1 p-1">
               <Link to="/adoptlist" className="ACadoptCardContent">
                 <Card.Img
                   src={AdoptCard1}

@@ -8,7 +8,7 @@ function HomeProductCard() {
         <img className="card-pic" src={catImg} alt=""></img>
         <div className="overlay"></div>
         <div className="hoverBtn">
-          <a href="#">加入購物車</a>
+          <a href="#/">加入購物車</a>
         </div>
       </div>
       <div className="title">Vetreska 未卡 | 桃子貓抓盒</div>

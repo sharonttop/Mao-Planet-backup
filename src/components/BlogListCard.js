@@ -1,39 +1,45 @@
 import React from 'react'
-import { Container, Row, Card, Button } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import AdoptCard1 from '../images/Home/AdoptCard1_300x300.jpg'
+import { FaPaw } from 'react-icons/fa'
+import BlogPic1 from '../images/Home/BlogPic1_150x150.jpg'
 import '../Styles/BlogListCard.scss'
 
 function BlogListCard() {
   return (
     <>
-      <Container className="py-5 d-md-block d-none">
-        <Row className="d-flex justify-content-center">
-          <div className="col-10 col-md-3">
-            <Card className="ACcard1 p-1">
-              <Link to="/adoptlist" className="ACadoptCardContent">
-                <Card.Img
-                  src={AdoptCard1}
-                  className="ACadoptAvatar mt-3 mx-auto d-flex justify-content-center"
-                />
-                <Card.Body>
-                  <Card.Title className="ACadoptcardTitle">小呆</Card.Title>
-                  <Card.Text className="ACadoptcardText">
-                    小呆是隻2歲左右的公貓，看起來呆呆的他，實際上是很聰明、愛玩而且貪吃的貓咪喔！
-                  </Card.Text>
-                </Card.Body>
-              </Link>
-            </Card>
-            <div className="ACadoptBtnSection d-flex justify-content-center pt-4 p-0">
-              <Link to="/adoptlist" className="ACknowmoreBtn">
-                <Button className="ACYellowOutlineBtn d-md-block d-none">
-                  了解更多
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </Row>
-      </Container>
+      <div className="col-10 col-md-4">
+        <Card className="ACblogListCard1 p-1">
+          <Link to="#/" className="ACblogListCardContent">
+            <Card.Img
+              src={BlogPic1}
+              className="ACblogListCardPic mt-3 mx-auto d-flex justify-content-center"
+            />
+            <Card.Body>
+              <Card.Title className="ACblogListCardTitle">
+                養貓新手必備知識
+              </Card.Title>
+              <Card.Text className="ACblogListCardText">
+                這篇文章是寫給家中有一歲以內的幼貓、或是準備新養貓的新手家長們看的，希望能解除大家心中的疑惑，充實醫療保健相關的知識，讓新手貓奴們升級成更稱職的毛孩爸媽！
+              </Card.Text>
+            </Card.Body>
+          </Link>
+        </Card>
+
+        <div className="ACblogListBtn d-flex justify-content-center p-0 pt-4">
+          <Link to="/home">
+            <Button
+              variant="outline-primary"
+              className="ACYellowOutlineBtn d-md-block d-none"
+            >
+              <div>
+                <FaPaw />
+                &nbsp;&nbsp;&nbsp;我要繼續閱讀
+              </div>
+            </Button>
+          </Link>
+        </div>
+      </div>
     </>
   )
 }

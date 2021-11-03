@@ -3,7 +3,7 @@ import '../Styles/BlogListTag.scss'
 const BlogListTag = (props) => {
   return (
     <>
-      <button class="ACBlogListTag">{props.children}</button>
+      <button class="ACblogListTag">{props.children}</button>
     </>
   )
 }

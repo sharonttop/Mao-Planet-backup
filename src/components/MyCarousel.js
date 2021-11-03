@@ -119,9 +119,12 @@ function MyCarousel() {
                 <p>全館滿NT$999免運</p>
               </div>
             </div>
-            <div className="joinMemberBtn">
+            <div className="ACjoinMemberBtn">
               <Link to="/member">
-                <Button variant="outline-primary" className="YellowOutlineBtn">
+                <Button
+                  variant="outline-primary"
+                  className="ACYellowOutlineBtn"
+                >
                   <div>
                     <FaPaw />
                     &nbsp;&nbsp;&nbsp;立即加入會員

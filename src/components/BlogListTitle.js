@@ -4,11 +4,11 @@ import '../Styles/BlogListTitle.scss'
 const BlogListTitle = (props) => {
   return (
     <div className="ACBlogListTitle-container">
-      <span>_________________</span>
+      <span>___________________</span>
       <span className="ACBlogListTitle">
       {props.children}&nbsp;&nbsp;&nbsp;&nbsp;
       </span>
-      <span>_________________</span>
+      <span>___________________</span>
     </div>
   )
 }

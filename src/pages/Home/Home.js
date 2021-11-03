@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Button, Card } from 'react-bootstrap'
+import { Container, Row, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaPaw } from 'react-icons/fa'
 import MyCarousel from '../../components/MyCarousel'
