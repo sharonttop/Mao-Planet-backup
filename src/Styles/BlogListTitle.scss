@@ -17,3 +17,17 @@
       margin: 0 2%;
     }
   }
+
+  .m-ACBlogListTitle-container {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .m-ACBlogListTitle {
+    text-align: center;
+    margin: 12% auto;
+    font-size: 1.5rem;
+    color: #646464;
+    font-weight: 400; //有調整，原500
+  }

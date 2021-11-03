@@ -8,7 +8,7 @@ import '../Styles/BlogListCard.scss'
 function BlogListCard() {
   return (
     <>
-      <div className="col-10 col-md-4">
+      <div className="col-10 col-md-4 d-md-block d-none">
         <Card className="ACblogListCard1 p-1">
           <Link to="#/" className="ACblogListCardContent">
             <Card.Img

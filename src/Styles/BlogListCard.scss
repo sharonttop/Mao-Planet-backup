@@ -11,8 +11,8 @@
 }
 
 .ACblogListCardPic {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -32,6 +32,15 @@
   width: 100%;
 }
 
+.m-ACblogListPic {
+  width: 100px;
+  height: 100px;
+}
+
+.m-ACblogListPic img {
+  width: 100%;
+}
+
 .ACblogListCardContent:hover {
   text-decoration: none;
 }
@@ -44,6 +53,15 @@
   font-size: 0.9rem;
   color: #646464;
   text-decoration: none;
+}
+
+.m-ACblogListCardTitle {
+  color: #000;
+}
+
+.m-ACblogListText {
+  font-size: 1rem;
+  color: #646464;
 }
 
 .m-ACblogListCardText {

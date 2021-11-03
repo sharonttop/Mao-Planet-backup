@@ -1,12 +1,12 @@
+import React from 'react'
 import '../Styles/BlogListTitle.scss'
-
 
 const BlogListTitle = (props) => {
   return (
-    <div className="ACBlogListTitle-container">
+    <div className="ACBlogListTitle-container p-0">
       <span>___________________</span>
       <span className="ACBlogListTitle">
-      {props.children}&nbsp;&nbsp;&nbsp;&nbsp;
+        {props.children}&nbsp;&nbsp;&nbsp;&nbsp;
       </span>
       <span>___________________</span>
     </div>
