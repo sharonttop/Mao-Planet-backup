@@ -3,8 +3,8 @@ import { Container } from 'react-bootstrap'
 
 import { FaPaw } from 'react-icons/fa'
 import BlogCatCard4 from '../images/BlogList/BlogCatCard4_650x650.jpg'
-import BlogDogCard1 from '../images/BlogList/BlogDogCard1_300x300.jpg'
-import '../Styles/BlogListCardSection.scss'
+import BlogCatCard1 from '../images/BlogList/BlogCatCard1_300x300.jpg'
+import '../Styles/MobileBlogHotTopic.scss'
 
 import {
   MDBCarousel,
@@ -73,15 +73,15 @@ const MobileBlogHotTopic = () => {
                   <MDBCard className="mb-2">
                     <MDBCardImage
                       className="m-ACHotTopicPic m-4"
-                      src={BlogDogCard1}
+                      src={BlogCatCard1}
                     />
                     <MDBCardBody>
-                      <MDBCardTitle>如何幫狗狗選擇美容店？</MDBCardTitle>
+                      <MDBCardTitle>新手上路：養貓新手必備知識</MDBCardTitle>
                       <MDBCardText className="m-ACHotTopicText mb-4">
-                        寵物美容院比比皆是，目前寵物美容業並沒有公定的標準規定，多是靠自主經營或寵物美容老師傳授，毛爸毛媽該如何選擇，才能保障自己和毛孩的權益呢？
+                        這篇文章是寫給家中有一歲以內的幼貓、或是準備新養貓的新手家長們看的，希望能解除大家心中的疑惑、充實醫療保健相關的知識，讓新手貓奴們升級成更稱職的毛孩爸媽！
                       </MDBCardText>
                       <MDBBtn
-                        href="/adoptlist"
+                        href="/BlogArticle1"
                         className="m-ACGrayOutlineBtn d-flex justify-content-center mx-auto"
                       >
                         <div>

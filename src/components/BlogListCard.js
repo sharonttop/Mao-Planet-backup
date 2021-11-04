@@ -10,7 +10,7 @@ function BlogListCard() {
     <>
       <div className="col-10 col-md-4 d-md-block d-none">
         <Card className="ACblogListCard1 p-1">
-          <Link to="#/" className="ACblogListCardContent">
+          <Link to="/bloglist/blogarticle1" className="ACblogListCardContent">
             <Card.Img
               src={BlogPic1}
               className="ACblogListCardPic mt-3 mx-auto d-flex justify-content-center"
@@ -27,7 +27,7 @@ function BlogListCard() {
         </Card>
 
         <div className="ACblogListBtn d-flex justify-content-center p-0 pt-4">
-          <Link to="/home">
+          <Link to="/bloglist/blogarticle1">
             <Button
               variant="outline-primary"
               className="ACYellowOutlineBtn d-md-block d-none"

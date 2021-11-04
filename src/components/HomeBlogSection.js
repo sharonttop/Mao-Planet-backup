@@ -15,7 +15,7 @@ function HomeBlogSection(props) {
       <Container fluid id="ACblogSection" className="p-0 d-md-block d-none">
         <Row className="d-flex justify-content-center">
           <Link
-            to="/bloglist"
+            to="/bloglist/blogarticle1"
             className="ACblogIntro col-md-4 mx-2 mt-5 p-3 d-flex"
           >
             <div className="ACblogIntroPic px-0">

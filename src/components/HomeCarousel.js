@@ -11,7 +11,7 @@ import slider2 from '../images/Home/slider2_1720x800.png'
 import slider3 from '../images/Home/slider3_1720x800.png'
 import sliderBar from '../images/Home/sliderBar_800x80.svg'
 import mobileslider1 from '../images/Home/mobileslider1_375x500.png'
-import '../Styles/MyCarousel.scss'
+import '../Styles/HomeCarousel.scss'
 
 import {
   MDBCarousel,
@@ -23,7 +23,7 @@ import {
   MDBContainer,
 } from 'mdbreact'
 
-function MyCarousel() {
+function HomeCarousel() {
   return (
     <>
       {/* PC */}
@@ -84,38 +84,38 @@ function MyCarousel() {
           </MDBCarousel>
         </MDBContainer>
 
-        <div className="container sliderBar">
+        <div className="container ACsliderBar">
           <img src={sliderBar} alt=" " />
           <div className="row">
-            <div id="member1">
-              <div className="membericon">
+            <div id="ACmember-adopt">
+              <div className="ACmembericon">
                 <BiHeart />
               </div>
-              <div className="membertext">
+              <div className="ACmembertext">
                 <p>加入會員領養毛孩</p>
               </div>
             </div>
-            <div id="member2">
-              <div className="membericon">
+            <div id="ACmember-hotel">
+              <div className="ACmembericon">
                 <BiHomeAlt />
               </div>
-              <div className="membertext">
+              <div className="ACmembertext">
                 <p>毛孩旅宿享5%回饋</p>
               </div>
             </div>
-            <div id="member3">
-              <div className="membericon">
+            <div id="ACmember-ID">
+              <div className="ACmembericon">
                 <BiGift />
               </div>
-              <div className="membertext">
+              <div className="ACmembertext">
                 <p>專屬毛孩ID領生日禮</p>
               </div>
             </div>
-            <div id="member4">
-              <div className="membericon">
+            <div id="ACmember-999">
+              <div className="ACmembericon">
                 <BiCartAlt />
               </div>
-              <div className="membertext">
+              <div className="ACmembertext">
                 <p>全館滿NT$999免運</p>
               </div>
             </div>
@@ -137,50 +137,56 @@ function MyCarousel() {
       </Container>
 
       {/* mobile */}
-      <Container fluid className="m-carouselSection p-0 d-md-none d-block">
-        <div className="m-sliderCSS conatiner-fluid p-0 col-12">
-          <h1 className="m-h1">等待。家</h1>
+      <Container fluid className="m-ACcarouselSection p-0 d-md-none d-block">
+        <div className="m-ACsliderCSS conatiner-fluid p-0 col-12">
+          <h1 className="m-ACsliderTitle">等待。家</h1>
           <img src={mobileslider1} alt="" className="m-slider1" />
         </div>
       </Container>
 
-      <Container fluid className="m-sliderbar p-0 mt-3 mb-5 d-md-none d-block">
+      <Container
+        fluid
+        className="m-ACsliderbar p-0 mt-3 mb-5 d-md-none d-block"
+      >
         <Row className="col-6 mx-auto justify-content-center align-items-center">
-          <div id="m-member1">
-            <div className="membericon">
+          <div id="m-ACmember-adopt">
+            <div className="ACmembericon">
               <BiHeart />
             </div>
-            <div className="membertext">
+            <div className="ACmembertext">
               <p>加入會員領養毛孩</p>
             </div>
           </div>
-          <div id="m-member2">
-            <div className="membericon">
+          <div id="m-ACmember-hotel">
+            <div className="ACmembericon">
               <BiHomeAlt />
             </div>
-            <div className="membertext">
+            <div className="ACmembertext">
               <p>毛孩旅宿享5%回饋</p>
             </div>
           </div>
-          <div id="m-member3">
-            <div className="membericon">
+          <div id="m-ACmember-ID">
+            <div className="ACmembericon">
               <BiGift />
             </div>
-            <div className="membertext">
+            <div className="ACmembertext">
               <p>專屬毛孩ID領生日禮</p>
             </div>
           </div>
-          <div id="m-member4">
-            <div className="membericon">
+          <div id="m-ACmember-999">
+            <div className="ACmembericon">
               <BiCartAlt />
             </div>
-            <div className="membertext">
+            <div className="ACmembertext">
               <p>全館滿NT$999免運</p>
             </div>
           </div>
           <div className="m-joinMemberBtn my-3">
             <Link to="/member">
-              <Button variant="outline-primary" className="YellowOutlineBtn">
+              <Button
+                variant="outline-primary"
+                className="m-ACYellowOutlineBtn"
+              >
                 <div>
                   <FaPaw />
                   &nbsp;&nbsp;&nbsp;立即加入會員
@@ -194,4 +200,4 @@ function MyCarousel() {
   )
 }
 
-export default MyCarousel
+export default HomeCarousel

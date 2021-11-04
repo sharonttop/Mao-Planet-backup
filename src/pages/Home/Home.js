@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaPaw } from 'react-icons/fa'
-import MyCarousel from '../../components/MyCarousel'
+import HomeCarousel from '../../components/HomeCarousel'
 import PCHomeAdoptCard from '../../components/PCHomeAdoptCard'
 import MobileHomeAdoptCard from '../../components/MobileHomeAdoptCard'
 import HomeProductCardSection from '../../components/HomeProductCardSection'
@@ -22,7 +22,7 @@ function Home(props) {
   // const { auth } = props
   return (
     <>
-      <MyCarousel />
+      <HomeCarousel />
       {/* <h2>{auth ? '會員已登入' : '未登入'}</h2> */}
 
       {/* 毛孩找家 */}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import BlogListBanner from '../../components/BlogListBanner'
+import BlogHotTopicSection from '../../components/BlogHotTopicSection'
 import BlogListTag from '../../components/BlogListTag'
 import BlogListTitle from '../../components/BlogListTitle'
 import BlogListCardSection from '../../components/BlogListCardSection'
@@ -28,7 +29,12 @@ function BlogList(props) {
         </div>
       </Container>
 
-      {/* mobile */}
+      {/* PC-hotTopic */}
+      <Container className="p-0">
+        <BlogHotTopicSection />
+      </Container>
+
+      {/* mobile-hotTopic */}
       <Container>
         <MobileBlogHotTopic />
       </Container>

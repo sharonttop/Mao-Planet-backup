@@ -1,0 +1,70 @@
+#ACHotCarousel {
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  padding: 0 12%;
+  margin: 10% 0;
+}
+
+.ACblogHotTag {
+  width: 70%;
+  height: 50px;
+  background-color: #f5df4d;
+  object-fit: cover;
+  border-radius: 0 150px 150px 0;
+}
+
+.ACblogHotTag span {
+  font-size: 1.5rem;
+  font-family: 'Chelsea Market', cursive;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  line-height: 50px;
+}
+
+.AChotTopicTitle {
+  font-weight: 500;
+  color: #000;
+}
+
+.AChotTopicText {
+  color: #646464;
+}
+
+.ACGrayOutlineBtn {
+  width: 200px;
+  border-radius: 20px;
+  border: 2px solid #939597;
+  background-color: #fff;
+  color: #646464;
+  margin: 5px 0px 25px 0px;
+  text-align: center;
+}
+
+.ACGrayOutlineBtn:hover {
+  background-color: #939597;
+  border: 2px solid #939597;
+  color: white;
+}
+
+.ACGrayOutlineBtn:active {
+    background-color: #939597;
+    border: 2px solid #939597;
+    color: white;
+  }
+
+.AChotTopicBtn:hover {
+  text-decoration: none;
+}
+
+
+.AChotTopicBtn:active {
+    background-color: #939597;
+    border: 2px solid #939597;
+    color: white;
+  }
+
+.AChotTopicPic img {
+  width: 100%;
+  border-radius: 3%;
+}

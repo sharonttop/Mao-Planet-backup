@@ -44,7 +44,7 @@ const MobileHomeBlogSection = () => {
                       這篇文章是寫給家中有一歲以內的幼貓、或是準備新養貓的新手家長們看的，希望能解除大家心中的疑惑，充實醫療保健相關的知識，讓新手貓奴們升級成更稱職的毛孩爸媽！
                     </MDBCardText>
                     <MDBBtn
-                      href="/bloglist"
+                      href="/bloglist/blogarticle1"
                       className="m-ACYellowOutlineBtn d-flex justify-content-center mx-auto"
                     >
                       了解更多

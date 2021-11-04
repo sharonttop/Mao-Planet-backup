@@ -4,7 +4,8 @@ import MobileBlogListCard from './MobileBlogListCard'
 import '../Styles/BlogListCardSection.scss'
 
 function MobileBlogListCardSection(props) {
-  return (<>
+  return (
+    <>
       <Container className="p-0 d-md-block d-none d-flex justify-content-center">
         <div className="ACblogList-container">
           <div className="ACblogListCard">
@@ -14,7 +15,8 @@ function MobileBlogListCardSection(props) {
           </div>
         </div>
       </Container>
-  </>)
+    </>
+  )
 }
 
 export default MobileBlogListCardSection
