@@ -108,12 +108,12 @@ function MyNavbar(props) {
               <BiSearch />
             </Nav.Link>
             {!auth && (
-              <Nav.Link as={NavLink} to="/login" className="navicon">
+              <Nav.Link as={NavLink} to="/login" className="ACnavIcon">
                 <BiUser />
               </Nav.Link>
             )}
             {auth && (
-              <Nav.Link as={NavLink} to="/admin" className="navicon">
+              <Nav.Link as={NavLink} to="/admin" className="ACnavIcon">
                 <Avatar />
               </Nav.Link>
             )}

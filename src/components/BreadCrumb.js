@@ -6,14 +6,14 @@ function BreadCrumb(props) {
 
   const pathnameList = [
     '/adoptlist',
-    '/productlist',
+    // '/productlist',
     '/hotellist',
     '/bloglist',
     '/member',
   ]
   const pathnameTextList = [
     '毛孩找家',
-    '毛孩雜貨',
+    // '毛孩雜貨',
     '毛孩假期',
     '鏟屎官大補帖',
     '會員中心',

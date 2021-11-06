@@ -46,7 +46,7 @@ function Avatar(props) {
     : IMG_PATH + '/default-avatar.svg'
   return (
     <>
-      <div className="avatar" style={avatarStyle}>
+      <div className="ACadoptAvatar" style={avatarStyle}>
         <img src={avatarImg} alt="" id="img01" />
       </div>
     </>

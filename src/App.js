@@ -11,7 +11,7 @@ import './Styles/global.scss'
 // 頁面用元件
 import Home from './pages/Home/Home'
 import AdoptList from './pages/AdoptList'
-import ProductList from './pages/ProductList'
+// import ProductList from './pages/ProductList'
 import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
 import HotelList from './pages/HotelList'
@@ -87,9 +87,9 @@ function App(props) {
               <Route path="/productlist/cat">
                 <ProductCat />
               </Route>
-              <Route path="/productlist">
+              {/* <Route path="/productlist">
                 <ProductList />
-              </Route>
+              </Route> */}
               <Route path="/hotellist">
                 <HotelList auth={auth} />
               </Route>
