@@ -1,0 +1,35 @@
+.AG-subHero {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.AG-subImg,.AG-subText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.AG-subImg img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.AG-subText{
+    justify-content:center;
+
+}
+
+.AG-subText h2 {
+    font-size: 1.51rem;
+    margin-bottom:30px;
+}
+
+.AG-subText h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #646464;
+    margin: 2px 0;
+}
