@@ -1,4 +1,11 @@
 node_modules
-.DS_Store
-src/.DS_Store
+yarn.lock
+package.json
+package-lock.json
 build
+src/App.js
+src/App.css
+src/config
+public
+.vscode
+src/App.css
