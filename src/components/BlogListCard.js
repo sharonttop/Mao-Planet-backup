@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaPaw } from 'react-icons/fa'
 import BlogPic1 from '../images/Home/BlogPic1_150x150.jpg'
 import '../Styles/BlogListCard.scss'
+import '../Styles/ACButtons.scss'
 
 function BlogListCard() {
   return (
@@ -27,7 +28,7 @@ function BlogListCard() {
         </Card>
 
         <div className="ACblogListBtn d-flex justify-content-center p-0 pt-4">
-          <Link to="/bloglist/blogarticle1">
+          <Link to="/bloglist/blogarticle1" className="ACYellowBtn">
             <Button
               variant="outline-primary"
               className="ACYellowOutlineBtn d-md-block d-none"

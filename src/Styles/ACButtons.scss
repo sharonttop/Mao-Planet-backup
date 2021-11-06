@@ -1,0 +1,88 @@
+.ACGrayOutlineBtn {
+  width: 200px;
+  border-radius: 20px;
+  border: 2px solid #939597;
+  background-color: #fff;
+  color: #646464;
+  margin: 5px 0px 25px 0px;
+  text-align: center;
+
+  &:hover {
+    background-color: #939597;
+    color: white;
+  }
+
+  &:focus {
+    background-color: #939597;
+    color: white;
+  }
+
+  &:active {
+    background-color: #939597;
+    color: white;
+  }
+
+  &:visited {
+    background-color: #939597;
+    color: white;
+  }
+}
+
+.ACGrayBtn:hover {
+  text-decoration: none;
+}
+
+.ACYellowOutlineBtn {
+  width: 200px;
+  border-radius: 20px;
+  border: 2px solid #f5df4d;
+  background-color: #fff;
+  color: #646464;
+  margin: 5px 0px 25px 0px;
+  text-align: center;
+
+  &:hover {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+
+  &:focus {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+
+  &:active {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+
+  &:visited {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+}
+
+.ACYellowBtn:hover {
+    text-decoration: none;
+  }
+
+
+.m-ACYellowOutlineBtn {
+  width: 180px;
+  border-radius: 20px;
+  border: 2px solid #f5df4d;
+  background-color: #fff;
+  color: #646464;
+  text-align: center;
+}
+
+.m-ACYellowOutlineBtn:active {
+  background-color: #f5df4d;
+  border-color: #fff;
+  color: white;
+  text-decoration: none;
+}

@@ -1,21 +1,33 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+// import MyFooter from '../../components/MyFooter'
+import ReadingProgress from '../../components/ReadingProgress'
 
 import ArticlePic1 from '../../images/BlogArticle/ArticlePic1_805x500.jpg'
 import ArticlePic2 from '../../images/BlogArticle/ArticlePic2_805x500.jpg'
 import ArticlePic3 from '../../images/BlogArticle/ArticlePic3_805x500.jpg'
 import ArticlePic4 from '../../images/BlogArticle/ArticlePic4_805x500.jpg'
+import rHotTopic1 from '../../images/BlogArticle/rHotTopic1_100x100.jpg'
+import rHotTopic2 from '../../images/BlogArticle/rHotTopic2_100x100.jpg'
+import rHotTopic3 from '../../images/BlogArticle/rHotTopic3_100x100.jpg'
+
 import './BlogArticle.scss'
 
-function BlogList(props) {
+function BlogArticle1(props) {
   //   const { auth } = props
+  const target = React.createRef()
+
   return (
     <>
-      <Container className="d-flex justify-content-center" >
+      <ReadingProgress target={target} />
+      <div className={`post`} ref={target}></div>
+
+      <Container id="ACblogContent" className="d-flex justify-content-center">
         <Row>
-          <div className="ACblogArticle-container col-md-8 col-12">
+          <div className="ACblogArticle-container col-md-11 col-12">
             <p className="ACblogArticleDate">2021-09-06 發佈文章</p>
-            <h1>新手上路：養貓新手必備知識</h1>
+            <h1>養貓新手必備知識</h1>
             <p className="ACblogArticleText">文／獸醫師劉子華的。貓。語生活</p>
             <div>
               <img src={ArticlePic1} alt=" " className="ACblogArticlePic" />
@@ -38,7 +50,6 @@ function BlogList(props) {
             <p className="ACblogArticleText">
               貓注射部位肉瘤（FISS）是一種惡性腫瘤，發生原因目前不明，被懷疑是跟有佐劑的疫苗注射（例如白血病以及狂犬病）有關，因此如果只是施打一般核心疫苗或是無佐劑的疫苗，發生此病的機會是很低很低的。相比之下，因為沒有施打疫苗、或環境沒有做好消毒處理因此感染小病毒腸炎死亡的貓咪反而多很多…
             </p>
-            <br />
             <div>
               <img src={ArticlePic2} alt=" " className="ACblogArticlePic" />
             </div>
@@ -66,7 +77,6 @@ function BlogList(props) {
                 小結論：幼貓兩個月大左右就要帶去給獸醫檢查打針囉！個人建議一般貓咪選擇三合一就可以了，如果是半放養、或是在貓舍/多貓家庭/家中有貓咪已經有傳染性疾病的，再跟你的獸醫師討論適當的做法吧！
               </span>
             </p>
-            <br />
             <div>
               <img src={ArticlePic3} alt=" " className="ACblogArticlePic" />
             </div>
@@ -85,7 +95,6 @@ function BlogList(props) {
               <br />
               如果沒有打算要讓牠們生小貓，建議五個月大左右就要結紮了。母貓性成熟的時間會根據本身營養狀況及季節等稍有變化，可能六個月就開始有生育能力了！不能因為牠們看起來還小小隻的就大意唷！
             </p>
-            <br />
             <div>
               <img src={ArticlePic4} alt=" " className="ACblogArticlePic" />
             </div>
@@ -95,9 +104,48 @@ function BlogList(props) {
             </p>
           </div>
         </Row>
+        <div className="ACblogRCol d-flex col-md-4">
+          <div className="ACRColTitle">
+            <h5>熱門文章</h5>
+          </div>
+          <div className="d-flex my-3">
+            <Link to="#/" className="d-flex ACblogRColText">
+              <div className="ACblogListPic mr-3">
+                <img src={rHotTopic1} alt="" />
+              </div>
+              <div>
+                <h6>別讓貓咪不開心～為什麼貓咪常亂尿尿？</h6>
+                <p className="ACRCol-HotTopicDate">2021-11-09</p>
+              </div>
+            </Link>
+          </div>
+          <div className="d-flex my-3">
+            <Link to="#/" className="d-flex ACblogRColText">
+              <div className="ACblogListPic mr-3">
+                <img src={rHotTopic2} alt="" />
+              </div>
+              <div>
+                <h6>如何幫狗狗選擇美容店？</h6>
+                <p className="ACRCol-HotTopicDate">2021-10-18</p>
+              </div>
+            </Link>
+          </div>
+          <div className="d-flex my-3">
+            <Link to="#/" className="d-flex ACblogRColText">
+              <div className="ACblogListPic mr-3">
+                <img src={rHotTopic3} alt="" />
+              </div>
+              <div>
+                <h6>什麼是貓瘟？</h6>
+                <p className="ACRCol-HotTopicDate">2021-10-05</p>
+              </div>
+            </Link>
+          </div>
+        </div>
       </Container>
+      {/* <MyFooter /> */}
     </>
   )
 }
 
-export default BlogList
+export default BlogArticle1

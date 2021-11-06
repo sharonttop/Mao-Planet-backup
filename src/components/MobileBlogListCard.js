@@ -13,7 +13,10 @@ function MobileBlogListCard(props) {
         className="col-12 d-md-none d-block my-3 p-0"
       >
         <Row className="d-flex justify-content-center">
-          <Link to="/bloglist" className="m-ACblogListIntro d-flex">
+          <Link
+            to="/bloglist/blogarticle1"
+            className="m-ACblogListIntro d-flex"
+          >
             <div className="m-ACblogListPic px-0">
               <img src={BlogPic1} alt="" />
             </div>

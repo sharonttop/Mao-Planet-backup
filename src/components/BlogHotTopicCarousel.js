@@ -13,6 +13,7 @@ import {
 import BlogCatCard1 from '../images/BlogList/BlogCatCard1_300x300.jpg'
 import BlogCatCard4 from '../images/BlogList/BlogCatCard4_650x650.jpg'
 import '../Styles/BlogHotTopicCarousel.scss'
+import '../Styles/ACButtons.scss'
 
 const BlogHotTopicCarousel = (props) => {
   return (
@@ -42,11 +43,8 @@ const BlogHotTopicCarousel = (props) => {
                     貓咪常在家裡到處亂尿，每天回家打開門、只能聞到刺鼻的尿騷味；常常擔心放在床上、椅子上的衣服會不會淪陷於貓尿…以上也是你的生活寫照嗎？貓咪會亂尿，多是「疾病」、「環境」及「心理」三大原因造成。
                   </p>
                   <div>
-                    <Link to="/adoptlist">
-                      <Button
-                        variant="outline-primary"
-                        className="ACGrayOutlineBtn AChotTopicBtn mx-auto mt-5 d-md-block d-none"
-                      >
+                    <Link to="#/" className="ACGrayBtn">
+                      <Button className="ACGrayOutlineBtn AChotTopicBtn mx-auto mt-5 d-md-block d-none">
                         <div>
                           <FaPaw />
                           &nbsp;&nbsp;&nbsp;我要繼續閱讀
@@ -77,7 +75,7 @@ const BlogHotTopicCarousel = (props) => {
                     這篇文章是寫給家中有一歲以內的幼貓、或是準備新養貓的新手家長們看的，希望能解除大家心中的疑惑、充實醫療保健相關的知識，讓新手貓奴們升級成更稱職的毛孩爸媽！
                   </p>
                   <div>
-                    <Link to="/bloglist/blogarticle1">
+                    <Link to="/bloglist/blogarticle1" className="ACGrayBtn">
                       <Button
                         variant="outline-primary"
                         className="ACGrayOutlineBtn AChotTopicBtn mx-auto mt-5 d-md-block d-none"

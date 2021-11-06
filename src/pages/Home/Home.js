@@ -7,6 +7,7 @@ import PCHomeAdoptCard from '../../components/PCHomeAdoptCard'
 import MobileHomeAdoptCard from '../../components/MobileHomeAdoptCard'
 import HomeProductCardSection from '../../components/HomeProductCardSection'
 import HomeBlogSection from '../../components/HomeBlogSection'
+// import MyFooter from '../../components/MyFooter'
 
 import DogProductBN from '../../images/Home/DogProductBN_720x600.jpg'
 import CatProductBN from '../../images/Home/CatProductBN_720x600.jpg'
@@ -263,6 +264,7 @@ function Home(props) {
       </div>
 
       <HomeBlogSection />
+      {/* <MyFooter /> */}
     </>
   )
 }

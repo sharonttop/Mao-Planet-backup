@@ -6,6 +6,7 @@ import BlogListTag from '../../components/BlogListTag'
 import BlogListTitle from '../../components/BlogListTitle'
 import BlogListCardSection from '../../components/BlogListCardSection'
 import Pagination from '../../components/Pagination'
+// import MyFooter from '../../components/MyFooter'
 
 import MobileBlogHotTopic from '../../components/MobileBlogHotTopic'
 import MobileBlogListTitle from '../../components/MobileBlogListTitle'
@@ -125,6 +126,7 @@ function BlogList(props) {
       <div className="ACblogLastSec">
         <Pagination />
       </div>
+      {/* <MyFooter /> */}
     </>
   )
 }

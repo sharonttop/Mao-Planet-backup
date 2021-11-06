@@ -32,10 +32,10 @@ function MultiLevelBreadCrumb(props) {
   const formatText = (index) => {
     if (index === -1) return ''
 
-    // '/產品/嬰兒/初生兒' -> ['','產品','嬰兒', '初生兒']
+    // '/毛孩雜貨/貓貓館/貓的玩具' -> ['','毛孩雜貨','貓貓館', '貓的玩具']
     const textArray = pathnameTextList[index].split('/')
 
-    // '/product/baby/birth' -> ['','product','baby', 'birth']
+    // '/productlist/cat/toys' -> ['','product','cat', 'toys']
     const pathArray = pathnameList[index].split('/')
 
     console.log(textArray, pathArray)

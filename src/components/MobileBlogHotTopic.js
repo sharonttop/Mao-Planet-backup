@@ -76,12 +76,12 @@ const MobileBlogHotTopic = () => {
                       src={BlogCatCard1}
                     />
                     <MDBCardBody>
-                      <MDBCardTitle>新手上路：養貓新手必備知識</MDBCardTitle>
+                      <MDBCardTitle>養貓新手必備知識</MDBCardTitle>
                       <MDBCardText className="m-ACHotTopicText mb-4">
                         這篇文章是寫給家中有一歲以內的幼貓、或是準備新養貓的新手家長們看的，希望能解除大家心中的疑惑、充實醫療保健相關的知識，讓新手貓奴們升級成更稱職的毛孩爸媽！
                       </MDBCardText>
                       <MDBBtn
-                        href="/BlogArticle1"
+                        href="/bloglist/blogarticle1"
                         className="m-ACGrayOutlineBtn d-flex justify-content-center mx-auto"
                       >
                         <div>
