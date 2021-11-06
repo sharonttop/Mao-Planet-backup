@@ -10,20 +10,17 @@ import './Styles/global.scss'
 
 // 頁面用元件
 import Home from './pages/Home/Home'
+import AdoptList from './pages/AdoptList'
 import ProductList from './pages/ProductList'
 import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
+import HotelList from './pages/HotelList'
 import BlogList from './pages/BlogList/BlogList'
 import BlogArticle1 from './pages/BlogArticle/BlogArticle1'
 import SignUp from './pages/sign-up/SignUp'
 import Login from './pages/login/Login'
 import Member from './pages/member/Member'
 import NotFoundPage from './pages/NotFoundPage'
-import AdoptList from './pages/AdoptList/AdoptList'
-import AdoptPage from './pages/AdoptPage/AdoptPage'
-import HotelList from './pages/HotelList/HotelList'
-import HotelPage from './pages/HotelPage/HotelPage'
-
 
 // 組合用元件
 import MyNavbar from './components/MyNavbar'
