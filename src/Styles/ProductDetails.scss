@@ -18,20 +18,20 @@
 }
 
 #AG-pic1 {
-  background-image: url(../images/productList-images/s01.png);
+  background-image: url(../images/ProductList-images/s01.png);
 }
 #AG-pic2 {
-  background-image: url(../images/productList-images/s02.png);
+  background-image: url(../images/ProductList-images/s02.png);
 }
 #AG-pic3 {
-  background-image: url(../images/productList-images/s03.png);
+  background-image: url(../images/ProductList-images/s03.png);
 }
 #AG-pic4 {
-  background-image: url(../images/productList-images/s04.png);
+  background-image: url(../images/ProductList-images/s04.png);
 }
 
 .AG-bigPic {
-  background-image: url(../images/productList-images/big01.png);
+  background-image: url(../images/ProductList-images/big01.png);
   background-size: cover;
   width: 350px;
   height: 350px;
@@ -74,7 +74,7 @@
   border-radius: 5px;
   color: #f5df4d;
   border: #f5df4d solid 2px;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   font-weight: 400;
   font-size: 0.4rem;
   margin: 10px 0;
@@ -176,7 +176,7 @@
   }
 
   .AG-des-pay-bigText {
-    font-size: 0.90rem;
+    font-size: 0.9rem;
     margin-top: 30px;
     margin-bottom: 30px;
   }
@@ -196,7 +196,7 @@
   width: 90%;
   display: flex;
   flex-wrap: wrap;
-  margin:20px auto;
+  margin: 20px auto;
 
   .AG-bigPic {
     max-width: 30%;
@@ -204,18 +204,18 @@
   }
 
   #AG-bigPic1 {
-    background-image: url(../images/productList-images/DBPic1.png);
+    background-image: url(../images/ProductList-images/DBPic1.png);
   }
   #AG-bigPic2 {
-    background-image: url(../images/productList-images/DBPic2.png);
+    background-image: url(../images/ProductList-images/DBPic2.png);
   }
   #AG-bigPic3 {
-    background-image: url(../images/productList-images/DBPic3.png);
+    background-image: url(../images/ProductList-images/DBPic3.png);
   }
   #AG-bigPic4 {
-    background-image: url(../images/productList-images/DBPic4.png);
+    background-image: url(../images/ProductList-images/DBPic4.png);
   }
   #AG-bigPic5 {
-    background-image: url(../images/productList-images/DBPic5.png);
+    background-image: url(../images/ProductList-images/DBPic5.png);
   }
 }

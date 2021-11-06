@@ -1,5 +1,5 @@
 import '../Styles/ProductCard.scss'
-import catImg from '../images/productList-images/cat_cardPic_250X250.png'
+import catImg from '../images/ProductList-images/cat_cardPic_250X250.png'
 
 function ProductCard(){
     return(
