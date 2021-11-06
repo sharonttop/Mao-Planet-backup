@@ -1,0 +1,32 @@
+
+.ACblogList-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ACblogListCard{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.m-ACHotTopicPic {
+    width: 260px;
+    height: 260px;
+    overflow: hidden;
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .m-ACHotTopicPic > img {
+    width: 100%;
+  }
+
+  .m-ACHotTopicTextText {
+    font-size: 1rem;
+    color: #646464;
+    text-decoration: none;
+  }
+  

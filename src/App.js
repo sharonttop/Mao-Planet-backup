@@ -16,6 +16,7 @@ import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
 import HotelList from './pages/HotelList'
 import BlogList from './pages/BlogList/BlogList'
+import BlogArticle1 from './pages/BlogArticle/BlogArticle1'
 import Member from './pages/Member'
 import NotFoundPage from './pages/NotFoundPage'
 
@@ -43,6 +44,9 @@ function App(props) {
           {/* ScrollToTop是為了讓連到另一頁內容時，頁面回到最上方 */}
           <ScrollToTop>
             <Switch>
+              <Route path="/bloglist/blogarticle1">
+                <BlogArticle1 />
+              </Route>
               <Route path="/bloglist">
                 <BlogList />
               </Route>

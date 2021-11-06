@@ -1,0 +1,20 @@
+.ACblogListTag {
+  background-color: #ffffff;
+  padding: 3px 50px;
+  border-radius: 30px;
+  color: #646464;
+  border: #f5df4d solid 2px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 25px;
+
+  &:focus {
+    background-color: #f5df4d;
+    color: #ffffff;
+  }
+  &:hover {
+    background-color: #f5df4d;
+    color: #ffffff;
+  }
+}

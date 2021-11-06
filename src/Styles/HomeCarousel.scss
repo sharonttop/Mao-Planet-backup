@@ -1,4 +1,4 @@
-.carouselSection {
+.ACcarouselSection {
   width: 100%;
   height: 680px;
   background-color: #f5df4d;
@@ -6,13 +6,13 @@
   z-index: 1;
 }
 
-.sliderCSS {
+.ACsliderCSS {
   width: 100%;
   padding: 0px 0px 0px 180px;
   z-index: 2;
 }
 
-.sliderBar {
+.ACsliderBar {
   width: 100%;
   position: absolute;
   bottom: 20px;
@@ -24,7 +24,7 @@
   height: 500px;
 }
 
-#member1 {
+#ACmember-adopt {
   position: absolute;
   bottom: 10%;
   left: 15%;
@@ -33,7 +33,7 @@
   text-align: center;
 }
 
-#member2 {
+#ACmember-hotel {
   position: absolute;
   bottom: 10%;
   left: 30%;
@@ -42,7 +42,7 @@
   text-align: center;
 }
 
-#member3 {
+#ACmember-ID {
   position: absolute;
   bottom: 10%;
   left: 45%;
@@ -51,7 +51,7 @@
   text-align: center;
 }
 
-#member4 {
+#ACmember-999 {
   position: absolute;
   bottom: 10%;
   left: 60%;
@@ -60,22 +60,22 @@
   text-align: center;
 }
 
-.membericon {
+.ACmembericon {
   font-size: 2rem;
 }
 
-.membertext {
+.ACmembertext {
   font-size: 0.9rem;
   margin-top: 4px;
 }
 
-.joinMemberBtn {
+.ACjoinMemberBtn {
   position: absolute;
   bottom: 10%;
   left: 75%;
 }
 
-.YellowOutlineBtn {
+.ACYellowOutlineBtn {
   width: 200px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -85,13 +85,13 @@
   text-align: center;
 }
 
-.YellowOutlineBtn:hover {
+.ACYellowOutlineBtn:hover {
   background-color: #f5df4d;
   border-color: #fff;
   color: white;
 }
 
-.m-carouselSection {
+.m-ACcarouselSection {
   width: 100%;
   height: 500px;
   background-color: #f5df4d;
@@ -102,24 +102,24 @@
 //   position: relative;
 // }
 
-.m-sliderCSS img{
+.m-ACsliderCSS img{
   width: 100%;
 }
 
-.m-sliderbar {
+.m-ACsliderbar {
   width: 100%;
   height: 400px;
   background-color: #fff;
 }
 
-.m-h1 {
+.m-ACsliderTitle {
   color: #fff;
   position: absolute;
   left: 10%;
   bottom: 5%;
 }
 
-#m-member1, #m-member2, #m-member3, #m-member4 {
+#m-ACmember-adopt, #m-ACmember-hotel, #m-ACmember-ID, #m-ACmember-999 {
   color: #646464;
   text-align: center;
 }

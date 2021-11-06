@@ -1,0 +1,73 @@
+.ACblogListCard1 {
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.ACblogListCard1:hover {
+  transform: scale(1.02);
+  box-shadow: 1px 2px 15px rgba(94, 91, 91, 0.126);
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.ACblogListCardPic {
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+}
+
+.ACblogListCardPic > img {
+  width: 100%;
+}
+
+.m-ACblogListCardPic {
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  justify-content: center;
+  margin: auto;
+}
+
+.m-ACblogListCardPic > img {
+  width: 100%;
+}
+
+.m-ACblogListPic {
+  width: 100px;
+  height: 100px;
+}
+
+.m-ACblogListPic img {
+  width: 100%;
+}
+
+.ACblogListCardContent:hover {
+  text-decoration: none;
+}
+
+.ACblogListCardTitle {
+  color: #000;
+}
+
+.ACblogListCardText {
+  font-size: 0.9rem;
+  color: #646464;
+  text-decoration: none;
+}
+
+.m-ACblogListCardTitle {
+  color: #000;
+}
+
+.m-ACblogListText {
+  font-size: 1rem;
+  color: #646464;
+}
+
+.m-ACblogListCardText {
+  font-size: 1rem;
+  color: #646464;
+  text-decoration: none;
+}
+
+

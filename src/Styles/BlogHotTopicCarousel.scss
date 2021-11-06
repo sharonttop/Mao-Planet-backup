@@ -1,0 +1,42 @@
+#ACHotCarousel {
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  padding: 0 12%;
+  margin: 10% 0;
+}
+
+.ACblogHotTag {
+  width: 70%;
+  height: 50px;
+  background-color: #f5df4d;
+  object-fit: cover;
+  border-radius: 0 150px 150px 0;
+}
+
+.ACblogHotTag span {
+  font-size: 1.5rem;
+  font-family: 'Chelsea Market', cursive;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  line-height: 50px;
+}
+
+.AChotTopicTitle {
+  font-weight: 500;
+  color: #000;
+}
+
+.AChotTopicText {
+  color: #646464;
+}
+
+.AChotTopicBtn:hover {
+  text-decoration: none;
+}
+
+
+.AChotTopicPic img {
+  width: 100%;
+  border-radius: 3%;
+}

@@ -1,0 +1,84 @@
+.product-card-container {
+  max-width: 25%;
+  // width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.card-pic-area {
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.card-pic {
+  width: 100%;
+}
+
+.product-card-container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hoverBtn {
+  position: absolute;
+  width: 85%;
+  height: 20%;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  background-color: #f5df4d;
+  border-radius: 5px;
+}
+
+.hoverBtn a {
+  width: 80%;
+  font-size: 0.2rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+  text-align: center;
+}
+
+.product-card-container:hover .hoverBtn {
+  opacity: 1;
+}
+
+.title,
+.price {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.hoverBtn a,
+.title,
+.price {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.title {
+  color: #646464;
+  font-weight: 500;
+  margin-top: 0.8rem;
+}
+.price {
+  color: #939597;
+  margin-top: 0.6rem;
+  margin-bottom: 1.2rem;
+}

@@ -1,67 +1,67 @@
-#blogSection {
+#ACblogSection{
   max-width: 100%;
   background-color: #f5df4d;
   justify-content: center;
 }
 
-#m-blogSection {
+#m-ACblogSection {
   max-width: 100%;
   background-color: #f5df4d;
   justify-content: center;
 }
 
-.blogIntro {
+.ACblogIntro {
   background-color: #fff;
 }
 
-.blogIntro:hover {
+.ACblogIntro:hover {
   text-decoration: none;
 }
 
-.blogIntroPic {
+.ACblogIntroPic {
   width: 150px;
   height: 150px;
 }
 
 
-.blogIntroPic img {
+.ACblogIntroPic img {
   width: 100%;
 }
 
-.m-blogIntroPic {
+.m-ACblogIntroPic {
   width: 260px;
   height: 260px;
   margin: auto;
   justify-content: center;
 }
 
-.m-blogIntroPic img {
+.m-ACblogIntroPic img {
   width: 100%;
 }
 
-.blogIntroText {
+.ACblogIntroText {
   color: #000;
 }
 
-.blogIntroText p {
+.ACblogIntroText p {
   font-size: 0.9rem;
   color: #646464;
 }
 
-.m-blogIntroText {
+.m-ACblogIntroText {
   font-size: 1rem;
   color: #646464;
 }
 
-#blogBtnSection {
+#ACblogBtnSection {
   background-color: #f5df4d;
 }
 
-#m-blogBtnSection {
+#m-ACblogBtnSection {
   background-color: #f5df4d;
 }
 
-.YellowOutlineBtn {
+.ACYellowOutlineBtn {
   width: 200px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -71,13 +71,13 @@
   text-align: center;
 }
 
-.YellowOutlineBtn:hover {
+.ACYellowOutlineBtn:hover {
   background-color: #f5df4d;
   border-color: #fff;
   color: white;
 }
 
-.m-YellowOutlineBtn {
+.m-ACYellowOutlineBtn {
   width: 180px;
   border-radius: 20px;
   border: 2px solid #f5df4d;
@@ -87,7 +87,7 @@
   text-align: center;
 }
 
-.m-YellowOutlineBtn:active {
+.m-ACYellowOutlineBtn:active {
   background-color: #f5df4d;
   border-color: #fff;
   color: white;
