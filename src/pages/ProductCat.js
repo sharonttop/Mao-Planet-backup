@@ -1,8 +1,12 @@
+import ProductDetails from '../components/ProductDetails';
+import ProductList from '../components/ProductList'
+
+
 function ProductCat(props) {
 //   const { auth } = props
   return (
     <>
-      <h1>貓貓館</h1>
+      <ProductList />
     </>
   )
 }
