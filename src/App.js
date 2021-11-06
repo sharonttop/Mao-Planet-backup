@@ -90,11 +90,17 @@ function App(props) {
               <Route path="/productlist">
                 <ProductList />
               </Route>
-              <Route path="/hotellist">
-                <HotelList auth={auth} />
+              <Route path="/adoptlist/adoptpage/:id?">
+              <AdoptPage />
               </Route>
-              <Route path="/adoptlist">
-                <AdoptList auth={auth} />
+              <Route path="/hotellist/hotelpage/:id?">
+              <HotelPage />
+              </Route>
+              <Route path="/adoptlist/">
+              <AdoptList />
+              </Route>
+              <Route path="/hotellist">
+              <HotelList />
               </Route>
               <Route path="/home">
                 <Home auth={auth} />
