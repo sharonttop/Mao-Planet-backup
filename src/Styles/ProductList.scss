@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+
+.AG-productList-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+span {
+    color: #646464;
+}
+
+a {
+    text-decoration: none;
+    color: #646464;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 400;
+    // font-size: 0.6rem;
+}
+
+// .AG-breadCrumb {
+//     margin-left: 18%;
+    
+// }
+
+.AG-productTags{
+    margin: 30px auto 50px;
+}
+
+.AG-productCards{
+    width: 68%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
