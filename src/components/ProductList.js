@@ -2,9 +2,9 @@ import ProductListTag from './ProductListTag'
 import ProductListSubHero from './ProductListSubHero'
 import ProductListTitle from './ProductListTitle'
 import ProductCard from './ProductCard'
-import ChangePageButton from './ChangePageButton'
+// import ChangePageButton from './ChangePageButton'
 import '../Styles/ProductList.scss'
-import BlogSection from './BlogSection'
+// import BlogSection from './BlogSection'
 import ProductDetails from './ProductDetails'
 
 const ProductList = (tag)=>{
@@ -47,7 +47,7 @@ const ProductList = (tag)=>{
             <ProductCard/>
             <ProductCard/>
         </div>
-            <ChangePageButton />
+            {/* <ChangePageButton /> */}
     </div>
     </>
     )
