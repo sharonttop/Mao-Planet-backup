@@ -1,10 +1,13 @@
-function ProductCat(props) {
-//   const { auth } = props
-  return (
+
+import ProductList from '../components/ProductList'
+
+const ProductCat = ()=>{
+    return(
     <>
-      <h1>貓貓館</h1>
+    <ProductList />
+
     </>
-  )
+    )
 }
 
-export default ProductCat
+export default ProductCat;
