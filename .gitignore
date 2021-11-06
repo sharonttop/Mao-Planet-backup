@@ -1,4 +1,9 @@
 node_modules
-.DS_Store
-src/.DS_Store
+yarn.lock
+package.json
+package-lock.json
 build
+src/App.css
+public
+.vscode
+test.js

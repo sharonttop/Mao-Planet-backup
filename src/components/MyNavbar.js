@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { BiSearch, BiUser, BiHeart, BiHomeAlt, BiCartAlt } from 'react-icons/bi'
+import Avatar from './Avatar'
 import logo from '../images/logo.svg'
 import '../Styles/MyNavbar.scss'
 
@@ -8,7 +9,7 @@ import '../Styles/MyNavbar.scss'
 import { NavLink } from 'react-router-dom'
 
 function MyNavbar(props) {
-  // const { auth } = props
+  const { auth } = props
   return (
     <>
       <div className="ACtopYellow">
@@ -73,29 +74,49 @@ function MyNavbar(props) {
             <Nav.Link as={NavLink} to="/bloglist" className="ACnavtext mr-md-3">
               鏟屎官大補帖
             </Nav.Link>
-            <Nav.Link
-              as={NavLink}
-              to="/login"
-              className="ACnavtext d-flex d-block d-md-none"
-            >
-              會員登入
-            </Nav.Link>
-            <Nav.Link
-              as={NavLink}
-              to="/login"
-              className="ACnavtext d-flex d-block d-md-none"
-            >
-              新用戶註冊
-            </Nav.Link>
+            {auth && (
+              <Nav.Link
+                as={NavLink}
+                to="/admin"
+                className="navtext d-flex d-block d-md-none"
+              >
+                會員專區
+              </Nav.Link>
+            )}
+            {!auth && (
+              <Nav.Link
+                as={NavLink}
+                to="/login"
+                className="navtext d-flex d-block d-md-none"
+              >
+                會員登入
+              </Nav.Link>
+            )}
+            {!auth && (
+              <Nav.Link
+                as={NavLink}
+                to="/signup"
+                className="navtext d-flex d-block d-md-none"
+              >
+                新用戶註冊
+              </Nav.Link>
+            )}
           </Nav>
 
           <Nav className="mb-4 d-flex d-none d-md-row-block px-md-2">
             <Nav.Link href="#/" className="ACnavIcon">
               <BiSearch />
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/member" className="ACnavIcon">
-              <BiUser />
-            </Nav.Link>
+            {!auth && (
+              <Nav.Link as={NavLink} to="/login" className="navicon">
+                <BiUser />
+              </Nav.Link>
+            )}
+            {auth && (
+              <Nav.Link as={NavLink} to="/admin" className="navicon">
+                <Avatar />
+              </Nav.Link>
+            )}
             <Nav.Link href="#/" className="ACnavIcon">
               <BiHeart />
             </Nav.Link>
