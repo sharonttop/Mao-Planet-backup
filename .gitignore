@@ -3,7 +3,10 @@ yarn.lock
 package.json
 package-lock.json
 build
+src/App.js
 src/App.css
+src/config
 public
 .vscode
-test.js
+src/App.css
+

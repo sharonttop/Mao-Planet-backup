@@ -1,0 +1,265 @@
+
+.container {
+  width: 100%;
+}
+/* header */
+.MKheader-title {
+  width: 90%;
+  letter-spacing: 5px;
+  text-align: start;
+  margin: 0 auto;
+}
+.MKheader-title > p {
+  font-size: 1.5rem;
+  font-weight: medium;
+}
+.MKtitle-text {
+  font-size: 1rem;
+  font-weight: 300;
+  width: 50%;
+}
+
+/* avatar */
+.MKrowAvatar {
+  width: 100%;
+  height: 50%;
+  align-items: center;
+}
+
+.MKadoptPageAvatar {
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.MKadoptPageAvatar > img {
+  margin: 0 auto;
+  width: 90%;
+  height: 500px;
+  object-fit: fill;
+  border-radius: 30px;
+}
+
+.MKsmall-avatar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+.MKsm-avatar > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
+  object-fit: fill;
+
+}
+/* detail part */
+.MKrowDetail {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
+}
+.MKdetail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 3rem 0;
+}
+.MKdetail-ul {
+  width: 40%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+.MKdetail-icon {
+  color: #f5df4d;
+}
+.MKdetail-title {
+  font-size: 1rem;
+}
+.MKdetail-text {
+  font-weight: 300;
+  width: 60%;
+}
+/* button & hover */
+.MKdetail-btn {
+  display: flex;
+  justify-content: center;
+}
+// .MKbuttonAdopt {
+//   margin-left: 10px;
+//   margin-right: 10px;
+//   margin-bottom: 20px;
+//   width: 200px;
+//   height: 35px;
+//   border: 1px solid #f5df4d;
+//   border-radius: 90px;
+//   text-align: center;
+// }
+
+// .MKbuttonAdopt:hover {
+//   background-color: #f5df4d;
+// }
+#MKcard-btn::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  bottom: -5px;
+  left: -10px;
+}
+#MKcard-btn {
+  background-color: transparent;
+  width: 90%;
+  height: 30px;
+  color: #646464;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+}
+#MKcard-btn:hover {
+  color: #fff;
+}
+// .MKbtn-heart {
+//   margin-right: 5px;
+//   color: red;
+// }
+// .MKbtn-heart {
+//   margin-right: 5px;
+// }
+
+/* button-G */
+.MKbutton-G {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 35px;
+  border: 1px solid #939597;
+  border-radius: 90px;
+  text-align: center;
+}
+.MKbtn-mail {
+  margin-right: 5px;
+}
+.MKbutton-G:hover {
+  background-color: #939597;
+}
+
+#MKcard-btn {
+  background-color: transparent;
+  width: 90%;
+  height: 30px;
+  color: #646464;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+}
+#MKcard-btn:hover {
+  color: #fff;
+}
+/* comment */
+.MKrowComment {
+  width: 80%;
+  margin: 10rem auto;
+  padding: 3rem 0;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
+}
+.MKcomment {
+  width: 80%;
+  margin: 0 auto;
+}
+.MKcom-header {
+  width: 80%;
+  margin: 0 auto;
+}
+.MKcom-header-title {
+  font-size: 1.5rem;
+}
+.MKcom-box {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.301);
+  justify-items: center;
+}
+
+.MKcom-name {
+  color: #f5df4d;
+  font-size: 1rem;
+  margin-bottom: -10px;
+}
+.MKcom-msn > h6 {
+  font-weight: 400;
+  width: 13rem;
+}
+.MKcom-avatar {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #4994be;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+.MKcom-avatar > span {
+  color: #4994be;
+  padding-left: auto;
+}
+.MKcommBtn {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.MKcomButton:hover {
+  background-color: #f5df4d;
+}
+.MKcomButton {
+  width: 200px;
+  height: 35px;
+  border: 1px solid #f5df4d;
+  border-radius: 90px;
+  text-align: center;
+}
+
+/* RWD */
+@media screen and (max-width: 992px) {
+  .MKrowAvatar {
+    margin-bottom: 6rem;
+  }
+  .MKadoptPageAvatar {
+    width: 100%;
+  }
+  .MKsmall-avatar {
+    display: none;
+  }
+  .MKrowDetail {
+    width: 90%;
+    margin: auto;
+  }
+  .MKbutton-G {
+    display: none;
+  }
+  .MKdetail-ul {
+    width: 100%;
+    display: flex;
+  }
+  .MKrowComment {
+    width: 95%;
+  }
+  .MKcomment {
+    width: 100%;
+  }
+  .MKcommBtn {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+}
