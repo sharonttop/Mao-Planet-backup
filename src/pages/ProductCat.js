@@ -1,12 +1,12 @@
 import ProductDetails from '../components/ProductDetails';
 import ProductList from '../components/ProductList'
-import ProductListCat from '../components/ProductList copy'
+import ProductListCatPlay from '../components/ProductList-Cat-Play'
 
 function ProductCat(props) {
 //   const { auth } = props
   return (
     <>
-      <ProductListCat />
+      <ProductListCatPlay />
     </>
   )
 }
