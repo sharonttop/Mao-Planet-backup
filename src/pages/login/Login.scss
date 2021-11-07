@@ -74,3 +74,24 @@
     font-size:0.9rem;
     color: #939597;
 }
+.LoginCatHand1{
+    position: absolute;
+    margin-left: 340px;
+    margin-top: 300px;
+    transform:rotate(10deg);
+}
+.LoginCatHand2{
+    position: absolute;
+    margin-left: 900px;
+    margin-top: 0px;
+    transform:rotate(10deg);
+}
+@media (max-width: 768px) { 
+    .LoginCatHand1{
+       display: none;
+    }
+    .LoginCatHand2{
+        display: none;
+    }
+
+}

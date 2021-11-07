@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import conf, { LOGIN_JWT } from '../../config'
 import { FaPaw } from 'react-icons/fa'
+import CatHand1 from '../../images/Login/cat hand1.svg'
+import CatHand2 from '../../images/Login/cat hand2.svg'
 import './Login.scss'
 
 function Login(props) {
@@ -174,6 +176,12 @@ function Login(props) {
 
   const loginDisplay = (
     <>
+      <div className="LoginCatHand1">
+        <img src={CatHand1} style={{ width: '110px' }} alt="" />
+      </div>
+      <div className="LoginCatHand2">
+        <img src={CatHand2} style={{ width: '120px' }} alt="" />
+      </div>
       <div className="card loginCard">
         <div className="loginBanner">
           <h2>登入會員</h2>

@@ -7,11 +7,19 @@ import MemberYouShouldKnow from '../../images/Member/MemberYouShouldKnow.png'
 export default class MultipleItems extends Component {
   render() {
     const settings = {
+      // dots: true,
+      // infinite: true,
+      // speed: 500,
+      // slidesToShow: 3,
+      // slidesToScroll: 3,
       dots: true,
       infinite: true,
-      speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: 'linear',
     }
     return (
       <div className="memberCardCarouselWarp">
@@ -61,6 +69,17 @@ const cssstyle = `
 .memberCardCarousel>img{
     width: 85%;
 }
+@media (max-width: 768px) {
+  .memberCardCarousel>img{
+    width: 90%;
+    }
+   .memberCardCarouselWarp{
+    width: 220%;
+     margin-top: 70px;
+    margin-left: 60px;
+   }
+ }
+
 .slick-next:before, .slick-prev:before {
     color: #000;
 }

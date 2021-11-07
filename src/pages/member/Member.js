@@ -8,7 +8,11 @@ import AddressEdit from './admin/user/AddressEdit'
 import PasswordChange from './admin/user/PasswordChange/PasswordChange'
 import PetId from './admin/user/petId/PetId'
 import './Member.scss'
+// 引入圖片和元件
 import MemberBackground from '../../images/Member/memberBackground3.svg'
+import MemberDogBtn from '../../images/Member/MemberDogBtn.png'
+import MemberCatBtn from '../../images/Member/MemberCatBtn.png'
+
 import MemberCard from './MemberCard'
 import { FaPaw } from 'react-icons/fa'
 
@@ -19,23 +23,51 @@ function Member(props) {
       <div className="MemberBackground">
         <p>
           <FaPaw />
-          為您推薦Recommend
+          &nbsp;為您推薦Recommend
         </p>
         <img src={MemberBackground} alt="" />
       </div>
       <MemberCard />
-
-      <button
-        type="button"
-        onClick={() => {
-          logout()
-          props.history.push('/home')
-          window.location.reload() //強制刷新頁面
-        }}
-        className="btn btn-primary"
-      >
-        登出
-      </button>
+      {/*  */}
+      <div className="col-sm-8">
+        <div className="card memberNewsCard">
+          <div className="memberNews">
+            <p>最新公告</p>
+          </div>
+          <div className="memberNewsWrap">
+            <ul>
+              <li>
+                <Link to="/admin/user/infoedit">
+                  <FaPaw />
+                  &nbsp;鏟屎官大補帖更新11/19
+                </Link>
+              </li>
+              <hr className="MemberNewLineStyle" />
+              <li>
+                <Link to="/admin/user/petid">
+                  <FaPaw />
+                  &nbsp;11月份最新商品資訊
+                </Link>
+              </li>
+              <hr className="MemberNewLineStyle" />
+              <li>
+                <Link to="/admin/user/order">
+                  <FaPaw />
+                  &nbsp;登入毛孩ID即享折價優惠
+                </Link>
+              </li>
+              <hr className="MemberNewLineStyle" />
+              <li>
+                <Link to="/admin/user/order">
+                  <FaPaw />
+                  &nbsp;系統維修公告
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/*  */}
     </>
   )
   console.log(props)
@@ -74,9 +106,9 @@ function Member(props) {
 
   return (
     <>
-      <div className="container">
+      <div className="container MemberContainer">
         <div className="row">
-          <div className="col-sm-4">
+          <div className="col-sm-4 memberMessage">
             <div className="card memberCard">
               <div className="memberBanner">
                 <p>會員訊息</p>
@@ -86,26 +118,56 @@ function Member(props) {
                   <li>
                     <Link to="/admin/user/infoedit">個人資料</Link>
                   </li>
+                  <hr className="MemberLineStyle" />
                   <li>
                     <Link to="/admin/user/petid">毛孩ID</Link>
                   </li>
+                  <hr className="MemberLineStyle" />
                   <li>
                     <Link to="/admin/user/order">我的訂單</Link>
                   </li>
+                  <hr className="MemberLineStyle" />
                   <li>
                     <Link to="/admin/user/#/">追蹤清單</Link>
                   </li>
+                  <hr className="MemberLineStyle" />
                   <li>
                     <Link to="/admin/user/addressedit">收貨地址</Link>
                   </li>
+                  <hr className="MemberLineStyle" />
                   <li>
                     <Link to="/admin/user/passwordchange">密碼修改</Link>
+                  </li>
+                  <hr className="MemberLineStyle" />
+                  <li>
+                    <Link
+                      type="button"
+                      onClick={() => {
+                        logout()
+                        props.history.push('/home')
+                        window.location.reload() //強制刷新頁面
+                      }}
+                      className="btn btn-primary logoutMemberBtn"
+                    >
+                      登出
+                    </Link>
                   </li>
                 </ul>
               </div>
             </div>
+
+            <div className="MemberDogBtn">
+              <Link to="/productlist/dog">
+                <img src={MemberDogBtn} alt="" />
+              </Link>
+            </div>
+            <div className="MemberCatBtn">
+              <Link to="/productlist/cat">
+                <img src={MemberCatBtn} alt="" />
+              </Link>
+            </div>
           </div>
-          <div className="col-sm-8">
+          <div className="col-sm-8 MemberDefault">
             {/* <h1>會員管理區</h1> */}
             <Component />
           </div>
