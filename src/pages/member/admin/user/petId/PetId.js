@@ -159,7 +159,7 @@ function PetId(props) {
                     }}
                   >
                     {/* 第一個值會用state的初始值 */}
-                    <option value="">CAat/Dog</option>
+                    <option value="">Cat/Dog</option>
                     <option value="貓">貓</option>
                     <option value="狗">狗</option>
                   </select>
