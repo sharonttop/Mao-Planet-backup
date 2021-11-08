@@ -1,12 +1,10 @@
-import ProductDetails from '../components/ProductDetails';
-import ProductList from '../components/ProductList'
-
+import ProductListCatPlay from '../components/ProductListCatPlay'
 
 function ProductCat(props) {
-//   const { auth } = props
+  //   const { auth } = props
   return (
     <>
-      <ProductList />
+      <ProductListCatPlay />
     </>
   )
 }

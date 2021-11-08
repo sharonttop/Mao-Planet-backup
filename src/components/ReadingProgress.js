@@ -1,43 +1,50 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import { ProgressBar } from 'react-bootstrap'
+import throttle from 'lodash.throttle'
 import '../Styles/ReadingProgress.scss'
 
-function ReadingProgress({ target }) {
-  const [readingProgress, setReadingProgress] = useState(0)
-  const scrollListener = () => {
-    if (!target.current) {
-      return
-    }
+function getPageHeight() {
+  const body = document.body
+  const html = document.documentElement
 
-    const element = target.current
-    const totalHeight =
-      element.clientHeight - element.offsetTop - window.innerHeight
-    const windowScrollTop =
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0
+  return Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  )
+}
 
-    if (windowScrollTop === 0) {
-      return setReadingProgress(0)
-    }
-
-    if (windowScrollTop > totalHeight) {
-      return setReadingProgress(100)
-    }
-
-    setReadingProgress((windowScrollTop / totalHeight) * 100)
-  }
+function ReadingProgress() {
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollListener)
-    return () => window.removeEventListener('scroll', scrollListener)
-  })
+    const handleScroll = throttle(() => {
+      const { scrollY, innerHeight } = window
+      const pageHeight = getPageHeight()
+      setProgress(
+        !scrollY
+          ? 0
+          : scrollY + innerHeight >= pageHeight
+          ? 100
+          : Math.round(
+              ((scrollY + innerHeight * (scrollY / pageHeight)) / pageHeight) *
+                100
+            )
+      )
+    }, 100)
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   return (
-    <div
-      className="reading-progress-bar"
-      style={{ width: `${readingProgress}%` }}
-    />
+    <div className="ACbarPosition">
+      <ProgressBar min={0} max={100} now={progress} />
+    </div>
   )
 }
 

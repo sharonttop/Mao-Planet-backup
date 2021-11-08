@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  useLocation,
+  // useLocation,
 } from 'react-router-dom'
 import React, { useState } from 'react'
 import './Styles/global.scss'
@@ -14,12 +14,17 @@ import AdoptList from './pages/AdoptList'
 // import ProductList from './pages/ProductList'
 import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
+import ProductListCatFood from './components/ProductListCatFood'
+import ProductListCatToilet from './components/ProductListCatToilet'
+import ProductListCatHealth from './components/ProductListCatHealth'
+import ProductListCatOutdoor from './components/ProductListCatOutdoor'
 import HotelList from './pages/HotelList'
 import BlogList from './pages/BlogList/BlogList'
 import BlogArticle1 from './pages/BlogArticle/BlogArticle1'
 import SignUp from './pages/sign-up/SignUp'
 import Login from './pages/login/Login'
 import Member from './pages/member/Member'
+// import ReadingProgress from './components/ReadingProgress'
 import NotFoundPage from './pages/NotFoundPage'
 
 // 組合用元件
@@ -66,6 +71,7 @@ function App(props) {
       <>
         {/* LOGO+標題+導覽列+上方選單 */}
         <MyNavbar auth={auth} />
+
         {/* 主內容區 */}
         <MainContent>
           <MultiLevelBreadCrumb />
@@ -84,7 +90,19 @@ function App(props) {
               <Route path="/productlist/dog">
                 <ProductDog />
               </Route>
-              <Route path="/productlist/cat">
+              <Route path="/productlist/cat/food" exact>
+                <ProductListCatFood />
+              </Route>
+              <Route path="/productlist/cat/toilet" exact>
+                <ProductListCatToilet />
+              </Route>
+              <Route path="/productlist/cat/health" exact>
+                <ProductListCatHealth />
+              </Route>
+              <Route path="/productlist/cat/outdoor" exact>
+                <ProductListCatOutdoor />
+              </Route>
+              <Route path="/productlist/cat/" exact>
                 <ProductCat />
               </Route>
               {/* <Route path="/productlist">
