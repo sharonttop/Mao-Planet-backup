@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-import { BiSearch, BiUser, BiHeart, BiHomeAlt, BiCartAlt } from 'react-icons/bi'
+import { BiSearch, BiUser, BiCartAlt } from 'react-icons/bi'
 import Avatar from './Avatar'
+// import ReadingProgress from '../components/ReadingProgress'
 import logo from '../images/logo.svg'
 import '../Styles/MyNavbar.scss'
 
@@ -12,9 +13,7 @@ function MyNavbar(props) {
   const { auth } = props
   return (
     <>
-      <div className="ACtopYellow">
-        <p></p>
-      </div>
+      {/* <div className="ACtopYellow"></div> */}
 
       <Navbar
         collapseOnSelect
@@ -117,18 +116,21 @@ function MyNavbar(props) {
                 <Avatar />
               </Nav.Link>
             )}
-            <Nav.Link href="#/" className="ACnavIcon">
+            {/* <Nav.Link href="#/" className="ACnavIcon">
               <BiHeart />
             </Nav.Link>
             <Nav.Link href="#/" className="ACnavIcon">
               <BiHomeAlt />
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link href="#/" className="ACnavIcon">
               <BiCartAlt />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      {/* <div>
+        <ReadingProgress />
+      </div> */}
     </>
   )
 }

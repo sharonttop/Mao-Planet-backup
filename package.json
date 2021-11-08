@@ -16,6 +16,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jquery": "^3.6.0",
+    "lodash.throttle": "4.1.1",
     "mdbreact": "^5.1.0",
     "nuka-carousel": "^4.8.1",
     "prettier": "^2.4.1",

@@ -20,8 +20,7 @@ function BlogArticle1(props) {
 
   return (
     <>
-      <ReadingProgress target={target} />
-      <div className={`post`} ref={target}></div>
+      
 
       <Container id="ACblogContent" className="d-flex justify-content-center">
         <Row>
