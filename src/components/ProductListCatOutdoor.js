@@ -5,10 +5,11 @@ import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
 import { Link } from 'react-router-dom'
 
-import ProductDetails from './ProductDetails'
-
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
+
+import subHero_catOutdoor from '../images/ProductList-images/cat-outdoor.jpeg'
+
 
 const ProductListOutdoor = (tag)=>{
     const catOutdoor = CAT_PRODUCT["Cat-Outdoor"];
@@ -24,8 +25,8 @@ const ProductListOutdoor = (tag)=>{
         <Link to="/productlist/cat/health"><ProductListTag >貓貓保健</ProductListTag></Link>
         <Link to="/productlist/cat/outdoor"><ProductListTag >貓貓出遊</ProductListTag></Link>
         </div>
-            <ProductListSubHero />
-            <ProductListTitle />
+            <ProductListSubHero subHero_cat={subHero_catOutdoor}/>
+            <ProductListTitle subTitle={"貓貓出遊"} engTitle={"Outdoor"}/>
         <div className='AG-productCards'>
         {catOutdoor.map((item) => {
             return (
