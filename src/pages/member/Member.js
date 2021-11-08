@@ -37,28 +37,28 @@ function Member(props) {
           <div className="memberNewsWrap">
             <ul>
               <li>
-                <Link to="/admin/user/infoedit">
+                <Link to="/bloglist">
                   <FaPaw />
                   &nbsp;鏟屎官大補帖更新11/19
                 </Link>
               </li>
               <hr className="MemberNewLineStyle" />
               <li>
-                <Link to="/admin/user/petid">
+                <Link to="/productlist/cat">
                   <FaPaw />
                   &nbsp;11月份最新商品資訊
                 </Link>
               </li>
               <hr className="MemberNewLineStyle" />
               <li>
-                <Link to="/admin/user/order">
+                <Link to="/admin/user/petid">
                   <FaPaw />
                   &nbsp;登入毛孩ID即享折價優惠
                 </Link>
               </li>
               <hr className="MemberNewLineStyle" />
               <li>
-                <Link to="/admin/user/order">
+                <Link to="/home">
                   <FaPaw />
                   &nbsp;系統維修公告
                 </Link>

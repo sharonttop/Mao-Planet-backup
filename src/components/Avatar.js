@@ -37,8 +37,8 @@ function Avatar(props) {
   //[props.location.pathname]
 
   const avatarStyle = {
-    width: '45px',
-    height: '45px',
+    width: '38px',
+    height: '38px',
   }
 
   const avatarImg = avatar
