@@ -24,7 +24,7 @@ function PetId(props) {
     { id: '', petImgSrc: '', petName: '', breed: '', petBirthday: '' },
   ])
   //上傳照片
-  // const [petImgSrc, setPetImgSrc] = useState('')
+  const [petImgSrc, setPetImgSrc] = useState('')
 
   //下拉選單:汪喵
   const [selectedOption, setSelectedOption] = useState('')
@@ -55,8 +55,6 @@ function PetId(props) {
     setInputList(list)
   }
 
-  const petImg = inputList.petImgSrc
-
   const doUpload = async (e) => {
     //Using Fetch
     var formData = new FormData()
@@ -69,8 +67,8 @@ function PetId(props) {
     const r = await axios.post(UPLOAD_AVATAR, formData)
 
     console.log(r.data)
-    console.log(inputList.petImgSrc)
-    // setInputList(petImgSrc)
+    // console.log(r.data.filename)
+    setPetImgSrc(r.data.filename)
     // handleChange(e, i)
   }
   return (
@@ -98,26 +96,28 @@ function PetId(props) {
                 type="hidden"
                 className="form-control"
                 name="avatar"
-                // value={petImgSrc}
+                value={petImgSrc}
               /> */}
+              <form name="form1" style={{ display: 'none' }}>
+                <input
+                  className="form-control"
+                  type="file"
+                  id="avatar"
+                  name="avatar"
+                  accept="image/*"
+                  onChange={doUpload}
+                  data_key={i}
+                />
+              </form>
               <form className="petIdForm" name="petId_form">
                 <div
                   className="petIdAvatar"
-                  onClick={(e) => e.target.querySelector('.uploadFile').click()}
+                  onClick={(e) => document.querySelector('#avatar').click()}
                 >
-                  <input
-                    className="uploadFile"
-                    accept="image/*"
-                    type="file"
-                    name="avatar"
-                    style={{ display: 'none' }}
-                    onChange={doUpload}
-                    data_key={i}
-                  />
                   <img
                     src={
-                      petImg
-                        ? IMG_PATH + '/' + petImg
+                      petImgSrc
+                        ? IMG_PATH + '/' + petImgSrc
                         : IMG_PATH + '/default-avatar.svg'
                     }
                     alt=""
@@ -129,15 +129,13 @@ function PetId(props) {
                     type="hidden"
                     className="form-control"
                     name="avatar"
-                    value={item.petImgSrc}
-                    onChange={(e) => handleChange(e, i)}
+                    value={petImgSrc}
                   />
                 </div>
 
                 <div className="petIdForm-group">
                   <label>毛孩名</label>
                   <input
-                    style={{ fontSize: 0.9 }}
                     className="form-control"
                     type="text"
                     name="petName"
@@ -149,7 +147,6 @@ function PetId(props) {
                 <div className="petIdForm-group">
                   <label>汪喵</label>
                   <select
-                    style={{ fontSize: 0.9 }}
                     className="form-control"
                     name="breed"
                     value={selectedOption}
