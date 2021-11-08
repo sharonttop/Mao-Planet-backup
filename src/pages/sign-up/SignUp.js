@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import conf, { IMG_PATH, UPLOAD_AVATAR, REGISTER } from '../../config'
 import { withRouter } from 'react-router-dom'
+import CatHand1 from '../../images/Login/cat hand1.svg'
+import CatHand2 from '../../images/Login/cat hand2.svg'
 
 import axios from 'axios'
 import './SignUp.scss'
@@ -135,6 +137,12 @@ function SignUp(props) {
 
   const display = (
     <>
+      <div className="MemberCatHand1">
+        <img src={CatHand1} style={{ width: '110px' }} alt="" />
+      </div>
+      <div className="MemberCatHand2">
+        <img src={CatHand2} style={{ width: '125px' }} alt="" />
+      </div>
       <div className="card signCard">
         <div className="signUpBanner">
           <h2>註冊</h2>
