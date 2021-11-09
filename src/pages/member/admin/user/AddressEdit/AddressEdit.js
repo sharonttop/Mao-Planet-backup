@@ -150,7 +150,7 @@ function AddressEdit(props) {
                 getAddressData()
               }}
             />
-            <label>收件人資料與顧客資料相同</label>
+            &nbsp;<label>收件人資料與顧客資料相同</label>
           </section>
           <form
             className="addressEditForm"

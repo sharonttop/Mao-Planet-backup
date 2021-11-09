@@ -20,6 +20,24 @@ import './PetId.scss'
 
 function PetId(props) {
   console.log({ conf })
+  const [isLoading, setIsLoading] = useState(true)
+  // 自動1秒後關閉指示的spinner
+  useEffect(() => {
+    if (isLoading) {
+      setTimeout(() => setIsLoading(false), 1000)
+    }
+  }, [isLoading])
+
+  const loading = (
+    <>
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
+    </>
+  )
+
   const [inputList, setInputList] = useState([
     { id: '', petImgSrc: '', petName: '', breed: '', petBirthday: '' },
   ])
@@ -71,7 +89,8 @@ function PetId(props) {
     setPetImgSrc(r.data.filename)
     // handleChange(e, i)
   }
-  return (
+
+  const display = (
     <>
       <div className="petIdCouponAD">
         <img
@@ -93,11 +112,11 @@ function PetId(props) {
             </div>
             <div key={i} className="wrap">
               {/* <input
-                type="hidden"
-                className="form-control"
-                name="avatar"
-                value={petImgSrc}
-              /> */}
+              type="hidden"
+              className="form-control"
+              name="avatar"
+              value={petImgSrc}
+            /> */}
               <form name="form1" style={{ display: 'none' }}>
                 <input
                   className="form-control"
@@ -259,6 +278,8 @@ function PetId(props) {
       {/* <pre>{JSON.stringify(inputList, null, 2)}</pre> */}
     </>
   )
+
+  return <>{isLoading ? loading : display}</>
 }
 
 export default withRouter(PetId)

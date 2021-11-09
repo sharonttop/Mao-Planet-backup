@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 // 子頁面區域元件
@@ -17,8 +17,25 @@ import MemberCard from './MemberCard'
 import { FaPaw } from 'react-icons/fa'
 
 function Member(props) {
-  // 預設出現的文字元件
-  const Default = () => (
+  const [isLoading, setIsLoading] = useState(true)
+  // 自動1秒後關閉指示的spinner
+  useEffect(() => {
+    if (isLoading) {
+      setTimeout(() => setIsLoading(false), 1500)
+    }
+  }, [isLoading])
+
+  const loading = (
+    <>
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
+    </>
+  )
+
+  const display = (
     <>
       <div className="MemberBackground">
         <p>
@@ -70,6 +87,8 @@ function Member(props) {
       {/*  */}
     </>
   )
+  // 預設出現的文字元件
+  const Default = () => <>{isLoading ? loading : display}</>
   console.log(props)
 
   // 網址參數對應頁面區塊元件
@@ -155,7 +174,7 @@ function Member(props) {
                 </ul>
               </div>
             </div>
-          {/* 寵物廣告板 */}
+            {/* 寵物廣告板 */}
             <div className="MemberDogBtn">
               <Link to="/productlist/dog">
                 <img src={MemberDogBtn} alt="" />
