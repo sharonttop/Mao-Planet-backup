@@ -1,22 +1,25 @@
+// 毛孩找家
 #adoptSection {
   width: 100%;
-  height: 800px;
+  height: 700px;
   background-color: #e5e5e5;
-  padding: auto;
+  // padding: 10% 0;
   position: relative;
 }
 
 .ACadoptBN {
-  margin: 80px 0px;
+  width: 580px;
+  height: 100%;
+  padding: 30% 0;
 }
 
 .ACadoptBN img {
-  width: 80%;
+  width: 85%;
 }
 
 .ACadoptTitle {
   position: absolute;
-  top: 20%;
+  top: 200px;
   left: 16%;
   z-index: 20;
 }
@@ -29,7 +32,7 @@
 
 .ACadoptText {
   position: absolute;
-  top: 60%;
+  top: 450px;
   left: 15%;
   z-index: 20;
 }
@@ -38,28 +41,36 @@
   color: #646464;
 }
 
-.m-ACadoptText p{
+.m-ACadoptText {
+  position: absolute;
+  top: 600px;
+  left: 10%;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+.m-ACadoptText p {
   color: #646464;
 }
 
 .ACadoptBtn {
   position: absolute;
-  top: 80%;
-  left: 15%;
+  top: 600px;
+  left: 16%;
   z-index: 20;
 }
 
-
 #ACadoptSection3Card {
-  width: 100%;
-  height: 550px;
   background: linear-gradient(to bottom, #e5e5e5 20%, #ffffff);
-  margin-bottom:15%;
+  padding: 10% 0;
+  // width: 100%;
+  // height: 550px;
+  // margin-bottom:15%;
 }
 
-
+// 毛孩雜貨
 #ACproductSection {
-  margin: 100px 0px;
+  margin: 10% 0;
   position: relative;
 }
 
@@ -67,7 +78,7 @@
   padding-right: 3px;
 }
 
-.ACdogProductBN img{
+.ACdogProductBN img {
   width: 100%;
 }
 
@@ -78,58 +89,13 @@
   z-index: 10;
 }
 
-.ACGrayOutlineBtn {
-  width: 200px;
-  border-radius: 20px;
-  border: 2px solid #939597;
-  background-color: #fff;
-  color: #646464;
-  margin: 5px 0px 25px 0px;
-  text-align: center;
-}
-
-.ACGrayOutlineBtn:hover {
-  background-color: #939597;
-  border: 2px solid #939597;
-  color: white;
-}
-
-.m-ACdogProductBN img{
-  width: 100%;
-}
-
-
-.m-ACdogBtn {
-  position: absolute;
-  right: 25%;
-  bottom: 50%;
-  z-index: 10;
-}
-
-.m-ACGrayOutlineBtn {
-  width: 180px;
-  border-radius: 20px;
-  border: 2px solid #939597;
-  background-color: #fff;
-  color: #646464;
-  margin: 5px 0px 25px 0px;
-  text-align: center;
-}
-
-.m-GrayOutlineBtn:hover {
-  background-color: #939597;
-  border: 2px solid #939597;
-  color: white;
-}
-
-.ACcatProductBN  {
+.ACcatProductBN {
   padding-left: 3px;
 }
 
-.ACcatProductBN  img{
+.ACcatProductBN img {
   width: 100%;
 }
-
 
 .ACcatBtn {
   position: absolute;
@@ -138,49 +104,37 @@
   z-index: 10;
 }
 
-.ACYellowOutlineBtn {
-  width: 200px;
-  border-radius: 20px;
-  border: 2px solid #f5df4d;
-  background-color: #fff;
-  color: #646464;
-  margin: 5px 0px 25px 0px;
-  text-align: center;
+.m-ACdogProductBN {
+  position: relative;
 }
 
-.ACYellowOutlineBtn:hover {
-  background-color: #f5df4d;
-  border: 2px solid #f5df4d;
-  color: white;
+.m-ACdogProductBN img {
+  width: 100%;
 }
 
-.m-ACcatProductBN img{
+.m-ACdogBtn {
+  // margin: 5% auto;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+}
+
+.m-ACcatProductBN {
+  position: relative;
+  margin-bottom: 20%;
+}
+
+.m-ACcatProductBN img {
   width: 100%;
 }
 
 .m-ACcatBtn {
   position: absolute;
-  left: 25%;
-  bottom: 0%;
-  z-index: 10;
+  top: 82%;
+  left: 3%;
 }
 
-.m-ACYellowOutlineBtn {
-  width: 180px;
-  border-radius: 20px;
-  border: 2px solid #f5df4d;
-  background-color: #fff;
-  color: #646464;
-  margin: 5px 0px 25px 0px;
-  text-align: center;
-}
-
-.m-ACYellowOutlineBtn:hover {
-  background-color: #f5df4d;
-  border: 2px solid #f5df4d;
-  color: white;
-}
-
+// 毛孩雜貨：3張卡片
 #ACproductSection3Card {
   margin-top: 100px;
   margin-bottom: 100px;
@@ -190,10 +144,9 @@
   position: relative;
 }
 
-.ACnewArrCard img{
+.ACnewArrCard img {
   width: 100%;
 }
-
 
 .ACtag {
   width: 150px;
@@ -223,13 +176,13 @@
 }
 
 .ACnewArrCardText span {
-  color:#fff;
+  color: #fff;
   font-size: 1.5rem;
   letter-spacing: 3px;
   font-family: 'Chelsea Market', cursive;
 }
 
-
+// 毛孩旅宿
 #AChotelSection {
   width: 100%;
   height: 700px;
@@ -250,7 +203,6 @@
 
 .m-ACHotelBN img {
   width: 80%;
-  
 }
 
 .ACYellowDeco {
@@ -288,10 +240,11 @@
   color: #646464;
 }
 
-.m-AChotelText p{
+.m-AChotelText p {
   color: #646464;
 }
 
+// 毛孩愛美
 #ACsalonSection {
   width: 100%;
   height: 650px;
@@ -307,7 +260,6 @@
 
 .m-ACsalonBN img {
   width: 80%;
-  
 }
 
 .GrayDeco {
@@ -358,5 +310,5 @@
 }
 
 .AChotelBtn {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }

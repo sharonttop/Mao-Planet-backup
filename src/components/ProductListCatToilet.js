@@ -11,7 +11,7 @@ import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
 
 const ProductListCatToilet = (tag) => {
-//   const menuItems = []
+  //   const menuItems = []
   const catToilet = CAT_PRODUCT['Cat-Toilet']
   console.log(catToilet)
 
@@ -42,6 +42,7 @@ const ProductListCatToilet = (tag) => {
             return (
               <>
                 <ProductCard
+                  ID={item.ID}
                   ProductImg={item.URL}
                   ProductTitle={item.title}
                   ProductPrice={item.price}

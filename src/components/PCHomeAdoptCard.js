@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Card, Button } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import AdoptCard1 from '../images/Home/AdoptCard1_300x300.jpg'
 import AdoptCard2 from '../images/Home/AdoptCard2_300x300.jpg'
@@ -9,19 +9,19 @@ import '../Styles/HomeAdoptCard.scss'
 function PCHomeAdoptCard() {
   return (
     <>
-      <Container className="py-5 d-md-block d-none">
-        <Row className="d-flex justify-content-center">
-          <div className="col-10 col-md-3">
-            <Card className="ACadoptCard1 p-1">
-              <Link to="/adoptlist" className="ACadoptCardContent">
+      <div className="col-12 d-md-block d-none">
+        <div className="d-flex justify-content-center mx-auto">
+          <div>
+            <Card className="ACadoptCard p-1 mx-3">
+              <Link to="/adoptlist/adoptpage/36" className="ACadoptCardContent">
                 <Card.Img
                   src={AdoptCard1}
-                  className="ACadoptAvatar mt-3 mx-auto d-flex justify-content-center"
+                  className="ACadoptAvatar mt-3 mx-auto pt-3 d-flex justify-content-center"
                 />
                 <Card.Body>
-                  <Card.Title className="ACadoptcardTitle">小呆</Card.Title>
+                  <Card.Title className="ACadoptcardTitle pt-3">小呆</Card.Title>
                   <Card.Text className="ACadoptcardText">
-                    小呆是隻2歲左右的公貓，看起來呆呆的他，實際上是很聰明、愛玩而且貪吃的貓咪喔！
+                    小呆是隻2歲左右的公貓，看起來呆呆的他，實際上是很聰明、愛玩而且貪吃的貓咪喔！等待有緣人來帶他回家！
                   </Card.Text>
                 </Card.Body>
               </Link>
@@ -34,19 +34,19 @@ function PCHomeAdoptCard() {
               </Link>
             </div>
           </div>
-          <div className="col-10 col-md-3">
-            <Card className="ACcard1 p-1">
-              <Link to="/adoptlist" className="ACadoptCardContent">
+          <div>
+            <Card className="ACadoptCard p-1 mx-3">
+              <Link to="/adoptlist/adoptpage/38" className="ACadoptCardContent">
                 <Card.Img
                   src={AdoptCard2}
-                  className="ACadoptAvatar mt-3 mx-auto d-flex justify-content-center"
+                  className="ACadoptAvatar mt-3 mx-auto pt-3 d-flex justify-content-center"
                 />
                 <Card.Body>
-                  <Card.Title className="ACadoptcardTitle">
-                    小虎、小斑姐妹花
+                  <Card.Title className="ACadoptcardTitle pt-3">
+                    牛奶、花生姐妹花
                   </Card.Title>
                   <Card.Text className="ACadoptcardText">
-                    小虎和小斑是姊妹，出生沒多久媽媽就不見了，獨留她們在炙熱的陽台上，幸好愛媽即時發現...
+                    牛奶和花生是姊妹，出生沒多久媽媽就不見了，獨留她們在炙熱的陽台上，幸好愛媽即時發現才讓他們活了下來！
                   </Card.Text>
                 </Card.Body>
               </Link>
@@ -59,17 +59,17 @@ function PCHomeAdoptCard() {
               </Link>
             </div>
           </div>
-          <div className="col-10 col-md-3">
-            <Card className="ACcard1 p-1">
-              <Link to="/adoptlist" className="ACadoptCardContent">
+          <div>
+            <Card className="ACadoptCard p-1 mx-3">
+              <Link to="/adoptlist/adoptpage/39" className="ACadoptCardContent">
                 <Card.Img
                   src={AdoptCard3}
-                  className="ACadoptAvatar mt-3 mx-auto d-flex justify-content-center"
+                  className="ACadoptAvatar mt-3 mx-auto pt-3 d-flex justify-content-center"
                 />
                 <Card.Body>
-                  <Card.Title className="ACadoptcardTitle">毛毛</Card.Title>
+                  <Card.Title className="ACadoptcardTitle pt-3">毛毛</Card.Title>
                   <Card.Text className="ACadoptcardText">
-                    被發現時躲在大橋下發抖，幸好在愛媽的幫助下逐漸恢復健康，現在等待有緣人給他一個家！
+                    被發現時躲在下著大雨的大橋下發抖，幸好在愛媽的幫助下逐漸恢復健康，毛色變得光滑柔亮，現在等待有緣人給他一個家!
                   </Card.Text>
                 </Card.Body>
               </Link>
@@ -82,8 +82,8 @@ function PCHomeAdoptCard() {
               </Link>
             </div>
           </div>
-        </Row>
-      </Container>
+        </div>
+      </div>
     </>
   )
 }

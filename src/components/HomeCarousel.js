@@ -9,7 +9,6 @@ import { Button } from 'react-bootstrap'
 import slider1 from '../images/Home/slider1_1720x800.png'
 import slider2 from '../images/Home/slider2_1720x800.png'
 import slider3 from '../images/Home/slider3_1720x800.png'
-import sliderBar from '../images/Home/sliderBar_800x80.svg'
 import mobileslider1 from '../images/Home/mobileslider1_375x500.png'
 import '../Styles/HomeCarousel.scss'
 
@@ -27,8 +26,8 @@ function HomeCarousel() {
   return (
     <>
       {/* PC */}
-      <Container fluid className="ACcarouselSection p-0 d-md-block d-none">
-        <MDBContainer fluid className="pb-5 p-0">
+      <div id="ACcarouselSection" className="p-0 d-md-block d-none">
+        <MDBContainer className="ACslider col-md-11 d-md-block d-none">
           <MDBCarousel
             activeItem={1}
             length={3}
@@ -40,7 +39,7 @@ function HomeCarousel() {
               <MDBCarouselItem itemId="1">
                 <MDBView>
                   <img
-                    className="ACsliderCSS d-block container-fluid"
+                    className="ACsliderPic d-block"
                     src={slider1}
                     alt="First slide"
                   />
@@ -53,7 +52,7 @@ function HomeCarousel() {
               <MDBCarouselItem itemId="2">
                 <MDBView>
                   <img
-                    className="ACsliderCSS d-block container-fluid"
+                    className="ACsliderPic d-block"
                     src={slider2}
                     alt="Second slide"
                   />
@@ -68,15 +67,15 @@ function HomeCarousel() {
               <MDBCarouselItem itemId="3">
                 <MDBView>
                   <img
-                    className="ACsliderCSS d-block container-fluid"
+                    className="ACsliderPic d-block"
                     src={slider3}
                     alt="Third slide"
                   />
-                  <MDBMask overlay="black-slight" />
+                  <MDBMask overlay="black-light" />
                 </MDBView>
                 <MDBCarouselCaption>
                   <h1 className="h1-responsive mb-md-5">
-                    錢錢，我需要那個酷東西！
+                    鏟屎官！我需要那個酷東西
                   </h1>
                 </MDBCarouselCaption>
               </MDBCarouselItem>
@@ -84,10 +83,10 @@ function HomeCarousel() {
           </MDBCarousel>
         </MDBContainer>
 
-        <div className="container ACsliderBar">
-          <img src={sliderBar} alt=" " />
-          <div className="row">
-            <div id="ACmember-adopt">
+        <div className="ACcontainer">
+          <div className="ACBar"></div>
+          <div className="ACbarContent row space-around align-items-center">
+            <div id="ACmember-adopt" className="mx-md-4">
               <div className="ACmembericon">
                 <BiHeart />
               </div>
@@ -95,7 +94,7 @@ function HomeCarousel() {
                 <p>加入會員領養毛孩</p>
               </div>
             </div>
-            <div id="ACmember-hotel">
+            <div id="ACmember-hotel" className="mx-md-4">
               <div className="ACmembericon">
                 <BiHomeAlt />
               </div>
@@ -103,7 +102,7 @@ function HomeCarousel() {
                 <p>毛孩旅宿享5%回饋</p>
               </div>
             </div>
-            <div id="ACmember-ID">
+            <div id="ACmember-ID" className="mx-md-4">
               <div className="ACmembericon">
                 <BiGift />
               </div>
@@ -111,7 +110,7 @@ function HomeCarousel() {
                 <p>專屬毛孩ID領生日禮</p>
               </div>
             </div>
-            <div id="ACmember-999">
+            <div id="ACmember-999" className="mx-md-4">
               <div className="ACmembericon">
                 <BiCartAlt />
               </div>
@@ -119,7 +118,7 @@ function HomeCarousel() {
                 <p>全館滿NT$999免運</p>
               </div>
             </div>
-            <div className="ACjoinMemberBtn">
+            <div className="ACjoinMemberBtn mx-md-4 mt-1">
               <Link to="/member">
                 <Button
                   variant="outline-primary"
@@ -134,15 +133,15 @@ function HomeCarousel() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
 
       {/* mobile */}
-      <Container fluid className="m-ACcarouselSection p-0 d-md-none d-block">
-        <div className="m-ACsliderCSS conatiner-fluid p-0 col-12">
+      <div id="m-ACcarouselSection" className="d-md-none d-block">
+        <div className="m-ACslider">
           <h1 className="m-ACsliderTitle">等待。家</h1>
-          <img src={mobileslider1} alt="" className="m-slider1" />
+          <img src={mobileslider1} alt="" />
         </div>
-      </Container>
+      </div>
 
       <Container
         fluid

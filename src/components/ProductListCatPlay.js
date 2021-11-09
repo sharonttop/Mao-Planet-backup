@@ -40,6 +40,7 @@ const ProductListCatPlay = (tag) => {
             return (
               <>
                 <ProductCard
+                  ID={item.ID}
                   ProductImg={item.URL}
                   ProductTitle={item.title}
                   ProductPrice={item.price}

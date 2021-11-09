@@ -42,10 +42,10 @@ const MobileHomeAdoptCard = () => {
                   <MDBCardBody>
                     <MDBCardTitle>小呆</MDBCardTitle>
                     <MDBCardText className="m-ACadoptcardText mb-4">
-                      小呆是隻2歲左右的公貓，看起來呆呆的他，實際上是很聰明、愛玩而且貪吃的貓咪喔！
+                      小呆是隻2歲左右的公貓，看起來呆呆的他，實際上是很聰明、愛玩而且貪吃的貓咪喔！等待有緣人來帶他回家！
                     </MDBCardText>
                     <MDBBtn
-                      href="/adoptlist"
+                      href="/adoptlist/adoptpage/36"
                       className="m-ACYellowOutlineBtn d-flex justify-content-center mx-auto"
                     >
                       了解更多
@@ -62,12 +62,12 @@ const MobileHomeAdoptCard = () => {
                     src={AdoptCard2}
                   />
                   <MDBCardBody>
-                    <MDBCardTitle>小虎、小斑姐妹花</MDBCardTitle>
+                    <MDBCardTitle>牛奶、花生姐妹花</MDBCardTitle>
                     <MDBCardText className="m-ACadoptcardText mb-4">
-                      小虎和小斑是姊妹，出生沒多久媽媽就不見了，獨留她們在炙熱的陽台上，幸好愛媽即時發現...
+                      牛奶和花生是姊妹，出生沒多久媽媽就不見了，獨留她們在炙熱的陽台上，幸好愛媽即時發現才讓他們活了下來！
                     </MDBCardText>
                     <MDBBtn
-                      href="/adoptlist"
+                      href="/adoptlist/adoptpage/38"
                       className="m-ACYellowOutlineBtn d-flex justify-content-center mx-auto"
                     >
                       了解更多
@@ -86,10 +86,10 @@ const MobileHomeAdoptCard = () => {
                   <MDBCardBody>
                     <MDBCardTitle>毛毛</MDBCardTitle>
                     <MDBCardText className="m-ACadoptcardText mb-4">
-                      被發現時躲在大橋下發抖，幸好在愛媽的幫助下逐漸恢復健康，現在等待有緣人給他一個家！
+                    被發現時躲在下著大雨的大橋下發抖，幸好在愛媽的幫助下逐漸恢復健康，毛色變得光滑柔亮，現在等待有緣人給他一個家！
                     </MDBCardText>
                     <MDBBtn
-                      href="/adoptlist"
+                      href="/adoptlist/adoptpage/39"
                       className="m-ACYellowOutlineBtn d-flex justify-content-center mx-auto"
                     >
                       了解更多

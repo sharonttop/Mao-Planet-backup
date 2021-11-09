@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { BiSearch, BiUser, BiCartAlt } from 'react-icons/bi'
+import { useStateValue } from '../StateProvider'
 import Avatar from './Avatar'
 // import ReadingProgress from '../components/ReadingProgress'
 import logo from '../images/logo.svg'
@@ -11,6 +12,7 @@ import { NavLink } from 'react-router-dom'
 
 function MyNavbar(props) {
   const { auth } = props
+  const [{ basket }, dispatch] = useStateValue()
   return (
     <>
       {/* <div className="ACtopYellow"></div> */}
@@ -122,8 +124,13 @@ function MyNavbar(props) {
             <Nav.Link href="#/" className="ACnavIcon">
               <BiHomeAlt />
             </Nav.Link> */}
-            <Nav.Link href="#/" className="ACnavIcon">
+            <Nav.Link
+              as={NavLink}
+              to="/shopping/firststep"
+              className="ACnavIcon"
+            >
               <BiCartAlt />
+              <span className="CartCount">{basket?.length}</span>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

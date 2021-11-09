@@ -1,0 +1,28 @@
+{
+    "Cat-Play": [
+        {
+        "ID": "cp-01",
+        "URL": "https://i.imgur.com/XlYyLWy.png",
+        "title":"Vetreska 未卡 | 動感光波逗貓玩具",
+        "price":"550"
+        },
+        {
+        "ID": "cp-02",
+        "URL": "https://i.imgur.com/KddZzen.png",
+        "title":"Bite Me | 莓莓叭噗 (可藏食)",
+        "price":"300"
+        },
+        {
+        "ID": "cp-03",
+        "URL": "https://i.imgur.com/IKblgqY.png",
+        "title":"PurLab | 花花fafa逗貓棒 (三款)",
+        "price":"190"
+        },
+        {
+        "ID": "cp-04",
+        "URL": "https://i.imgur.com/LlHX7Zq.png",
+        "title":"ZEZE | 花園系列貓薄荷玩偶 (多款)",
+        "price":"290"
+        }
+    ]
+}

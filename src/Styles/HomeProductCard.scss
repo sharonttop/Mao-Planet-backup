@@ -1,4 +1,4 @@
-.product-card-container {
+.AG-product-card-container {
   max-width: 25%;
   // width: 20%;
   display: flex;
@@ -6,12 +6,12 @@
   padding: 15px;
 }
 
-.card-pic-area {
+.AG-card-pic-area {
   width: 100%;
   position: relative;
 }
 
-.overlay {
+.AG-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -21,16 +21,16 @@
   transition: background 0.5s ease;
 }
 
-.card-pic {
+.AG-card-pic {
   width: 100%;
 }
 
-.product-card-container:hover .overlay {
+.AG-product-card-container:hover .AG-overlay {
   display: block;
   background: rgba(0, 0, 0, 0.3);
 }
 
-.hoverBtn {
+.AG-hoverBtn {
   position: absolute;
   width: 85%;
   height: 20%;
@@ -46,7 +46,7 @@
   border-radius: 5px;
 }
 
-.hoverBtn a {
+.AG-hoverBtn a {
   width: 80%;
   font-size: 0.2rem;
   font-weight: 500;
@@ -56,28 +56,28 @@
   text-align: center;
 }
 
-.product-card-container:hover .hoverBtn {
+.AG-product-card-container:hover .AG-hoverBtn {
   opacity: 1;
 }
 
-.title,
-.price {
+.AG-title,
+.AG-price {
   text-align: center;
   font-size: 0.8rem;
 }
 
-.hoverBtn a,
-.title,
-.price {
+.AG-hoverBtn a,
+.AG-title,
+.AG-price {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-.title {
+.AG-title {
   color: #646464;
   font-weight: 500;
   margin-top: 0.8rem;
 }
-.price {
+.AG-price {
   color: #939597;
   margin-top: 0.6rem;
   margin-bottom: 1.2rem;

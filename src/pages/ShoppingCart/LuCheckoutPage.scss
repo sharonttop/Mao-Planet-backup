@@ -1,0 +1,100 @@
+.LAddtocart {
+    color: #646464;
+    /* margin-top: 0.5rem; */
+    /* margin-bottom: 0.5rem; */
+    /* margin-left: 12; */
+    background: white;
+    border: 1px solid #F5DF4D;
+    border-radius: 50pt;
+    width: 130px;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+.LAddtocart:hover {
+    color:white;
+    background: #F5DF4D;
+}
+.LOrderbtn {
+    color:white;
+    background: #F5DF4D;
+    width: 350px;
+    border-radius: 5pt;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin: 0 auto;
+}
+.LOrderbtn:hover {
+    opacity: 70%;
+}
+.LCouponbtn {
+    color: white;
+    background: #646464;
+    width: 140px;
+    border-radius: 5pt;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+.Lprocesstag {
+    width: 40px;
+    height: 40px;
+    background: #F5DF4D;
+    border-radius: 50pt;
+    position: relative;
+}
+.Lprogressnum1 {
+    font-size: 24px;
+    position:absolute;
+    margin-left: 34%;
+}
+.Lprogresstitle {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.Lprocesstag2 {
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: #646464;
+    border-radius: 50pt;
+    position: relative;
+}
+.Lprogressnum2 {
+    font-size: 24px;
+    position:absolute;
+    margin-left: 34%;
+}
+.Lprogresstitle2 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.Lprocesstag3 {
+    width: 40px;
+    height: 40px;
+    color:white;
+    background: #646464;
+    border-radius: 50pt;
+    position: relative;
+}
+.Lprogressnum3 {
+    font-size: 24px;
+    position:absolute;
+    margin-left: 34%;
+}
+.Lprogresstitle3 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+.LProductConfirmArea, .LAddtoCartHeader, .LDataInputheader {
+    background: #F5DF4D;
+}
+.SummaryItem {
+    display: flex;
+    justify-content: space-between;
+}
+.DeliveryItem {
+    display: flex;
+    justify-content: space-between;
+}
+.LuDelBtn {
+    cursor: pointer;
+}

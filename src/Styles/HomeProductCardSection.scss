@@ -1,16 +1,16 @@
-.productList-container {
+.ACproductList-container {
     display: flex;
     flex-direction: column;
 }
 
-.title-container {
+.ACtitle-container {
     display: flex;
     justify-content: center;
     // margin: 5% auto 4%;
     width: 100%;
   }
   
-  .productListTitle {
+  .ACproductListTitle {
     margin: 0 10%;
     font-size: 1.5rem;
     color: #646464;
@@ -18,12 +18,12 @@
   }
   
   @media (max-width: 768px) {
-    .productListTitle {
+    .ACproductListTitle {
       margin: 0 2%;
     }
   }
 
-.HomeProductCards{
+.ACHomeProductCards{
     width: 68%;
     display: flex;
     justify-content: space-evenly;

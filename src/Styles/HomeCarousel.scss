@@ -1,61 +1,77 @@
-.ACcarouselSection {
+#ACcarouselSection {
   width: 100%;
-  height: 680px;
+  height: 85vh;
   background-color: #f5df4d;
   position: relative;
   z-index: 1;
   margin-top: 90px;
 }
 
-.ACsliderCSS {
+.ACslider {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right:0;
+}
+
+.ACsliderPic {
   width: 100%;
-  padding: 0px 0px 0px 180px;
   z-index: 2;
 }
 
-.ACsliderBar {
-  width: 100%;
+.ACBar {
+  width: 85%;
+  height: 100px;
+  min-width: 1100px;
+  background-color: #fff;
+  border-radius: 0 50px 50px 0;
   position: absolute;
   bottom: 5%;
   left: 0;
   z-index: 3;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-.m-slider1 {
-  height: 500px;
+.ACbarContent {
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+  flex-wrap: wrap;
 }
 
 #ACmember-adopt {
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
+  // position: absolute;
+  // bottom: 5%;
+  // left: 15%;
   z-index: 4;
   color: #646464;
   text-align: center;
+  // margin: 0 5%;
 }
 
 #ACmember-hotel {
-  position: absolute;
-  bottom: 10%;
-  left: 30%;
+  // position: absolute;
+  // bottom: 5%;
+  // left: 30%;
   z-index: 5;
   color: #646464;
   text-align: center;
 }
 
 #ACmember-ID {
-  position: absolute;
-  bottom: 10%;
-  left: 45%;
+  // position: absolute;
+  // bottom: 5%;
+  // left: 45%;
   z-index: 6;
   color: #646464;
   text-align: center;
 }
 
 #ACmember-999 {
-  position: absolute;
-  bottom: 10%;
-  left: 60%;
+  // position: absolute;
+  // bottom: 5%;
+  // left: 60%;
   z-index: 7;
   color: #646464;
   text-align: center;
@@ -71,9 +87,10 @@
 }
 
 .ACjoinMemberBtn {
-  position: absolute;
-  bottom: 10%;
-  left: 75%;
+  // position: absolute;
+  // bottom: 6%;
+  // left:80%;
+  z-index: 7;
 }
 
 .ACYellowOutlineBtn {
@@ -92,19 +109,24 @@
   color: white;
 }
 
-.m-ACcarouselSection {
+#m-ACcarouselSection {
   width: 100%;
   height: 500px;
   background-color: #f5df4d;
   z-index: 1;
+  margin-top: 95px;
+  position: relative;
 }
 
-// .m-sliderCSS {
-//   position: relative;
-// }
+.m-ACslider {
+  position: absolute;
+  top:0;
+  right: 0;
+}
 
 .m-ACsliderCSS img{
   width: 100%;
+  object-fit: cover;
 }
 
 .m-ACsliderbar {

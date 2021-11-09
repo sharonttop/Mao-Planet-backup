@@ -1,9 +1,10 @@
-.ACadoptCard1 {
+.ACadoptCard {
+  width: 280px;
   border: none;
   cursor: pointer;
 }
 
-.ACadoptCard1:hover {
+.ACadoptCard:hover {
   transform: scale(1.02);
   box-shadow: 1px 2px 15px rgba(94, 91, 91, 0.126);
   transition: 0.5s;
@@ -12,7 +13,7 @@
 
 .ACadoptAvatar {
   width: 200px;
-  height: 200px;
+  height: 100%;
   overflow: hidden;
   border-radius: 50%;
 }
