@@ -29,6 +29,10 @@ function Avatar(props) {
       setAvatar(obj.avatar)
     })()
   }
+  //測試前端抓大頭貼
+  // useEffect(() => {
+  //   setAvatar(JSON.parse(localStorage.getItem('member')).avatar)
+  // }, [])
 
   //-------抓客人資料(測試後端)
   useEffect(() => {
