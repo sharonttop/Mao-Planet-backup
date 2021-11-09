@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom'
 // 子頁面區域元件
 import UserOrder from './admin/user/UserOrder'
 import InfoEdit from './admin/user/InfoEdit/InfoEdit'
-import AddressEdit from './admin/user/AddressEdit'
+import AddressEdit from './admin/user/AddressEdit/AddressEdit'
 import PasswordChange from './admin/user/PasswordChange/PasswordChange'
 import PetId from './admin/user/petId/PetId'
 import './Member.scss'

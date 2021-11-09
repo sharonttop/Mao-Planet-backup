@@ -166,7 +166,7 @@ function PetId(props) {
                 <div className="petIdForm-group">
                   <label>毛孩生日</label>
                   <input
-                    style={{ fontSize: 0.9 }}
+                    style={{ fontSize: '1rem' }}
                     className="form-control"
                     type="date"
                     name="petBirthday"
