@@ -1,20 +1,19 @@
+
 import ProductListTag from './ProductListTag'
 import ProductListSubHero from './ProductListSubHero'
 import ProductListTitle from './ProductListTitle'
 import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
-import { Link } from 'react-router-dom'
-
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
-import subHero_catToilet from '../images/ProductList-images/cat-toilet.webp'
+import subHero_catPlay from '../images/ProductList-images/cat-play-kitty.jpeg'
 
 
-const ProductListCatToilet = (tag)=>{
-    const menuItems = [];
-    const catToilet = CAT_PRODUCT["Cat-Toilet"];
-    console.log(catToilet)
+const ProductListCatPlayPage2 = (tag)=>{
+    const catPlay = CAT_PRODUCT["Cat-Play-2"];
+    // console.log(catPlay)
 
     return(
     <>
@@ -26,10 +25,10 @@ const ProductListCatToilet = (tag)=>{
         <Link to="/productlist/cat/health"><ProductListTag >貓貓保健</ProductListTag></Link>
         <Link to="/productlist/cat/outdoor"><ProductListTag >貓貓出遊</ProductListTag></Link>
         </div>
-            <ProductListSubHero subHero_cat={subHero_catToilet}/>
-            <ProductListTitle subTitle={"貓貓廁所"} engTitle={"Toilets"}/>
+            <ProductListSubHero subHero_cat={subHero_catPlay}/>
+            <ProductListTitle subTitle={"貓貓玩具"} engTitle={"Toys"}/>
         <div className='AG-productCards'>
-        {catToilet.map((item) => {
+        {catPlay.map((item) => {
             return (
                 <>
                 <ProductCard ID={item.ID} ProductImg={item.URL} ProductTitle={item.title} ProductPrice={item.price} />
@@ -44,5 +43,4 @@ const ProductListCatToilet = (tag)=>{
         
         
 
-export default ProductListCatToilet;
-
+export default ProductListCatPlayPage2;

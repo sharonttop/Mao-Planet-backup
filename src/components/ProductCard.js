@@ -32,6 +32,7 @@ function ProductCard({ ID, ProductImg, ProductTitle, ProductPrice }) {
       </div>
       <div className="AG-title">{ProductTitle}</div>
       <div className="AG-price">NT$ {ProductPrice}</div>
+
     </div>
   )
 }
