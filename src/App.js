@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  useLocation,
+  // useLocation,
 } from 'react-router-dom'
 import React, { useState } from 'react'
 import './Styles/global.scss'
@@ -24,6 +24,9 @@ import BlogArticle1 from './pages/BlogArticle/BlogArticle1'
 import SignUp from './pages/sign-up/SignUp'
 import Login from './pages/login/Login'
 import Member from './pages/member/Member'
+// import ReadingProgress from './components/ReadingProgress'
+import LuCartConfirmPage from './pages/ShoppingCart/LuCartConfirmPage'
+import LuCheckoutPage from './pages/ShoppingCart/LuCheckoutPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 // 組合用元件
@@ -70,6 +73,7 @@ function App(props) {
       <>
         {/* LOGO+標題+導覽列+上方選單 */}
         <MyNavbar auth={auth} />
+
         {/* 主內容區 */}
         <MainContent>
           <MultiLevelBreadCrumb />
@@ -88,9 +92,6 @@ function App(props) {
               <Route path="/productlist/dog">
                 <ProductDog />
               </Route>
-              <Route path="/productlist/cat/" exact>
-                <ProductCat />
-              </Route>
               <Route path="/productlist/cat/food" exact>
                 <ProductListCatFood />
               </Route>
@@ -102,6 +103,15 @@ function App(props) {
               </Route>
               <Route path="/productlist/cat/outdoor" exact>
                 <ProductListCatOutdoor />
+              </Route>
+              <Route path="/productlist/cat/" exact>
+                <ProductCat />
+              </Route>
+              <Route path="/shopping/firststep">
+                <LuCheckoutPage />
+              </Route>
+              <Route path="/shopping/secondstep" exact>
+                <LuCartConfirmPage />
               </Route>
               {/* <Route path="/productlist">
                 <ProductList />
