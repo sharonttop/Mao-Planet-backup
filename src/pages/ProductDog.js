@@ -1,8 +1,10 @@
+import ProductListDogPlay from '../components/ProductListDogPlay'
+
 function ProductDog(props) {
-//   const { auth } = props
+  //   const { auth } = props
   return (
     <>
-      <h1>狗狗館</h1>
+      <ProductListDogPlay />
     </>
   )
 }

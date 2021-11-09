@@ -7,6 +7,7 @@ import '../Styles/ProductList.scss'
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import Pagination from './Pagination'
 
 import subHero_catPlay from '../images/ProductList-images/cat-play-kitty.jpeg'
 
@@ -25,7 +26,7 @@ const ProductListCatPlayPage2 = (tag)=>{
         <Link to="/productlist/cat/health"><ProductListTag >貓貓保健</ProductListTag></Link>
         <Link to="/productlist/cat/outdoor"><ProductListTag >貓貓出遊</ProductListTag></Link>
         </div>
-            <ProductListSubHero subHero_cat={subHero_catPlay}/>
+            <ProductListSubHero subHero={subHero_catPlay}/>
             <ProductListTitle subTitle={"貓貓玩具"} engTitle={"Toys"}/>
         <div className='AG-productCards'>
         {catPlay.map((item) => {
@@ -35,6 +36,9 @@ const ProductListCatPlayPage2 = (tag)=>{
                 </>
         )})}
         </div>
+        <div className="ACblogLastSec">
+        <Pagination />
+      </div>
     </div>
     </>
     )

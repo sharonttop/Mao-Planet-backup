@@ -18,6 +18,10 @@ import ProductListCatFood from './components/ProductListCatFood'
 import ProductListCatToilet from './components/ProductListCatToilet'
 import ProductListCatHealth from './components/ProductListCatHealth'
 import ProductListCatOutdoor from './components/ProductListCatOutdoor'
+import ProductListDogFood from './components/ProductListDogFood'
+import ProductListDogToilet from './components/ProductListDogToilet'
+import ProductListDogHealth from './components/ProductListDogHealth'
+import ProductListDogOutdoor from './components/ProductListDogOutdoor'
 import HotelPage from './pages/HotelPage/HotelPage'
 import HotelList from './pages/HotelList/HotelList'
 import BlogList from './pages/BlogList/BlogList'
@@ -90,7 +94,21 @@ function App(props) {
               <Route path="/bloglist">
                 <BlogList />
               </Route>
-              <Route path="/productlist/dog">
+
+              <Route path="/productlist/dog/food" exact>
+                <ProductListDogFood />
+              </Route>
+              <Route path="/productlist/dog/toilet" exact>
+                <ProductListDogToilet />
+              </Route>
+              <Route path="/productlist/dog/health" exact>
+                <ProductListDogHealth />
+              </Route>
+              <Route path="/productlist/dog/outdoor" exact>
+                <ProductListDogOutdoor />
+              </Route>
+
+              <Route path="/productlist/dog" exact>
                 <ProductDog />
               </Route>
               <Route path="/productlist/cat/food" exact>
