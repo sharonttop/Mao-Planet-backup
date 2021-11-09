@@ -4,16 +4,11 @@ import {
   withRouter,
   // Redirect,
 } from 'react-router-dom'
-import conf, {
-  UPLOAD_AVATAR,
-  // SIGN_UP,
-  AUTH_TOKEN,
-  // JWT_GET_DATA,
-} from '../../../../../config'
+import conf, { AUTH_TOKEN } from '../../../../../config'
+import CatHand1 from '../../../../../images/Login/cat hand1.svg'
+import CatHand2 from '../../../../../images/Login/cat hand2.svg'
 
-import axios from 'axios'
-// import './InfoEdit.scss'
-
+import './AddressEdit.scss'
 
 function AddressEdit(props) {
   //同會員資料單一核取方塊
@@ -43,9 +38,8 @@ function AddressEdit(props) {
   }, [isLoading])
 
   const token = localStorage.getItem('token')
-  //-------抓客人資料(測試後端)
-  useEffect(() => {
-    setIsLoading(true)
+  //抓取後端資料
+  const getAddressData = () => {
     ;(async () => {
       const r = await fetch(AUTH_TOKEN, {
         method: 'GET',
@@ -57,7 +51,7 @@ function AddressEdit(props) {
 
       setEditFields(obj)
     })()
-  }, [])
+  }
 
   // 專門用來處理每個欄位的輸入用
 
@@ -120,21 +114,8 @@ function AddressEdit(props) {
     console.log(formData.get('mobile'))
     console.log(formData.get('address'))
 
-    const usp = new URLSearchParams(new FormData(document.edit_form))
-    const r = await fetch(AUTH_TOKEN, {
-      method: 'PUT',
-      body: usp.toString(),
-      headers: {
-        Authorization: 'Bearer ' + token,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
-    })
-    const data = await r.json()
-    console.log(data)
     alert('已更新儲存')
     props.history.push('/admin')
-
-    //---
   }
 
   const loading = (
@@ -149,21 +130,38 @@ function AddressEdit(props) {
 
   const display = (
     <>
-      <div className="card infoEditCard">
-        <div className="infoEditBanner">
+      <div className="addressEditCatHand1">
+        <img src={CatHand1} style={{ width: '110px' }} alt="" />
+      </div>
+      <div className="addressEditCatHand2">
+        <img src={CatHand2} style={{ width: '120px' }} alt="" />
+      </div>
+      <div className="card addressEditCard">
+        <div className="addressEditBanner">
           <h2>收貨地址</h2>
         </div>
-        <div className="infoEditWrap">
+        <div className="addressEditWrap">
+          <section id="addressEditcheckbox">
+            <input
+              type="checkbox"
+              checked={agree}
+              onChange={(e) => {
+                setAgree(e.target.checked)
+                getAddressData()
+              }}
+            />
+            <label>收件人資料與顧客資料相同</label>
+          </section>
           <form
-            className="infoEditForm"
+            className="addressEditForm"
             name="edit_form"
             onSubmit={handleSubmit}
             onChange={handleFormChange}
             onInvalid={handleFormInvalid}
           >
-            <div className="infoEditInfo">
-              <div className="infoEditForm-group">
-                <label>姓名</label>
+            <div className="addressEditInfo">
+              <div className="addressEditForm-group">
+                <label>收件人姓名</label>
                 <input
                   className="form-control"
                   type="text"
@@ -181,10 +179,13 @@ function AddressEdit(props) {
                     {editFieldsErrors.name}
                   </div>
                 )}
+                <p className="addressEditCheck">
+                  請輸入收件人真實姓名，以確保收件
+                </p>
               </div>
 
-              <div className="infoEditForm-group">
-                <label>手機</label>
+              <div className="addressEditForm-group">
+                <label>收件人電話號碼</label>
                 <input
                   className="form-control"
                   type="mobile"
@@ -194,8 +195,8 @@ function AddressEdit(props) {
                   placeholder="mobile"
                 />
               </div>
-              <div className="infoEditForm-group">
-                <label>地址</label>
+              <div className="addressEditForm-group">
+                <label>收件地址</label>
                 <input
                   className="form-control"
                   name="address"
@@ -205,18 +206,9 @@ function AddressEdit(props) {
                 />
               </div>
             </div>
-            <div className="infoEdit-group">
-              <button type="submit" className="btn infoEditBtn">
-                更新儲存
-              </button>
-              <button
-                type="button"
-                className="btn cancelSubmit"
-                onClick={() => {
-                  props.history.push('/admin')
-                }}
-              >
-                放棄編輯
+            <div className="addressEdit-group">
+              <button type="submit" className="btn addressEditBtn">
+                儲存地址
               </button>
             </div>
           </form>
