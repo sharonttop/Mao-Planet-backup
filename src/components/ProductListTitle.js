@@ -1,15 +1,13 @@
-import '../Styles/ProductListTitle.scss'
+import "../Styles/ProductListTitle.scss"
 
-const ProductListTitle = () => {
-  return (
-    <div className="AG-title-container">
-      <span>_________________</span>
-      <span className="AG-productListTitle">
-        貓貓玩具&nbsp;&nbsp;&nbsp;&nbsp;Toys
-      </span>
-      <span>_________________</span>
-    </div>
-  )
+const ProductListTitle = ({subTitle,engTitle})=>{
+    return(
+        <div className="AG-title-container">
+            <span>_________________</span>
+            <span className="AG-productListTitle">{subTitle}&nbsp;&nbsp;&nbsp;&nbsp;{engTitle}</span>
+            <span>_________________</span>
+        </div>
+    )
 }
 
-export default ProductListTitle
+export default ProductListTitle;

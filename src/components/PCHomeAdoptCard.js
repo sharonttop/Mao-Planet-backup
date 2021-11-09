@@ -27,7 +27,7 @@ function PCHomeAdoptCard() {
               </Link>
             </Card>
             <div className="ACadoptBtnSection d-flex justify-content-center pt-4 p-0">
-              <Link to="/adoptlist" className="ACknowmoreBtn">
+              <Link to="/adoptlist/adoptpage/36" className="ACknowmoreBtn">
                 <Button className="ACYellowOutlineBtn d-md-block d-none">
                   了解更多
                 </Button>
@@ -52,7 +52,7 @@ function PCHomeAdoptCard() {
               </Link>
             </Card>
             <div className="ACadoptBtnSection d-flex justify-content-center pt-4 p-0">
-              <Link to="/adoptlist" className="ACknowmoreBtn">
+              <Link to="/adoptlist/adoptpage/38" className="ACknowmoreBtn">
                 <Button className="ACYellowOutlineBtn d-md-block d-none">
                   了解更多
                 </Button>
@@ -75,7 +75,7 @@ function PCHomeAdoptCard() {
               </Link>
             </Card>
             <div className="ACadoptBtnSection d-flex justify-content-center pt-4 p-0">
-              <Link to="/adoptlist" className="ACknowmoreBtn">
+              <Link to="/adoptlist/adoptpage/39" className="ACknowmoreBtn">
                 <Button className="ACYellowOutlineBtn d-md-block d-none">
                   了解更多
                 </Button>
