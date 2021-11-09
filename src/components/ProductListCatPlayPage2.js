@@ -13,7 +13,7 @@ import subHero_catPlay from '../images/ProductList-images/cat-play-kitty.jpeg'
 
 const ProductListCatPlayPage2 = (tag)=>{
     const catPlay = CAT_PRODUCT["Cat-Play-2"];
-    console.log(catPlay)
+    // console.log(catPlay)
 
     return(
     <>

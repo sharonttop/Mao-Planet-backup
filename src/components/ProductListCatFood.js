@@ -13,7 +13,7 @@ import subHero_catFood from '../images/ProductList-images/cat-food.jpg'
 
 const ProductListCatFood = (tag)=>{
     const catFood = CAT_PRODUCT["Cat-Food"];
-    console.log(catFood)
+    // console.log(catFood)
 
     return(
     <>
