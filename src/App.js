@@ -10,15 +10,16 @@ import './Styles/global.scss'
 
 // 頁面用元件
 import Home from './pages/Home/Home'
-import AdoptList from './pages/AdoptList'
-// import ProductList from './pages/ProductList'
+import AdoptList from './pages/AdoptList/AdoptList'
+import AdoptPage from './pages/AdoptPage/AdoptPage'
 import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
 import ProductListCatFood from './components/ProductListCatFood'
 import ProductListCatToilet from './components/ProductListCatToilet'
 import ProductListCatHealth from './components/ProductListCatHealth'
 import ProductListCatOutdoor from './components/ProductListCatOutdoor'
-import HotelList from './pages/HotelList'
+import HotelPage from './pages/HotelPage/HotelPage'
+import HotelList from './pages/HotelList/HotelList'
 import BlogList from './pages/BlogList/BlogList'
 import BlogArticle1 from './pages/BlogArticle/BlogArticle1'
 import SignUp from './pages/sign-up/SignUp'
@@ -116,11 +117,17 @@ function App(props) {
               {/* <Route path="/productlist">
                 <ProductList />
               </Route> */}
-              <Route path="/hotellist">
-                <HotelList auth={auth} />
+              <Route path="/hotellist/hotelpage/:id?">
+                <HotelPage />
               </Route>
-              <Route path="/adoptlist">
-                <AdoptList auth={auth} />
+              <Route path="/hotellist">
+                <HotelList />
+              </Route>
+              <Route path="/adoptlist/adoptpage/:id?">
+                <AdoptPage />
+              </Route>
+              <Route path="/adoptlist/">
+                <AdoptList />
               </Route>
               <Route path="/home">
                 <Home auth={auth} />
