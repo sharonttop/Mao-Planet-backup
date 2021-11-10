@@ -12,6 +12,8 @@ function Login(props) {
   console.log({ conf })
 
   const { auth, setAuth } = props
+  // (從login引入useState作法)
+  // const { auth, setAuth, setMyAvatar } = props
 
   // //驗證有無token
   // const token = localStorage.getItem('token')
@@ -80,6 +82,8 @@ function Login(props) {
     if (data.success) {
       setAuth(true)
       localStorage.setItem('member', JSON.stringify(data.member))
+      // (從login引入useState作法)
+      // setMyAvatar(data.member.avatar)
       //將顧客資料基本資料從前端存到localStorage，注意不要存放敏感性資料，譬如身分證手機等等
       localStorage.setItem('token', data.token)
       //儲存到localStorage

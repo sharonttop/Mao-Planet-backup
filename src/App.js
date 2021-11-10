@@ -38,7 +38,8 @@ import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
 
 function App(props) {
   const [auth, setAuth] = useState(false)
-
+  /*從login引入useState作法
+  const [myAvatar, setMyAvatar] = useState('')*/
   //Sharon註冊功能--------------------------------------
   const [fields, setFields] = useState({
     name: '',
@@ -71,6 +72,7 @@ function App(props) {
       <>
         {/* LOGO+標題+導覽列+上方選單 */}
         <MyNavbar auth={auth} />
+        {/* <MyNavbar auth={auth} myAvatar={myAvatar} /> */}
 
         {/* 主內容區 */}
         <MainContent>
@@ -146,6 +148,11 @@ function App(props) {
               <Route path="/login">
                 {/* 利用props傳入頁面元件狀態 */}
                 <Login auth={auth} setAuth={setAuth} />
+                {/* <Login
+                  auth={auth}
+                  setAuth={setAuth}
+                  setMyAvatar={setMyAvatar}
+                /> */}
               </Route>
               <Route path="*">
                 <NotFoundPage />
