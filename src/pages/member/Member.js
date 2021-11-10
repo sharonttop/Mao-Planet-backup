@@ -21,7 +21,7 @@ function Member(props) {
   // 自動1秒後關閉指示的spinner
   useEffect(() => {
     if (isLoading) {
-      setTimeout(() => setIsLoading(false), 1500)
+      setTimeout(() => setIsLoading(false), 1000)
     }
   }, [isLoading])
 
@@ -143,11 +143,11 @@ function Member(props) {
                   </li>
                   <hr className="MemberLineStyle" />
                   <li>
-                    <Link to="/admin/user/order">我的訂單</Link>
+                    <Link to="/admin/user/">我的訂單</Link>
                   </li>
                   <hr className="MemberLineStyle" />
                   <li>
-                    <Link to="/admin/user/#/">追蹤清單</Link>
+                    <Link to="/admin/user/">追蹤清單</Link>
                   </li>
                   <hr className="MemberLineStyle" />
                   <li>
