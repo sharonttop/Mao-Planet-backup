@@ -14,6 +14,7 @@ export const LOGIN_JWT = API_HOST + '/login-jwt'
 export const JWT_GET_DATA = API_HOST + '/get-data-jwt'
 export const AUTH_TOKEN = API_HOST + '/auth-token'
 export const PASSWORD_CHANGE = API_HOST + '/password-change'
+export const PETID_COUPON = API_HOST + '/petid-coupon'
 
 config = {
   API_HOST,
@@ -23,6 +24,7 @@ config = {
   JWT_GET_DATA,
   AUTH_TOKEN,
   PASSWORD_CHANGE,
+  PETID_COUPON,
 }
 export default config
 

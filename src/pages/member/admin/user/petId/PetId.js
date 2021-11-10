@@ -4,6 +4,7 @@ import { Button, Modal } from 'react-bootstrap'
 import conf, {
   IMG_PATH,
   UPLOAD_AVATAR,
+  PETID_COUPON,
   // JWT_GET_DATA,
 } from '../../../../../config'
 
@@ -89,6 +90,9 @@ function PetId(props) {
     setPetImgSrc(r.data.filename)
     // handleChange(e, i)
   }
+
+  // ****** 更新折價券(後端測試) ******
+  const token = localStorage.getItem('token')
 
   const display = (
     <>
@@ -219,7 +223,18 @@ function PetId(props) {
       <Button
         variant="primary"
         className="btn petIdBtn"
-        onClick={handleShow}
+        onClick={() => {
+          //新增petCoupon到後端資料表
+          fetch(PETID_COUPON, {
+            method: 'PUT',
+            // body: usp.toString(),
+            headers: {
+              Authorization: 'Bearer ' + token,
+              'Content-Type': 'application/x-www-form-urlencoded',
+            }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
+          })
+          handleShow() //彈出視窗
+        }}
         style={{
           fontFamily: 'Noto Sans TC',
           marginLeft: 'auto',

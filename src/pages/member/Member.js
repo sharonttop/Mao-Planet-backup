@@ -13,6 +13,7 @@ import MemberBackground from '../../images/Member/memberBackground3.svg'
 import MemberDogBtn from '../../images/Member/MemberDogBtn.png'
 import MemberCatBtn from '../../images/Member/MemberCatBtn.png'
 
+import PetIdCouponMark from '../../components/PetIdCouponMark'
 import MemberCard from './MemberCard'
 import { FaPaw } from 'react-icons/fa'
 
@@ -140,6 +141,8 @@ function Member(props) {
                   <hr className="MemberLineStyle" />
                   <li>
                     <Link to="/admin/user/petid">毛孩ID</Link>
+                    &nbsp;&nbsp;&nbsp;
+                    <PetIdCouponMark />
                   </li>
                   <hr className="MemberLineStyle" />
                   <li>
@@ -159,17 +162,19 @@ function Member(props) {
                   </li>
                   <hr className="MemberLineStyle" />
                   <li>
-                    <Link
+                    <button
                       type="button"
                       onClick={() => {
                         logout()
-                        props.history.push('/home')
-                        window.location.reload() //強制刷新頁面
+                        window.location.href = '/home'
+
+                        //props.history.push('/home')
+                        //window.location.reload() //強制刷新頁面
                       }}
                       className="btn btn-primary logoutMemberBtn"
                     >
                       登出
-                    </Link>
+                    </button>
                   </li>
                 </ul>
               </div>
