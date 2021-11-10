@@ -1,5 +1,4 @@
-import { React, useState, useEffect } from 'react'
-import { IMG_PATH } from '../config'
+import React from 'react'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { BiSearch, BiUser, BiCartAlt } from 'react-icons/bi'
 import Avatar from './Avatar'
@@ -14,26 +13,7 @@ function MyNavbar(props) {
   const { auth } = props
 
   /*試寫大頭貼從localStorge拿資料不用從後端fetch
-  const [avatar, setAvatar] = useState('')
-  const avatarReload = () => {
-    ;(async () => {
-      if (auth) {
-        setAvatar(JSON.parse(localStorage.getItem('member')).avatar)
-      }
-    })()
-  }
-  useEffect(() => {
-    avatarReload()
-  }, [])
-  const avatarStyle = {
-    width: '35px',
-    height: '35px',
-  }
-
-  const avatarImg = avatar
-    ? IMG_PATH + '/' + avatar
-    : IMG_PATH + '/default-avatar.svg'
-*/
+    // const { auth, myAvatar, setMyAvatar } = props (從login引入useState作法)*/
   return (
     <>
       {/* <div className="ACtopYellow"></div> */}
@@ -137,10 +117,14 @@ function MyNavbar(props) {
             {auth && (
               <Nav.Link as={NavLink} to="/admin" className="ACnavIcon">
                 <Avatar />
-                {/*試寫大頭貼從localStorge拿資料不用從後端fetch 
-                <div className="ACadoptAvatar" style={avatarStyle}>
-                  <img src={avatarImg} alt="" id="img01" />
-                </div> */}
+                {/*
+                試寫大頭貼從localStorge拿資料不用從後端fetch 
+                (從login引入useState作法)
+                 <Avatar
+                  auth={auth}
+                  myAvatar={myAvatar}
+                  setMyAvatar={setMyAvatar}
+                /> */}
               </Nav.Link>
             )}
             {/* <Nav.Link href="#/" className="ACnavIcon">
