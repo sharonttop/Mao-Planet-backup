@@ -46,7 +46,7 @@ function HomeBlogSection(props) {
       </Container>
 
       {/* mobile: 套carousel */}
-      <div fluid id="m-ACblogSection" classNmae="mt-3 p-0 d-md-none d-block">
+      <div fluid id="m-ACblogSection" className="mt-3 p-0 d-md-none d-block">
         <MobileHomeBlogSection />
       </div>
 
