@@ -25,12 +25,12 @@
   }
   
   .petIdForm-group > input {
-    height: 30px !important;
-    max-width: 165px !important;
+    height: 30px;
+    max-width: 165px;
   }
   .petIdForm-group > select {
-    height: 30px !important;
-    max-width: 100px !important;
+    height: 30px;
+    max-width: 100px;
   }
   
   .petIdBanner {
@@ -132,14 +132,17 @@
       max-width: 80%;
       max-height: 80%;
     }
+    .petIdForm-group{
+      margin-left:20%;
+    }
     .petIdForm-group > input {
-      height: 30px !important;
-      width: 230px !important;
+      height: 30px;
+      max-width: 230px ;
       // margin:0 auto 0 auto;
     }
     .petIdForm-group > select {
-      height: 30px !important;
-      width: 230px !important;
+      height: 30px;
+      max-width: 230px;
       // margin:auto 0 auto 0;
     }
     .petIdForm {
@@ -182,6 +185,12 @@
       width: 80%;
       margin-left: 10%;
       margin-top: 5%;
+    }
+    .modal-title.h4{
+      margin-left: 27%!important;
+    }
+    .modal-body>h2{
+      margin-left: 21%!important;
     }
   }
   
