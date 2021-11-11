@@ -7,13 +7,28 @@ import{FaRegHeart} from 'react-icons/fa'
 import ProductCard from "./ProductCard";
 import ProductListTitle from "./ProductListTitle";
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
+import '../Styles/ProductCard.scss'
+import { Link } from 'react-router-dom'
+import { useStateValue } from '../StateProvider'
 
 
 
-const ProductDetailsCP18 = () => {
-
+const ProductDetailsCP18 = ({ ID, ProductImg, ProductTitle, ProductPrice }) => {
+    const [{ basket }, dispatch] = useStateValue()
     const cp18Data = CAT_PRODUCT["Cat-Play-2"][1]
     console.log(cp18Data)
+
+    const addToBasket = () => {
+        dispatch({
+          type: 'ADD_TO_BASKET',
+          item: {
+            id: ID,
+            image: ProductImg,
+            title: ProductTitle,
+            price: ProductPrice,
+          },
+        })
+      }
 
 return (
     <>
@@ -46,7 +61,7 @@ return (
               <a className="AG-selectedNumber">1</a>
               <a>+</a>
           </div>
-          <a className="AG-toCart">加入購物車</a>
+          <a className="AG-toCart" onClick={addToBasket}>加入購物車</a>
           <a className="AG-toList"><FaRegHeart/> 加入追蹤清單</a>
       </div>
     </div>
