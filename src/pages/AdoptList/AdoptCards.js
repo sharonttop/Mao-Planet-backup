@@ -42,7 +42,7 @@ const AdoptCards = () => {
                 <div className=" MKALcard ">
                   <div className="MKALcard-context">
                     <div className="MKALavatar">
-                      <img src={v.avatar} alt="" />
+                      <img className="MKALCardImg" src={v.avatar} alt="" />
                     </div>
                     <div className="MKALcardContent">
                       <p className="MKALcard-title">{v.name}</p>

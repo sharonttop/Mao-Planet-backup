@@ -3,6 +3,9 @@ import './AdoptPage.scss'
 import { FaPaw } from 'react-icons/fa'
 import { AiFillMail } from 'react-icons/ai'
 import Axios from 'axios'
+import { Link } from 'react-router-dom'
+import Comments from './Comments/Comments'
+
 import {
   MDBCarousel,
   MDBCarouselCaption,
@@ -21,7 +24,6 @@ import { withRouter } from 'react-router-dom'
 // import AdoptPage2 from './adoptpage-01-02_300x300.jpeg'
 // import ComAvatar2 from './adoptlist-02_300x300.jpg'
 //comments
-import Comments from './Comments'
 function AdoptPage(props) {
   console.log(props)
   const [petList, setPetList] = useState([])
@@ -60,7 +62,13 @@ function AdoptPage(props) {
       }
     }
   }, [petList, props.match.params.id])
+  const Mailto = ({ email, subject = '', body = '', children }) => {
+    let params = subject || body ? '?' : ''
+    if (subject) params += `subject=${encodeURIComponent(subject)}`
+    if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`
 
+    return <a href={`mailto:${email}${params}`}>{children}</a>
+  }
   return (
     <>
       {/* header */}
@@ -95,7 +103,7 @@ function AdoptPage(props) {
             <MDBCarouselItem itemId="2">
               <MDBView className="MKAPCarouselBox">
                 <img
-                  className="MKAPCarouselimg"
+                  className="MKAPCarouselimg "
                   src={adoptPage.avatar01}
                   alt="Second slide"
                 />
@@ -236,86 +244,92 @@ function AdoptPage(props) {
           <div className="MKdetail-btn">
             <div className="" type="submit">
               <div>
-                <button className="button-G">
-                  <span className="MailBtn">
-                    <AiFillMail />
-                  </span>
-                  私信飼主
-                </button>
+                <Mailto
+                  email={adoptPage.email}
+                  subject="認養文"
+                  body="您好，方便跟你預約時間嗎？"
+                >
+                  <button className="button-G">
+                    <span className="MailBtn">
+                      <AiFillMail />
+                    </span>
+                    私信飼主
+                  </button>
+                </Mailto>
               </div>
             </div>
           </div>
         </div>
       </>
       {/* Comments */}
-      {/* <Row>
-          <div className="MKrowComment">
-            <div className="MKcomm">
-              <div className="MKcom-header">
-                <h6 className="MKcom-header-title">留言板</h6>
-              </div>
-              <div className="MKcomment">
-                <div className="MKcom-box">
+      <div>
+        {/* <div className="MKrowComment">
+          <div className="MKcomm">
+            <div className="MKcom-header">
+              <h6 className="MKcom-header-title">留言板</h6>
+            </div>
+            <div className="MKcomment">
+              <div className="MKcom-box">
+                <div className="MKcom-avatar">
                   <div className="MKcom-avatar">
-                    <div className="MKcom-avatar">
-                      <img src={ComAvatar2} alt="" />
-                    </div>
-                  </div>
-                  <div className="MKcom-user">
-                    <div className="MKcom-name">
-                      <p>我是貓奴</p>
-                    </div>
-                    <div className="MKcom-msn">
-                      <h6>Hi,想和你約時間看小呆</h6>
-                    </div>
+                    <img src="" alt="" />
                   </div>
                 </div>
-              </div>
-              <div className="MKcomment">
-                <div className="MKcom-box">
-                  <div className="MKcom-avatar">
-                    <div className="MKcom-avatar">
-                      <img src={AdoptPage1} alt="" />
-                    </div>
+                <div className="MKcom-user">
+                  <div className="MKcom-name">
+                    <p>我是貓奴</p>
                   </div>
-                  <div className="MKcom-user">
-                    <div className="MKcom-name">
-                      <p>小呆僕人</p>
-                    </div>
-                    <div className="MKcom-msn">
-                      <h6>好呀，這週六可以嗎？</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="MKcomment">
-                <div className="MKcom-box">
-                  <div className="MKcom-avatar">
-                    <div className="MKcom-avatar">
-                      <img src={ComAvatar2} alt="" />
-                    </div>
-                  </div>
-                  <div className="MKcom-user">
-                    <div className="MKcom-name">
-                      <p>我是貓奴</p>
-                    </div>
-                    <div className="MKcom-msn">
-                      <h6>okay</h6>
-                    </div>
+                  <div className="MKcom-msn">
+                    <h6>Hi,想和你約時間看小呆</h6>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="MKcommBtn">
-              <div className="MKcomButton" type="submit">
-                <div>
-                  <button id="MKcard-btn">我要回覆</button>
+            <div className="MKcomment">
+              <div className="MKcom-box">
+                <div className="MKcom-avatar">
+                  <div className="MKcom-avatar">
+                    <img src="" alt="" />
+                  </div>
+                </div>
+                <div className="MKcom-user">
+                  <div className="MKcom-name">
+                    <p>小呆僕人</p>
+                  </div>
+                  <div className="MKcom-msn">
+                    <h6>好呀，這週六可以嗎？</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="MKcomment">
+              <div className="MKcom-box">
+                <div className="MKcom-avatar">
+                  <div className="MKcom-avatar">
+                    <img src={'ComAvatar2'} alt="" />
+                  </div>
+                </div>
+                <div className="MKcom-user">
+                  <div className="MKcom-name">
+                    <p>我是貓奴</p>
+                  </div>
+                  <div className="MKcom-msn">
+                    <h6>okay</h6>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </Row> */}
-      <Comments />
+          <div className="MKcommBtn">
+            <div className="MKcomButton" type="submit">
+              <div>
+                <button id="MKcard-btn">我要回覆</button>
+              </div>
+            </div>
+          </div>
+        </div> */}
+      </div>
+      <Comments currentUserId="1" />
     </>
   )
 }

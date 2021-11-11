@@ -24,11 +24,11 @@ function CartSubtotal() {
               <div className="DeliveryItem">
                 <div className="">運費</div>
                 <div className="">
-                  <strong>$60</strong>
+                  <strong>$0</strong>
                 </div>
               </div>
               <div className="DeliveryItem">
-                <div className="">小計</div>
+                <div className="">總計</div>
                 <div className="">
                   <strong>{value}</strong>
                 </div>
@@ -66,7 +66,7 @@ function CartSubtotal() {
       value={getBasketTotal(basket)}
       displayType={'text'}
       thousandSeparator={true}
-      prefix={'$'}
+      prefix={'NT'}
     />
   )
 }

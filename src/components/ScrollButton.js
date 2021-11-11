@@ -24,7 +24,7 @@ const ScrollButton = () => {
   window.addEventListener('scroll', toggleVisible)
 
   return (
-    <Button className="ACscrollButton">
+    <Button className="ACscrollButton d-md-block d-none">
       <FaChevronCircleUp
         onClick={scrollToTop}
         style={{ display: visible ? 'inline' : 'none' }}

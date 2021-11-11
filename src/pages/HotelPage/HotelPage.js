@@ -4,6 +4,7 @@ import { AiFillStar } from 'react-icons/ai'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
+import GoogleMap from './GoogleMap'
 import Axios from 'axios'
 import {
   MDBCarousel,
@@ -15,8 +16,6 @@ import {
   MDBContainer,
 } from 'mdbreact'
 function HotelPage(props) {
-  console.log(props)
-
   // const coll = document.getElementsByclassNameName('collapsible')
 
   // for (i = 0; i < coll.length; i++) {
@@ -141,6 +140,7 @@ function HotelPage(props) {
             </MDBCarouselInner>
           </MDBCarousel>
         </div>
+
         {/* booking form */}
         {/* <Row>
           <div className="MKbooking">
@@ -293,6 +293,8 @@ function HotelPage(props) {
             </div>
           </div>
         </>
+        {/* map */}
+        <GoogleMap />
         {/* hotel comments */}
         <>
           <div className="MKHotelRowComment">

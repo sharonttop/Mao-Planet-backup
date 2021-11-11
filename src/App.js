@@ -28,6 +28,8 @@ import Member from './pages/member/Member'
 // import ReadingProgress from './components/ReadingProgress'
 import LuCartConfirmPage from './pages/ShoppingCart/LuCartConfirmPage'
 import LuCheckoutPage from './pages/ShoppingCart/LuCheckoutPage'
+import LuCartConfirmPageII from './pages/ShoppingCart/LuCartConfirmPageII'
+import LuCartDone from './pages/ShoppingCart/LuCartDone'
 import NotFoundPage from './pages/NotFoundPage'
 
 // 組合用元件
@@ -114,6 +116,12 @@ function App(props) {
               </Route>
               <Route path="/shopping/secondstep" exact>
                 <LuCartConfirmPage />
+              </Route>
+              <Route path="/shopping/finalstep" exact>
+                <LuCartConfirmPageII />
+              </Route>
+              <Route path="/shopping/donepage" exact>
+                <LuCartDone />
               </Route>
               {/* <Route path="/productlist">
                 <ProductList />

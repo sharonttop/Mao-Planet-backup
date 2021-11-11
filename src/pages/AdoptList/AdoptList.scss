@@ -28,7 +28,9 @@
 }
 .MKbanner-text > p {
   font-size: 1rem;
+  // font-weight: medium;
   text-align: end;
+  color: #646464;
 }
 .MKbanner-text > h2 {
   text-align: end;
@@ -116,12 +118,10 @@
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  align-content: center;
-  margin: 0 auto;
 }
 .MKALcard-context:hover {
-  transform: scale(1.02);
-  box-shadow: 1px 2px 15px rgba(94, 91, 91, 0.126);
+  // transform: scale(1.03);
+  box-shadow: 1px 2px 15px rgba(94, 91, 91, 0.646);
   transition: 0.5s;
 }
 
@@ -140,18 +140,23 @@
   position: relative;
   margin: 0 auto;
 }
-.MKALavatar > img {
+.MKALCardImg {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // object-fit: cover;
+}
+.MKALCardImg:hover {
+  transform: scale(1.3);
+  transition: 0.8s;
 
 }
-.MKALcardContent{
-  padding:1rem ;
+.MKALcardContent {
+  padding: 1rem;
 }
 .MKALcard-title {
   font-size: 1rem;
@@ -165,7 +170,7 @@
   padding: 5px;
   font-weight: 300;
   width: 100%;
-  height:100px;
+  height: 100px;
 }
 /* button & hover */
 .MKALbutton {
@@ -220,8 +225,7 @@
   color: #fff;
 }
 /* pagination */
-.pagination
-.MKpage-link {
+.pagination .MKpage-link {
   color: #646464;
   cursor: pointer;
 }
