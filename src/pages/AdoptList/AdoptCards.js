@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Dash from 'lodash'
-
 const pageSize = 9
 
 const AdoptCards = () => {
@@ -10,7 +9,9 @@ const AdoptCards = () => {
   //   if (loading) {
   //     return <h2>Loading....</h2>
   //   }
+  //petlist data
   const [petList, setPetList] = useState([])
+  //paginatePart
   const [paginatedPosts, setPaginatedPosts] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   useEffect(() => {
@@ -19,7 +20,7 @@ const AdoptCards = () => {
       setPaginatedPosts(Dash(response.data).slice(0).take(pageSize).value())
     })
   }, [])
-  console.log(paginatedPosts)
+  // console.log(paginatedPosts)
 
   const pageCount = petList ? Math.ceil(petList.length / pageSize) : 0
   // if ([pageCount === 1]) return null
@@ -32,25 +33,27 @@ const AdoptCards = () => {
   }
   return (
     <>
+      {/* 引入資料 */}
       <div className="MKALrow-list">
         <div className="MKALlist">
           {paginatedPosts.map((v, i) => {
             return (
-              <p key={i} className="MKDisplayLi col-12 col-lg-4">
+              <p key={i} className="MKDisplayLi col-12 col-md-4">
                 <div className=" MKALcard ">
                   <div className="MKALcard-context">
                     <div className="MKALavatar">
                       <img src={v.avatar} alt="" />
                     </div>
-                    <div className="">
-                      <p id="MKALcard-title">{v.name}</p>
-                      <p id="MKALcard-text"> {v.info}</p>
+                    <div className="MKALcardContent">
+                      <p className="MKALcard-title">{v.name}</p>
+                      <p className="MKALcard-text"> {v.info}</p>
                     </div>
                   </div>
                   <div className="MKALbutton" type="submit">
                     <div>
+                      {/* 點擊按鈕跳對照id分頁 */}
                       <Link to={'/adoptlist/adoptpage/' + v.sid}>
-                        <button id="MKALcard-btn">了解更多</button>
+                        <button className="MKALcard-btn">了解更多</button>
                       </Link>
                     </div>
                   </div>
@@ -60,8 +63,9 @@ const AdoptCards = () => {
           })}
         </div>
       </div>
-      <div>
-        <ul className="pagination d-flex justify-content-center ">
+      <div className="MKpagination">
+        {/* 分頁按鈕 */}
+        <ul className="pagination">
           {pages.map((page) => (
             <li
               className={

@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { BiSearch, BiUser, BiCartAlt } from 'react-icons/bi'
 import { useStateValue } from '../StateProvider'
 import Avatar from './Avatar'
-// import ReadingProgress from '../components/ReadingProgress'
+// import ReadingProgress from './ReadingProgress'
 import logo from '../images/logo.svg'
 import '../Styles/MyNavbar.scss'
 

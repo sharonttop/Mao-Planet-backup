@@ -2,7 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import Axios from 'axios'
 import Dash from 'lodash'
-
+import {
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBCard,
+  MDBCardImage,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBBtn,
+} from 'mdbreact'
 const pageSize = 3
 
 function HotelCard() {
@@ -31,38 +44,81 @@ function HotelCard() {
   }
   return (
     <>
-      <div className="MKrow-list">
-        {paginatedPosts.map((v, i) => {
-          return (
-            <li key={i} className="MKDisplayLi col-12 col-lg-4">
-              <div className="MKcard">
-                <div className="MKcard-context">
-                  <div className="MKavatar">
-                    <img src={v.avatar} alt="" />
-                  </div>
-                  <div className="">
-                    <p id="MKcard-title">{v.name}</p>
-                    <p id="MKcard-text">
-                      電話：{v.cell}
-                      <br />
-                      地址：{v.address}
-                    </p>
-                  </div>
-                </div>
-                <div className="MKbutton" type="submit">
-                  <div>
-                    <Link to={'/hotellist/hotelpage/' + v.sid}>
-                      <button id="MKcard-btn">了解更多</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </li>
-          )
-        })}
-      </div>
       <div>
-        <ul className="pagination d-flex justify-content-center ">
+        <div className="MKrow-list">
+          {paginatedPosts.map((v, i) => {
+            return (
+              <li key={i} className="MKDisplayLi">
+                <div className="MKcard">
+                  <div className="MKcard-context">
+                    <div className="MKavatar">
+                      <img src={v.avatar} alt="" />
+                    </div>
+                    <div className="">
+                      <p id="MKcard-title">{v.name}</p>
+                      <p id="MKcard-text">
+                        電話：{v.cell}
+                        <br />
+                        地址：{v.address}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="" type="submit">
+                    <div>
+                      <Link to={'/hotellist/hotelpage/' + v.sid}>
+                        <button className="MKbutton" id="">
+                          了解更多
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            )
+          })}
+        </div>
+      </div>
+      {/* <MDBCarousel activeItem={1} length={2} slide={true}>
+        <MDBCarouselInner>
+          <MDBCarouselItem itemId={1}>
+            <div className="MKrow-list">
+              {paginatedPosts.map((v, i) => {
+                return (
+                  <li key={i} className="MKDisplayLi">
+                    <div className="MKcard">
+                      <div className="MKcard-context">
+                        <div className="MKavatar">
+                          <img src={v.avatar} alt="" />
+                        </div>
+                        <div className="">
+                          <p id="MKcard-title">{v.name}</p>
+                          <p id="MKcard-text">
+                            電話：{v.cell}
+                            <br />
+                            地址：{v.address}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="" type="submit">
+                        <div>
+                          <Link to={'/hotellist/hotelpage/' + v.sid}>
+                            <button className="MKbutton" id="">
+                              了解更多
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                )
+              })}
+            </div>
+          </MDBCarouselItem>
+        </MDBCarouselInner>
+      </MDBCarousel> */}
+      <div>
+        {/*  pagination*/}
+        <ul className="pagination MKpagination">
           {pages.map((page) => (
             <li
               className={

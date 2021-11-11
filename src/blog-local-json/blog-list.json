@@ -1,0 +1,62 @@
+{
+    "ALL_ARTICLES": [
+        {
+        "ID": "ba-01",
+        "URL": "https://i.imgur.com/qJGRwW8.jpg",
+        "title":"養貓新手必備知識",
+        "description":"這篇文章是寫給家中有一歲以內的幼貓、或準備養貓的新手家長們看的，希望能解除大家心中的疑惑。"
+        },
+        {
+        "ID": "ba-02",
+        "URL": "https://i.imgur.com/qZLecbp.jpg",
+        "title":"什麼是貓瘟？",
+        "description":"有養貓的人一定都聽過鼎鼎大名的貓瘟，但面對這個疾病，多數的毛爸媽可能都是「聽過但不清楚」。"
+        },
+        {
+        "ID": "ba-03",
+        "URL": "https://i.imgur.com/UJJLjh5.jpg",
+        "title":"如何幫狗狗選擇美容店？",
+        "description":"寵物美容院比比皆是，目前寵物美容業並沒有標準規定，多是寵物美容師自主經營，價格亦無公定價。"
+        } 
+    ],
+    "DOG_ARTICLES": [
+        {
+        "ID": "bd-01",
+        "URL": "https://i.imgur.com/UJJLjh5.jpg",
+        "title":"如何幫狗狗選擇美容店？",
+        "description":"寵物美容院比比皆是，目前寵物美容業並沒有標準規定，多是寵物美容師自主經營，價格亦無公定價。"
+        },
+        {
+        "ID": "bd-02",
+        "URL": "https://i.imgur.com/GsEALTb.jpg",
+        "title":"狗狗越胖越不想動！",
+        "description":"對狗狗來說，先不說肥胖是各種疾病的根源之一，首先就會影響到狗狗的日常生活品質和精神狀態。"
+        },
+        {
+        "ID": "bd-03",
+        "URL": "https://i.imgur.com/xXpC5tX.jpg",
+        "title":"常見狗狗補鈣的錯誤觀念",
+        "description":"在傳統的觀念中，很多毛爸媽認為狗狗要長的又大又壯，就是要補充很多很多鈣，所以拼命熬大骨湯。"
+        } 
+    ],
+    "CAT_ARTICLES": [
+        {
+        "ID": "bc-01",
+        "URL": "https://i.imgur.com/QUaCTYc.jpg",
+        "title":"貓咪太愛吃，該怎麼辦？",
+        "description":"當「十隻橘貓九隻肥」的飼養觀念流傳久了，很多貓爸媽漸漸覺得貓咪就是要胖胖的才對。"
+        },
+        {
+        "ID": "bc-02",
+        "URL": "https://i.imgur.com/PWlOBQl.jpg",
+        "title":"養貓後，別再亂用清潔劑",
+        "description":"使用的是四級氨、漂白水、地板清潔劑等來擦地板，但往往清理完沒多久，貓咪又重遊舊地排尿。"
+        },
+        {
+        "ID": "bc-03",
+        "URL": "https://i.imgur.com/GPdg7Ls.jpg",
+        "title":"該如何挑選貓罐頭？",
+        "description":"市面上的罐頭百百種，又分主食罐跟副食罐，到底如何挑才對貓咪最健康呢？乾食濕食都有其特色。"
+        } 
+    ]
+}
