@@ -3,19 +3,18 @@ import ProductListSubHero from './ProductListSubHero'
 import ProductListTitle from './ProductListTitle'
 import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
-import Pagination from './Pagination'
+import PaginationPage2 from './PaginationPage2'
 
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
 import subHero_catPlay from '../images/ProductList-images/cat-play-kitty.jpeg'
 
 
 const ProductListCatPlay = (tag)=>{
     const catPlay = CAT_PRODUCT["Cat-Play"];
     // console.log(catPlay)
-
+const catPlayPage2= "/productlist/cat/play/2"
     return(
     <>
     <div className="AG-productList-container">
@@ -37,7 +36,7 @@ const ProductListCatPlay = (tag)=>{
         )})}
         </div>
         <div className="ACblogLastSec">
-        <Pagination />
+        <PaginationPage2 href={catPlayPage2}/>
       </div>
     </div>
     </>
