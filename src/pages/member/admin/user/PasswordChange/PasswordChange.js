@@ -6,6 +6,9 @@ import {
 } from 'react-router-dom'
 import conf, { PASSWORD_CHANGE, API_HOST } from '../../../../../config'
 import './PasswordChange.scss'
+//背景引入
+import CatHand1 from '../../../../../images/Login/cat hand1.svg'
+import CatHand2 from '../../../../../images/Login/cat hand2.svg'
 
 function PasswordChange(props) {
   //編輯功能--------------------------------------
@@ -142,6 +145,12 @@ function PasswordChange(props) {
 
   const display = (
     <>
+      <div className="PasswordChangeCatHand1">
+        <img src={CatHand1} style={{ width: '110px' }} alt="" />
+      </div>
+      <div className="PasswordChangeCatHand2">
+        <img src={CatHand2} style={{ width: '120px' }} alt="" />
+      </div>
       <div className="card passwordChangeCard">
         <div className="passwordChangeBanner">
           <h2>變更密碼</h2>

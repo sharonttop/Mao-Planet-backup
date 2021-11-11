@@ -1,5 +1,4 @@
-import '../Styles/ProductListTitle.scss'
-
+import "../Styles/ProductListTitle.scss"
 
 const ProductListTitle = ({subTitle,engTitle})=>{
     return(
@@ -11,4 +10,4 @@ const ProductListTitle = ({subTitle,engTitle})=>{
     )
 }
 
-export default ProductListTitle
+export default ProductListTitle;

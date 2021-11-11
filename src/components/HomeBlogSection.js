@@ -1,18 +1,19 @@
 import React from 'react'
-import { Container, Row, Button } from 'react-bootstrap'
+import { Row, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaPaw } from 'react-icons/fa'
 import MobileHomeBlogSection from './MobileHomeBlogSection'
 
 import BlogPic1 from '../images/Home/BlogPic1_150x150.jpg'
 import BlogPic2 from '../images/Home/BlogPic2_150x150.jpg'
+import '../Styles/ACButtons.scss'
 import '../Styles/HomeBlogSection.scss'
 
 function HomeBlogSection(props) {
   return (
     <>
       {/* PC */}
-      <Container fluid id="ACblogSection" className="p-0 d-md-block d-none">
+      <div id="ACblogSection" className="p-0 d-md-block d-none">
         <Row className="d-flex justify-content-center">
           <Link
             to="/bloglist/blogarticle1"
@@ -43,17 +44,17 @@ function HomeBlogSection(props) {
             </div>
           </Link>
         </Row>
-      </Container>
+      </div>
 
       {/* mobile: 套carousel */}
-      <div fluid id="m-ACblogSection" classNmae="mt-3 p-0 d-md-none d-block">
+      <div id="m-ACblogSection" classNmae="mt-3 p-0 d-md-none d-block">
         <MobileHomeBlogSection />
       </div>
 
       {/* button:PC mobile共用 */}
       <div
         id="ACblogBtnSection"
-        className="d-flex justify-content-center mb-5 pt-4 p-0"
+        className="d-flex justify-content-center mb-5 py-4 p-0"
       >
         <Link to="/bloglist">
           <Button className="m-ACYellowOutlineBtn">

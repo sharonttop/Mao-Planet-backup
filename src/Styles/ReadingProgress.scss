@@ -1,4 +1,33 @@
-.progress {
-  height: 7px;
-  border-radius: 0;
+// .progress {
+//   height: 7px;
+//   border-radius: 0;
+// }
+
+.ACbarPosition {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background-color: #646464;
 }
+
+.ACprogressBar {
+  height: 5px;
+  width: 0px;
+  background-color: #FF0000;
+}
+
+// .progress {
+//   width: 100%;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: 5px;
+//   background-color: #d3d3d3;
+// }
+// .progress > .progress-bar {
+//   height: 5px;
+//   width: 0px;
+//   background-color: #FF0000;
+// }

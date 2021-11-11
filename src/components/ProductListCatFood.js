@@ -5,7 +5,6 @@ import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
 import { Link } from 'react-router-dom'
 
-
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
 import Pagination from './Pagination'
@@ -37,6 +36,7 @@ const ProductListCatFood = (tag)=>{
                 <ProductCard ID={item.ID} ProductImg={item.URL} ProductTitle={item.title} ProductPrice={item.price} />
                 </>
         )})}
+
         </div>
         <div className="ACblogLastSec">
         <Pagination />

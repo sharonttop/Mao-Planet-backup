@@ -10,7 +10,6 @@ import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
 import subHero_catHealth from '../images/ProductList-images/cat-health.jpeg'
 
-
 const ProductListCatHealth = (tag)=>{
     const catHealth = CAT_PRODUCT["Cat-Health"];
     // console.log(catHealth)
