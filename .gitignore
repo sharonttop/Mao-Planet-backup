@@ -4,8 +4,10 @@ yarn.lock
 package.json
 package-lock.json
 build
-# src/App.js
+src/App.js
 src/App.css
 # src/config
 public
 .vscode
+src/images/.DS_Store
+.gitignore

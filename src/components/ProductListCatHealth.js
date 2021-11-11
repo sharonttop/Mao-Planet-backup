@@ -4,12 +4,11 @@ import ProductListTitle from './ProductListTitle'
 import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
 import { Link } from 'react-router-dom'
+import Pagination from './Pagination'
 
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
-
 import subHero_catHealth from '../images/ProductList-images/cat-health.jpeg'
-
 
 const ProductListCatHealth = (tag)=>{
     const catHealth = CAT_PRODUCT["Cat-Health"];
@@ -25,17 +24,20 @@ const ProductListCatHealth = (tag)=>{
         <Link to="/productlist/cat/health"><ProductListTag >貓貓保健</ProductListTag></Link>
         <Link to="/productlist/cat/outdoor"><ProductListTag >貓貓出遊</ProductListTag></Link>
         </div>
-            <ProductListSubHero subHero_cat={subHero_catHealth}/>
+            <ProductListSubHero subHero={subHero_catHealth}/>
             <ProductListTitle subTitle={"貓貓保健"} engTitle={"Health"}/>
         <div className='AG-productCards'>
         {catHealth.map((item) => {
             return (
                 <>
-                <ProductCard ProductImg={item.URL} ProductTitle={item.title} ProductPrice={item.price} />
+                <ProductCard ID={item.ID} ProductImg={item.URL} ProductTitle={item.title} ProductPrice={item.price} />
                 </>
         )})}
         </div>
-    </div>
+        </div>
+        <div className="ACblogLastSec">
+        <Pagination />
+      </div>
     </>
     )
 }

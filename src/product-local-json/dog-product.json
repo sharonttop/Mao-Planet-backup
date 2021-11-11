@@ -1,5 +1,5 @@
 {
-    "dog-Food": [
+    "Dog-Food": [
         {
         "ID": "df-01",
         "URL": "https://i.imgur.com/pkyay3E.png",
@@ -86,7 +86,7 @@
         },
         {
         "ID": "df-15",
-        "URL": "https://imgur.com/NGyumNl",
+        "URL": "https://imgur.com/NGyumNl.png",
         "title":"KIWIPET | 天然原肉凍乾零食 - 袋鼠肉餅",
         "price":"260"
         },
@@ -97,7 +97,7 @@
         "price":"260"
         }
     ],
-    "dog-Play": [
+    "Dog-Play": [
         {
         "ID": "dp-01",
         "URL": "https://i.imgur.com/PxyUQk3.png",
@@ -195,7 +195,7 @@
         "price":"230"
         }
     ]
-    ,"dog-Toilet": [
+    ,"Dog-Toilet": [
         {
         "ID": "dt-01",
         "URL": "https://i.imgur.com/HwBLvzu.png",
@@ -237,26 +237,8 @@
         "URL": "https://i.imgur.com/i3D4ImV.jpg",
         "title":"pidan | 吸水寵物尿片",
         "price":"250"
-        },
-        {
-        "ID": "dt-08",
-        "URL": "",
-        "title":"",
-        "price":""
-        },
-        {
-        "ID": "dt-09",
-        "URL": "",
-        "title":"",
-        "price":""
-        },
-        {
-        "ID": "dt-10",
-        "URL": "",
-        "title":"",
-        "price":""
         }
-    ],"dog-Outdoor": [
+    ],"Dog-Outdoor": [
         {
         "ID": "do-01",
         "URL": "https://i.imgur.com/78EN3ve.png",
@@ -353,7 +335,7 @@
         "title":"LazyEazy | 夜間反光加厚保暖外套 (兩色)",
         "price":"1050"
         }
-    ],"dog-Health": [
+    ],"Dog-Health": [
         {
         "ID": "dh-01",
         "URL": "https://i.imgur.com/p3lwHjl.png",

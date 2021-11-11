@@ -11,7 +11,7 @@
   width: 100px;
   height: 350px;
   justify-content: space-between;
-  div {
+  img {
     width: 80px;
     height: 80px;
   }
@@ -31,10 +31,12 @@
 }
 
 .AG-bigPic {
-  background-image: url(../images/ProductList-images/big01.png);
+  // background-image: url(../images/ProductList-images/big01.png);
   background-size: cover;
-  width: 350px;
-  height: 350px;
+  img {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 .AG-textAndBtnArea {
@@ -115,6 +117,7 @@
   padding: 10px 12px;
   font-size: 1rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .AG-toCart {
