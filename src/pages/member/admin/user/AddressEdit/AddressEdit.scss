@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
 }
+.addressEditForm {
+    // display:flex;
+    align-items: flex-end;
+    position: relative;
+}
 
-.loginCard {
+.addressEditCard {
     max-width: 360px;
     height: auto;
     /* min-height: 200px; */
@@ -11,87 +16,106 @@
     /* text-align: center; */
     padding: 0px 0 15px 0;
     border-radius: 10px;
-    margin: 60px auto;
+    margin: 0 auto 0 auto;
     overflow: hidden;
 
     background-color:#ffffff;
 }
 
-.loginForm-group>input{
+.addressEditForm-group>input{
     height: 30px !important;
     width: 230px !important;
 }
 
 
-.loginBanner {
+.addressEditBanner {
     /* border-radius: 10px 10px 0 0; */
-    height: 70px;
+    height: 60px;
     background: #F5DF4D;
     /* background-size: 100% 35%; */
     background-size: cover;
     margin-bottom: 1rem;
 
 }
-.loginBanner>h2{
+.addressEditBanner>h2{
+    letter-spacing:2px;
     font-size: 1.5rem;
     color: #ffffff;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     text-align: center;
 }
-.loginForm-group {
+.addressEditForm-group {
     margin-top: 0.5rem;
     margin-bottom: 1.2rem;
     margin-right: 4rem;
     margin-left: 4rem;
 }
 
-.loginBtn {
+.addressEditBtn {
     color: white;
     margin-top : .5rem;
     margin-bottom : .5rem;
+    margin-left : .5rem;
     margin-left :120px;
     background: #F5DF4D;
     border: 1px solid #F5DF4D;
-    border-radius: 50pt;
-    width: 120px;
+    border-radius: 50pt ;
+    width: 120px ;
     font-size:0.9rem;
     line-height:1.2rem;
-}
 
-.loginForm-group>label{
+}
+.addressEditForm-group>label{
     margin-bottom: 0;
     font-size:0.9rem;
 }
-.loginBtn:hover {
+.addressEditBtn:hover {
     color: white;
     opacity:0.7;
-    
 }
-.loginSignUpLink{
-  text-align: center;  
+
+.addressEdit-group{
+    flex-grow: 1;
 }
-.loginSignUpLink>a{
-    font-size:0.9rem;
-    color: #939597;
-}
-.LoginCatHand1{
+//背景貓腳
+.addressEditCatHand1{
     position: absolute;
-    margin-left: 340px;
+    margin-left: 40px;
     margin-top: 300px;
     transform:rotate(10deg);
 }
-.LoginCatHand2{
+.addressEditCatHand2{
     position: absolute;
-    margin-left: 900px;
-    margin-top: 0px;
+    margin-left: 590px;
+    margin-top: -30px;
     transform:rotate(10deg);
 }
+.addressEditCheck{
+    margin: 0;
+    font-size:0.5rem;
+}
+#addressEditcheckbox{
+    margin-left: 18%;
+}
 @media (max-width: 768px) { 
-    .LoginCatHand1{
-       display: none;
+    .addressEditInfo{
+        width: 100%;
+        order: 2;
     }
-    .LoginCatHand2{
+    .addressEdit-group{
+        width: 100%;
+        order: 2;
+    }
+
+    .addressEditBtn{
+        order: 3;
+        margin-left: 33%;
+    }
+    .addressEditCatHand1{
         display: none;
-    }
+     }
+     .addressEditCatHand2{
+         display: none;
+     }
 
 }

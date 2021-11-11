@@ -6,6 +6,6 @@ package-lock.json
 build
 # src/App.js
 src/App.css
-src/config
+# src/config
 public
 .vscode

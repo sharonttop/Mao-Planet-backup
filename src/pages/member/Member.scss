@@ -1,63 +1,215 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-.memberCard {
+  }
+  
+  .memberCard {
     max-width: 270px;
     height: auto;
     /* min-height: 200px; */
-
+  
     // text-align: center;
     // padding: 0px 0 15px 0;
     border-radius: 10px;
     margin: 0 0 0 auto;
     overflow: hidden;
-    background-color:#ffffff;
-}
-
-.memberBanner {
+    background-color: #ffffff;
+  }
+  
+  .memberBanner {
     /* border-radius: 10px 10px 0 0; */
-    height: 60px;
-    background: #F5DF4D;
+    height: 45px;
+    background: #f5df4d;
     /* background-size: 100% 35%; */
     background-size: cover;
     margin-bottom: 1rem;
-
-}
-.memberBanner>p{
+    margin-bottom: 10px;
+  }
+  .memberBanner > p {
+    letter-spacing: 2px;
     font-size: 1.2rem;
     color: #ffffff;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    margin-left: 25px;
     // text-align: center;
-}
-.memberCardwrap>ul>li>a {
-    text-decoration:none;
-    color:#222222;
-}
-// .memberCardwrap>ul>li {
-//     border-bottom:solid 1px #222222;
-// }
-
-.MemberBackground>img{
+  }
+  .logoutMemberBtn {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 4px;
+    margin-left: 20px;
+  }
+  .memberCardwrap > ul > li > a {
+    letter-spacing: 2px;
+    margin-left: 23px;
+    text-decoration: none;
+    color: #646464;
+  }
+  .memberCardwrap > ul > li > a:hover {
+    opacity: 0.7;
+  }
+  .memberCardwrap > ul {
+    margin-bottom: 4px;
+  }
+  hr.MemberLineStyle {
+    text-align: center;
+    width: 230px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  // .memberCardwrap>ul>li {
+  //     border-bottom:solid 1px #222222;
+  // }
+  
+  .MemberBackground > img {
     width: 950px;
     // max-height: 80%;
     position: absolute;
-}
-.MemberBackground>p{
+  }
+  .MemberBackground > p {
     // max-height: 80%;
+    letter-spacing: 1px;
     color: hsl(210, 2%, 58%);
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-left: 230px;
     margin-top: 20px;
     position: absolute;
-}
-.MemberBackground{
+  }
+  .MemberBackground {
     position: relative;
-}
-@media (max-width: 768px) { 
-    .memberCard {
-        margin: 0 auto;
+  }
+  @media (max-width: 768px) {
+    .slick-next:before,
+    .slick-prev:before {
+      font-size: 30px !important;
     }
-
-}
+    button.slick-arrow.slick-next{
+      left: 240px!important;
+    }
+    // button.slick-arrow.slick-prev{
+    //   left: 10px!important;
+    // }
+    .slick-dots {
+      width:35% !important;
+    }
+    .memberCard {
+      margin: 10px auto auto auto;
+    }
+    .MemberBackground > img {
+      width: 1200px;
+      left: -300px;
+    }
+    .MemberBackground > p {
+      // position: absolute;
+      // max-height: 80%;
+      margin-left: 15%;
+      margin-right: auto;
+      letter-spacing: 1px;
+      font-size: 1.5rem;
+    }
+  }
+  
+  // -------最新公告---
+  .memberNewsCard {
+    width: 150%;
+    min-width: 270px;
+    height: auto;
+    /* min-height: 200px; */
+  
+    // text-align: center;
+    // padding: 0px 0 15px 0;
+    border-radius: 10px;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  .memberNews {
+    /* border-radius: 10px 10px 0 0; */
+    height: 50px;
+    background: #939597;
+    /* background-size: 100% 35%; */
+    background-size: cover;
+    margin-bottom: 1rem;
+  }
+  .memberNews > p {
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding-top: .8rem;
+    margin-left: 25px;
+    // text-align: center;
+  }
+  .memberNewsWrap > ul > li > a {
+    letter-spacing: 3px;
+    margin-left: 23px;
+    text-decoration: none;
+    color: #646464;
+  }
+  .memberNewsWrap > ul > li > a:hover {
+    opacity: 0.7;
+  }
+  hr.MemberNewLineStyle {
+    text-align: center;
+    width: 90%;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    .memberNewsCard {
+      max-width: 60%;
+      margin: 0 auto 0 auto;
+    }
+  }
+  //貓狗館廣告------
+  .MemberDogBtn > a > img {
+    max-width: 260px;
+    margin-left: 100px;
+    margin-top: 5px;
+  }
+  .MemberCatBtn > a > img {
+    max-width: 260px;
+    margin-left: 100px;
+  }
+  .MemberDogBtn > a > img:hover {
+    opacity: 0.7;
+  }
+  .MemberCatBtn > a > img:hover {
+    opacity: 0.7;
+  }
+  @media (max-width: 768px) {
+    .MemberCatBtn > a > img {
+      max-width: 800px;
+      margin-left: 3%;
+    }
+    .MemberDogBtn > a > img {
+      margin-left: 3%;
+      max-width: 800px;
+    }
+  }
+  
+  //輪播牆手機板
+  @media (max-width: 768px) {
+    .MemberContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .MemberDefault {
+      // position: static;
+      order: 1;
+    }
+    .memberMessage {
+      order: 2;
+    }
+    .memberCardCarousel > img {
+      width: auto;
+    }
+  }
+  

@@ -1,9 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-.petIdCard {
+  }
+  
+  .petIdCard {
     margin-bottom: 20px;
     max-width: 730px;
     height: auto;
@@ -14,129 +14,183 @@
     border-radius: 10px;
     // margin: 60px auto;
     overflow: hidden;
-
-    background-color:#ffffff;
-}
-
-.petIdForm {
-    display:flex;
+  
+    background-color: #ffffff;
+  }
+  
+  .petIdForm {
+    display: flex;
     // align-items: flex-end;
     // position: relative;
-}
-
-
-
-.petIdForm-group>input{
-    height: 30px !important;
-    max-width: 165px !important;
-}
-.petIdForm-group>select{
-    height: 30px !important;
-    max-width: 100px !important;
-}
-
-.petIdBanner {
+  }
+  
+  .petIdForm-group > input {
+    height: 30px;
+    max-width: 165px;
+  }
+  .petIdForm-group > select {
+    height: 30px;
+    max-width: 100px;
+  }
+  
+  .petIdBanner {
     /* border-radius: 10px 10px 0 0; */
     height: 45px;
-    background: #F5DF4D;
+    background: #f5df4d;
     /* background-size: 100% 35%; */
     background-size: cover;
     margin-bottom: 1rem;
-
-}
-.petIdBanner>h2{
+  }
+  .petIdBanner > h2 {
     font-size: 1.2rem;
     color: #ffffff;
-    padding-top: .8rem;
+    padding-top: 0.8rem;
     text-align: center;
-}
-.petIdForm-group {
+  }
+  .petIdForm-group {
     // display: flex;
     margin-top: 0.5rem;
     // margin-bottom: 1.2rem;
     // margin-right: 4rem;
     margin-left: 2rem;
-}
-
-.petIdBtn {
+  }
+  
+  .petIdBtn {
     color: white;
-    margin-top : .5rem;
-    margin-bottom : .5rem;
-    margin-left :120px;
-    background: #F5DF4D;
-    border: 1px solid #F5DF4D;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 120px;
+    background: #f5df4d;
+    border: 1px solid #f5df4d;
     border-radius: 50pt;
     width: 120px;
-    font-size:0.9rem;
-    line-height:1.2rem;
-}
-
-.petIdForm-group>label{
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+  
+  .petIdForm-group > label {
     margin-bottom: 0;
-    font-size:0.9rem;
-}
-.petIdBtn:hover {
+    font-size: 0.9rem;
+  }
+  .petIdBtn:hover {
     color: white;
-    opacity:0.7;
-    
-}
-
-.petIdAvatar{
+    opacity: 0.7;
+  }
+  
+  .petIdAvatar {
     max-width: 100px;
     max-height: 100px;
     border-radius: 50%;
     overflow: hidden;
     /* border: 1px solid black; */
     margin-left: 1rem;
-}
-
-.petIdAvatar img {
+  }
+  
+  .petIdAvatar img {
     width: 100%;
-}
-.img-upload:hover{
+  }
+  .img-upload:hover {
     color: white;
-    opacity:0.7;
-}
-
-.petIdRemoveMark{
+    opacity: 0.7;
+  }
+  
+  .petIdRemoveMark {
     width: 40px;
-}
-.petIdAddMark{
+  }
+  .petIdAddMark {
     width: 40px;
     // position: absolute;
     // left: 350px;
     // bottom: -10px;
-}
-@media (max-width: 768px) { 
-    .petIdForm-group>input{
-        height: 30px !important;
-        width: 230px !important;
+  }
+  //彈出視窗
+  .modal-content {
+    border-radius: 1.2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-top: 20%;
+  }
+  .petIdBtn {
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 0.8rem;
+    /* margin-left :120px; */
+    background: #f5df4d;
+    border: 1px solid #f5df4d;
+    border-radius: 50pt;
+    width: 120px;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+  .petIdBtn:hover {
+    color: white;
+    opacity: 0.7;
+  }
+  @media (max-width: 768px) {
+    .petIdAvatar {
+      max-width: 80%;
+      max-height: 80%;
     }
-    .petIdForm-group>select{
-        height: 30px !important;
-        width: 230px !important;
+    .petIdForm-group{
+      margin-left:20%;
+    }
+    .petIdForm-group > input {
+      height: 30px;
+      max-width: 230px ;
+      // margin:0 auto 0 auto;
+    }
+    .petIdForm-group > select {
+      height: 30px;
+      max-width: 230px;
+      // margin:auto 0 auto 0;
     }
     .petIdForm {
-        display: block;
+      display: block;
     }
-    .signUp-group{
-        width: 100%;
-        order: 2;
+    .signUp-group {
+      width: 100%;
+      order: 2;
     }
-
-    .signUpBtn{
-        order: 3;
-        margin-left: 33%;
+  
+    .signUpBtn {
+      order: 3;
+      margin-left: 33%;
     }
-    .petIdAvatar{
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-    overflow: hidden;
-    /* border: 1px solid black; */
-    /* margin: -50px auto 0px auto; */
-    margin-left : auto;
-    margin-right : auto;
-
+    .petIdAvatar {
+      width: 50%;
+      height: 50%;
+      border-radius: 50%;
+      overflow: hidden;
+      /* border: 1px solid black; */
+      /* margin: -50px auto 0px auto; */
+      margin-left: auto;
+      margin-right: auto;
     }
-}
+    .petIdCouponAD {
+      display: none;
+    }
+    .petIdBtn {
+      margin-left: 33% !important;
+    }
+    // .petIdRemoveMark{
+    //     width: 40px;
+    // }
+    // .petIdAddMark{
+    //     margin-top :3%;
+    //     margin-left :45%;
+    // }
+    .modal-content {
+      border-radius: 1.2rem;
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 5%;
+    }
+    .modal-title.h4{
+      margin-left: 27%!important;
+    }
+    .modal-body>h2{
+      margin-left: 21%!important;
+    }
+  }
+  
