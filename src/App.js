@@ -36,6 +36,7 @@ import MyFooter from './components/MyFooter'
 import AuthHeader from './components/AuthHeader'
 import MainContent from './components/MainContent'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollButton from './components/ScrollButton'
 //import BreadCrumb from './components/BreadCrumb'
 import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
 
@@ -176,6 +177,7 @@ function App(props) {
         </MainContent>
         {/* 頁尾+版權訊息 */}
         <MyFooter />
+        <ScrollButton />
       </>
     </Router>
   )

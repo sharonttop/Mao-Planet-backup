@@ -1,8 +1,7 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-// import MyFooter from '../../components/MyFooter'
-import ReadingProgress from '../../components/ReadingProgress'
+// import ReadingProgress from '../../components/ReadingProgress'
 
 import ArticlePic1 from '../../images/BlogArticle/ArticlePic1_805x500.jpg'
 import ArticlePic2 from '../../images/BlogArticle/ArticlePic2_805x500.jpg'
@@ -16,15 +15,13 @@ import './BlogArticle.scss'
 
 function BlogArticle1(props) {
   //   const { auth } = props
-  const target = React.createRef()
+  // const target = React.createRef()
 
   return (
     <>
-      
-
-      <Container id="ACblogContent" className="d-flex justify-content-center">
+      <div id="ACblogContent" className="d-flex justify-content-center p-0">
         <Row>
-          <div className="ACblogArticle-container col-md-11 col-12">
+          <div className="ACblogArticle-container col-md-9 col-11">
             <p className="ACblogArticleDate">2021-09-06 發佈文章</p>
             <h1>養貓新手必備知識</h1>
             <p className="ACblogArticleText">文／獸醫師劉子華的。貓。語生活</p>
@@ -103,7 +100,7 @@ function BlogArticle1(props) {
             </p>
           </div>
         </Row>
-        <div className="ACblogRCol d-flex col-md-4">
+        <div className="ACblogRCol col-md-3 d-md-block d-none">
           <div className="ACRColTitle">
             <h5>熱門文章</h5>
           </div>
@@ -141,8 +138,47 @@ function BlogArticle1(props) {
             </Link>
           </div>
         </div>
-      </Container>
-      {/* <MyFooter /> */}
+      </div>
+
+      {/* mobile */}
+      <div className="ACblogRCol mb-5 col-12 d-md-none d-block">
+        <div className="ACRColTitle">
+          <h5>熱門文章</h5>
+        </div>
+        <div className="d-flex my-3">
+          <Link to="#/" className="d-flex ACblogRColText">
+            <div className="ACblogListPic mr-3">
+              <img src={rHotTopic1} alt="" />
+            </div>
+            <div>
+              <h6>別讓貓咪不開心～為什麼貓咪常亂尿尿？</h6>
+              <p className="ACRCol-HotTopicDate">2021-11-09</p>
+            </div>
+          </Link>
+        </div>
+        <div className="d-flex my-3">
+          <Link to="#/" className="d-flex ACblogRColText">
+            <div className="ACblogListPic mr-3">
+              <img src={rHotTopic2} alt="" />
+            </div>
+            <div>
+              <h6>如何幫狗狗選擇美容店？</h6>
+              <p className="ACRCol-HotTopicDate">2021-10-18</p>
+            </div>
+          </Link>
+        </div>
+        <div className="d-flex my-3">
+          <Link to="#/" className="d-flex ACblogRColText">
+            <div className="ACblogListPic mr-3">
+              <img src={rHotTopic3} alt="" />
+            </div>
+            <div>
+              <h6>什麼是貓瘟？</h6>
+              <p className="ACRCol-HotTopicDate">2021-10-05</p>
+            </div>
+          </Link>
+        </div>
+      </div>
     </>
   )
 }

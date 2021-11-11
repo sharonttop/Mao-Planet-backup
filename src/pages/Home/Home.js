@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Button } from 'react-bootstrap'
+import { Row, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaPaw } from 'react-icons/fa'
 import HomeCarousel from '../../components/HomeCarousel'
@@ -137,9 +137,9 @@ function Home(props) {
         </div>
       </div>
 
-      <Container id="ACproductSection3Card" className="p-0 d-md-block d-none">
-        <Row>
-          <div className="ACnewArrCard col-md-4 col-12 mt-5 mx-auto">
+      <div id="ACproductSection3Card" className="p-0 d-md-block d-none">
+        <Row className="d-flex justify-content-center">
+          <div className="ACnewArrCard mt-5 mx-md-3">
             <Link to="/productlist/cat">
               <img src={NewArrCard1} alt="" />
               <div className="ACtag">
@@ -151,7 +151,7 @@ function Home(props) {
               </div>
             </Link>
           </div>
-          <div className="ACnewArrCard col-md-4 col-12 mt-5 mx-auto">
+          <div className="ACnewArrCard mt-5 mx-md-3">
             <Link to="/productlist/cat">
               <img src={NewArrCard2} alt="" />
               <div className="ACtag">
@@ -163,7 +163,7 @@ function Home(props) {
               </div>
             </Link>
           </div>
-          <div className="ACnewArrCard col-md-4 col-12 mt-5 mx-auto">
+          <div className="ACnewArrCard mt-5 mx-md-3">
             <Link to="/productlist/dog">
               <img src={NewArrCard3} alt="" />
               <div className="ACtag">
@@ -176,7 +176,7 @@ function Home(props) {
             </Link>
           </div>
         </Row>
-      </Container>
+      </div>
 
       {/* 毛孩雜貨商品卡片 */}
       <HomeProductCardSection />
@@ -215,7 +215,7 @@ function Home(props) {
           </div>
         </Row>
       </div>
-      <Container fluid id="ACsalonSection" className="p-0">
+      <div id="ACsalonSection" className="p-0">
         {/* PC */}
         <Row>
           <div className="ACsalonBN col-md-5 d-md-block d-none">
@@ -246,7 +246,7 @@ function Home(props) {
             </p>
           </div>
         </Row>
-      </Container>
+      </div>
       <div className="AChotelBtn d-flex justify-content-center p-0">
         <Link to="/hotellist">
           <Button className="ACYellowOutlineBtn">
@@ -259,7 +259,6 @@ function Home(props) {
       </div>
 
       <HomeBlogSection />
-      {/* <MyFooter /> */}
     </>
   )
 }

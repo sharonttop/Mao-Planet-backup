@@ -1,5 +1,9 @@
+// #ACblogContent {
+//   margin: auto;
+// }
+
 .ACblogArticle-container {
-  margin: 8% 0 15% 0;
+  margin: 8% auto 15% auto;
 }
 
 .ACblogArticlePic {
@@ -42,7 +46,7 @@
 .ACblogRCol {
   display: flex;
   flex-direction: column;
-  margin: 21% 0;
+  margin: 15% 10% 0 0;
 }
  
 .ACRColTitle {

@@ -16,6 +16,7 @@ import {
 
 import BlogPic1 from '../images/Home/BlogPic1_250x250.jpg'
 import BlogPic2 from '../images/Home/BlogPic2_250x250.jpg'
+import '../Styles/ACButtons.scss'
 import '../Styles/HomeBlogSection.scss'
 
 const MobileHomeBlogSection = () => {

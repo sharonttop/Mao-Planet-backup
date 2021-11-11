@@ -1,4 +1,3 @@
-
 import ProductListTag from './ProductListTag'
 import ProductListSubHero from './ProductListSubHero'
 import ProductListTitle from './ProductListTitle'
@@ -10,37 +9,48 @@ import { Link } from 'react-router-dom'
 
 import subHero_catPlay from '../images/ProductList-images/cat-play-kitty.jpeg'
 
+const ProductListCatPlayPage2 = (tag) => {
+  const catPlay = CAT_PRODUCT['Cat-Play-2']
+  // console.log(catPlay)
 
-const ProductListCatPlayPage2 = (tag)=>{
-    const catPlay = CAT_PRODUCT["Cat-Play-2"];
-    // console.log(catPlay)
-
-    return(
+  return (
     <>
-    <div className="AG-productList-container">
+      <div className="AG-productList-container">
         <div className="AG-productTags">
-        <Link to="/productlist/cat/food"><ProductListTag >貓貓美食</ProductListTag></Link>
-        <Link to="/productlist/cat"><ProductListTag >貓貓玩具</ProductListTag></Link>
-        <Link to="/productlist/cat/toilet"><ProductListTag >貓貓廁所</ProductListTag></Link>
-        <Link to="/productlist/cat/health"><ProductListTag >貓貓保健</ProductListTag></Link>
-        <Link to="/productlist/cat/outdoor"><ProductListTag >貓貓出遊</ProductListTag></Link>
+          <Link to="/productlist/cat/food">
+            <ProductListTag>貓貓美食</ProductListTag>
+          </Link>
+          <Link to="/productlist/cat">
+            <ProductListTag>貓貓玩具</ProductListTag>
+          </Link>
+          <Link to="/productlist/cat/toilet">
+            <ProductListTag>貓貓廁所</ProductListTag>
+          </Link>
+          <Link to="/productlist/cat/health">
+            <ProductListTag>貓貓保健</ProductListTag>
+          </Link>
+          <Link to="/productlist/cat/outdoor">
+            <ProductListTag>貓貓出遊</ProductListTag>
+          </Link>
         </div>
-            <ProductListSubHero subHero_cat={subHero_catPlay}/>
-            <ProductListTitle subTitle={"貓貓玩具"} engTitle={"Toys"}/>
-        <div className='AG-productCards'>
-        {catPlay.map((item) => {
+        <ProductListSubHero subHero_cat={subHero_catPlay} />
+        <ProductListTitle subTitle={'貓貓玩具'} engTitle={'Toys'} />
+        <div className="AG-productCards">
+          {catPlay.map((item) => {
             return (
-                <>
-                <ProductCard ProductImg={item.URL} ProductTitle={item.title} ProductPrice={item.price} />
-                </>
-        )})}
+              <>
+                <ProductCard
+                  ProductImg={item.URL}
+                  ProductTitle={item.title}
+                  ProductPrice={item.price}
+                />
+              </>
+            )
+          })}
         </div>
-    </div>
+      </div>
     </>
-    )
+  )
 }
 
-        
-        
-
-export default ProductListCatPlayPage2;
+export default ProductListCatPlayPage2
