@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import conf, { LOGIN_JWT } from '../../config'
 import { FaPaw } from 'react-icons/fa'
+import CatHand1 from '../../images/Login/cat hand1.svg'
+import CatHand2 from '../../images/Login/cat hand2.svg'
 import './Login.scss'
 
 function Login(props) {
@@ -10,6 +12,8 @@ function Login(props) {
   console.log({ conf })
 
   const { auth, setAuth } = props
+  // (從login引入useState作法)
+  // const { auth, setAuth, setMyAvatar } = props
 
   // //驗證有無token
   // const token = localStorage.getItem('token')
@@ -78,6 +82,8 @@ function Login(props) {
     if (data.success) {
       setAuth(true)
       localStorage.setItem('member', JSON.stringify(data.member))
+      // (從login引入useState作法)
+      // setMyAvatar(data.member.avatar)
       //將顧客資料基本資料從前端存到localStorage，注意不要存放敏感性資料，譬如身分證手機等等
       localStorage.setItem('token', data.token)
       //儲存到localStorage
@@ -174,6 +180,12 @@ function Login(props) {
 
   const loginDisplay = (
     <>
+      <div className="LoginCatHand1">
+        <img src={CatHand1} style={{ width: '110px' }} alt="" />
+      </div>
+      <div className="LoginCatHand2">
+        <img src={CatHand2} style={{ width: '120px' }} alt="" />
+      </div>
       <div className="card loginCard">
         <div className="loginBanner">
           <h2>登入會員</h2>
