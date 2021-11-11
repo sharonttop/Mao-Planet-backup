@@ -14,10 +14,17 @@ import AdoptList from './pages/AdoptList/AdoptList'
 import AdoptPage from './pages/AdoptPage/AdoptPage'
 import ProductDog from './pages/ProductDog'
 import ProductCat from './pages/ProductCat'
+
 import ProductListCatFood from './components/ProductListCatFood'
 import ProductListCatToilet from './components/ProductListCatToilet'
 import ProductListCatHealth from './components/ProductListCatHealth'
 import ProductListCatOutdoor from './components/ProductListCatOutdoor'
+import ProductDetailsCP19 from './components/ProductDetailsCP19'
+import ProductDetailsCP18 from './components/ProductDetailsCP18'
+import ProductDetails from './components/ProductDetails'
+
+import ProductDetailsPage from './components/ProductDetailsPage'
+import ProductListCatPlayPage2 from './components/ProductListCatPlayPage2'
 import ProductListDogFood from './components/ProductListDogFood'
 import ProductListDogToilet from './components/ProductListDogToilet'
 import ProductListDogHealth from './components/ProductListDogHealth'
@@ -43,6 +50,8 @@ import ScrollToTop from './components/ScrollToTop'
 import ScrollButton from './components/ScrollButton'
 //import BreadCrumb from './components/BreadCrumb'
 import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
+// import ProductDetailsCP18 from './components/ProductDetailsCP18'
+
 
 function App(props) {
   const [auth, setAuth] = useState(false)
@@ -123,6 +132,17 @@ function App(props) {
               </Route>
               <Route path="/productlist/cat/outdoor" exact>
                 <ProductListCatOutdoor />
+              </Route>
+              
+              <Route path="/productlist/cat/cp-18" exact>
+                <ProductDetailsCP18 />
+              </Route>
+              <Route path="/productlist/cat/cp-19" exact>
+                <ProductDetailsCP19 />
+              </Route>
+              
+              <Route path="/productlist/cat/play/2" exact>
+                <ProductListCatPlayPage2 />
               </Route>
               <Route path="/productlist/cat/" exact>
                 <ProductCat />
