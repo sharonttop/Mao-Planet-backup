@@ -1,8 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Row } from 'react-bootstrap'
 import './AdoptPage.scss'
+import { FaPaw } from 'react-icons/fa'
+import { AiFillMail } from 'react-icons/ai'
 import Axios from 'axios'
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+  MDBMask,
+  MDBContainer,
+} from 'mdbreact'
 // img src
+// import Carousel from './Carousel'
+
 import { withRouter } from 'react-router-dom'
 
 // import AdoptPage1 from './adoptpage-01-02_300x300.jpeg'
@@ -51,22 +63,70 @@ function AdoptPage(props) {
 
   return (
     <>
-      <Container>
-        {/* header */}
-        <Row>
-          <div className="MKheader-title">
-            <p>
-              貓咪認養資訊:
-              <span className="MKtitle-text"> {adoptPage.name}</span>
-            </p>
-          </div>
-        </Row>
-        {/* avatar */}
-        <Row>
-          <div className="MKrowAvatar">
+      {/* header */}
+      <>
+        <div className="MKheader-title">
+          <p>
+            貓咪認養資訊:
+            <span className="MKtitle-text"> {adoptPage.name}</span>
+          </p>
+        </div>
+      </>
+      {/* Carousel */}
+      <div className="MKAPCarousel">
+        <MDBCarousel
+          activeItem={1}
+          length={3}
+          // showControls={true}
+          // showIndicators={true}
+          // className="z-depth-1"
+        >
+          <MDBCarouselInner className="MKAPCarousel">
+            <MDBCarouselItem itemId="1">
+              <MDBView className="MKAPCarouselBox">
+                <img
+                  className="MKAPCarouselimg"
+                  src={adoptPage.avatar}
+                  alt="First slide"
+                />
+                {/* <MDBMask overlay="black-light" /> */}
+              </MDBView>
+            </MDBCarouselItem>
+            <MDBCarouselItem itemId="2">
+              <MDBView className="MKAPCarouselBox">
+                <img
+                  className="MKAPCarouselimg"
+                  src={adoptPage.avatar01}
+                  alt="Second slide"
+                />
+              </MDBView>
+            </MDBCarouselItem>
+            <MDBCarouselItem itemId="3">
+              <MDBView className="MKAPCarouselBox">
+                <img
+                  className="MKAPCarouselimg"
+                  src={adoptPage.avatar02}
+                  alt="Third slide"
+                />
+              </MDBView>
+            </MDBCarouselItem>
+            <MDBCarouselItem itemId="4">
+              <MDBView className="MKAPCarouselBox">
+                <img
+                  className="MKAPCarouselimg"
+                  src={adoptPage.avatar03}
+                  alt="Third slide"
+                />
+              </MDBView>
+            </MDBCarouselItem>
+          </MDBCarouselInner>
+        </MDBCarousel>
+      </div>
+      {/* <div className="MKrowAvatar">
             <div className="MKadoptPageAvatar ">
               <img src={adoptPage.avatar} alt="" />
             </div>
+
             <div className="MKsmall-avatar">
               <div className="MKsm-avatar">
                 <img src={adoptPage.avatar01} alt="" />
@@ -79,126 +139,116 @@ function AdoptPage(props) {
               </div>
             </div>
           </div>
-        </Row>
+        </div> 
         {/* Detail Box */}
-        <Row>
-          <div className="MKrowDetail">
-            <div className="MKdetail">
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>姓名</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.name}</p>
-                </li>
-              </ul>
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>狀態</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.status}</p>
-                </li>
-              </ul>
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>種類</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.type}</p>
-                </li>
-              </ul>
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>體型</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.size}</p>
-                </li>
-              </ul>
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>地區</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.location}</p>
-                </li>
-              </ul>
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>電話</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.cell}</p>
-                </li>
-              </ul>
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>性別</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.gender}</p>
-                </li>
-              </ul>
-              <ul className="MKdetail-ul">
-                <li className="MKdetail-icon">
-                  <i className="fas fa-paw"></i>
-                </li>
-                <li className="MKdetail-title">
-                  <p>個性</p>
-                </li>
-                <li className="MKdetail-text">
-                  <p>{adoptPage.info}</p>
-                </li>
-              </ul>
-            </div>
-            <div className="MKdetail-btn">
-              <div className="MKbutton-G" type="submit">
-                <div>
-                  <button id="MKcard-btn">
-                    <span className="MKbtn-mail">
-                      <i className="far fa-envelope"></i>
-                    </span>
-                    私信飼主
-                  </button>
-                </div>
+      <>
+        <div className="MKrowDetail">
+          <div className="MKdetail">
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>姓名</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.name}</p>
+              </li>
+            </ul>
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>狀態</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.status}</p>
+              </li>
+            </ul>
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>種類</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.type}</p>
+              </li>
+            </ul>
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>體型</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.size}</p>
+              </li>
+            </ul>
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>地區</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.location}</p>
+              </li>
+            </ul>
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>電話</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.cell}</p>
+              </li>
+            </ul>
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>性別</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.gender}</p>
+              </li>
+            </ul>
+            <ul className="MKdetail-ul">
+              <li className="MKdetail-icon">
+                <FaPaw />
+              </li>
+              <li className="MKdetail-title">
+                <p>個性</p>
+              </li>
+              <li className="MKdetail-text">
+                <p>{adoptPage.info}</p>
+              </li>
+            </ul>
+          </div>
+          <div className="MKdetail-btn">
+            <div className="" type="submit">
+              <div>
+                <button className="button-G">
+                  <span className="MailBtn">
+                    <AiFillMail />
+                  </span>
+                  私信飼主
+                </button>
               </div>
-              {/* <div className="MKbuttonAdopt" type="submit">
-                <div>
-                  <button id="MKcard-btn">
-                    <span className="MKbtn-heart">
-                      <i className="fas fa-heart"></i>
-                    </span>
-                    我要認養
-                  </button>
-                </div>
-              </div> */}
             </div>
           </div>
-        </Row>
-        {/* Comments */}
-        {/* <Row>
+        </div>
+      </>
+      {/* Comments */}
+      {/* <Row>
           <div className="MKrowComment">
             <div className="MKcomm">
               <div className="MKcom-header">
@@ -265,8 +315,7 @@ function AdoptPage(props) {
             </div>
           </div>
         </Row> */}
-        <Comments />
-      </Container>
+      <Comments />
     </>
   )
 }

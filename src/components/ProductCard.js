@@ -19,6 +19,7 @@ function ProductCard({ ID, ProductImg, ProductTitle, ProductPrice }) {
     })
   }
 
+
   return (
     <>
     <div className="AG-product-card-container">
@@ -26,9 +27,7 @@ function ProductCard({ ID, ProductImg, ProductTitle, ProductPrice }) {
         <img className="AG-card-pic" src={ProductImg} alt=""></img>
         <Link to={`/productlist/cat/${ID}`} className="AG-overlay"></Link>
         <div className="AG-hoverBtn">
-          <a href="#" onClick={addToBasket}>
-            加入購物車
-          </a>
+          <a href="#">加入購物車</a>
         </div>
       </div>
       <div className="AG-title">{ProductTitle}</div>
@@ -38,4 +37,4 @@ function ProductCard({ ID, ProductImg, ProductTitle, ProductPrice }) {
   )
 }
 
-export default ProductCard
+export default ProductCard;

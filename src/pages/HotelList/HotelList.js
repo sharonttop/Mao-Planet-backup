@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row } from 'react-bootstrap'
 import './HotelList.scss'
+
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import HotelCards from './HotelCard'
+import Carousel from './Carousel'
 
-// data
+import { BsSearch } from 'react-icons/bs'
 import Axios from 'axios'
 
 function HotelList() {
@@ -17,9 +18,9 @@ function HotelList() {
   }, [])
   return (
     <>
-      <Container fluid>
+      <>
         {/* Banner */}
-        <Row>
+        <>
           <div className="MKbanner">
             <div className="MKbanner-left">
               <img src={HotelListBanner} alt="" />
@@ -35,9 +36,9 @@ function HotelList() {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* RWD Banner */}
-        <Row>
+        <>
           <div className="MKRWD-banner">
             <div className="MKrwd-banner-text">
               <p>毛孩假期</p>
@@ -50,15 +51,15 @@ function HotelList() {
               </h5>
             </div>
           </div>
-        </Row>
+        </>
         {/* filter */}
-        <Row>
+        <>
           <div className="MKrowFilter">
             <div className="MKadopt-filter">
               <div className="MKfilter">
                 <div className="MKselector ">
                   <p>地區</p>
-                  <select name="" id="MKad-filter">
+                  <select name="" className="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">台北</option>
                     <option value="">新北</option>
@@ -70,7 +71,7 @@ function HotelList() {
                 </div>
                 <div className="MKselector ">
                   <p>價錢</p>
-                  <select name="" id="MKad-filter">
+                  <select name="" className="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">500~1500</option>
                     <option value="">1500~2500</option>
@@ -79,98 +80,37 @@ function HotelList() {
                 </div>
                 <div className="MKselector ">
                   <p>服務</p>
-                  <select name="" id="MKad-filter">
+                  <select name="" className="MKad-filter">
                     <option value="">---請選擇---</option>
                     <option value="">修剪毛髮</option>
                     <option value="">美容清潔</option>
                     <option value="">疫苗注射</option>
                   </select>
                 </div>
-                <div className="MKselector " id="MKad-filter">
-                  <button id="MKsearch-btn" type="submit">
-                    <i className="fas fa-search"></i>
+                <div className="MKselector ">
+                  <button className="MKsearch-btn" type="submit">
+                    {/* <i className="fas fa-search"></i> */}
+                    <BsSearch />
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* map */}
-        <Row>
+        <>
           <div className="MKrow-map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.8517337052526!2d121.51392975777993!3d25.047523761341026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9727e339109%3A0xc34a31ce3a4abecb!2z6Ie65YyX6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1634912525150!5m2!1szh-TW!2stw"
               loading="lazy"
             ></iframe>
           </div>
-        </Row>
+        </>
         {/* HotelCardList */}
-        <Row>
-          {/* <div className="MKrow-list">
-            {hotelList.map((v, i) => {
-              return (
-                <li key={i} className="MKDisplayLi col-12 col-lg-4">
-                  <div className="MKcard">
-                    <div className="MKcard-context">
-                      <div className="MKavatar">
-                        <img src={v.avatar} alt="" />
-                      </div>
-                      <div className="">
-                        <p id="MKcard-title">{v.name}</p>
-                        <p id="MKcard-text">
-                          電話：{v.cell}
-                          <br />
-                          地址：{v.address}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="MKbutton" type="submit">
-                      <div>
-                        <button id="MKcard-btn">了解更多</button>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              )
-            })}
-          </div> */}
-          <HotelCards />
-        </Row>
+        <HotelCards />
         {/* pagination */}
-        {/* <Row>
-          <div className="MKrow-pagination">
-            <div aria-label="Page navigation example">
-              <ul className="pagination">
-                <li className="MKpage-link">
-                  <a className="page-link" href="/" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li className="MKpage-link">
-                  <a className="page-link" href="/">
-                    1
-                  </a>
-                </li>
-                <li className="MKpage-link">
-                  <a className="page-link" href="/">
-                    2
-                  </a>
-                </li>
-                <li className="MKpage-link">
-                  <a className="page-link" href="/">
-                    3
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="/" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Row> */}
-      </Container>
+        {/* <Carousel /> */}
+      </>
     </>
   )
 }

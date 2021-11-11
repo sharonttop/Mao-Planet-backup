@@ -2,7 +2,7 @@ import ProductListCatPlay from '../components/ProductListCatPlay'
 
 
 function ProductCat(props) {
-  //   const { auth } = props
+//   const { auth } = props
   return (
     <>
       <ProductListCatPlay />

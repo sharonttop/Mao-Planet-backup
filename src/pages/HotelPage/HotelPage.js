@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Row } from 'react-bootstrap'
 import './HotelPage.scss'
+import { AiFillStar } from 'react-icons/ai'
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import Axios from 'axios'
-
+import {
+  MDBCarousel,
+  MDBCarouselCaption,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+  MDBMask,
+  MDBContainer,
+} from 'mdbreact'
 function HotelPage(props) {
   console.log(props)
 
@@ -54,19 +62,19 @@ function HotelPage(props) {
   }, [hotelList, props.match.params.id])
   return (
     <>
-      <Container fluid>
+      <>
         {/* title */}
-        <Row>
+        <>
           <div className="MKHotelHeaderTitle">
             <p>
               旅宿明細:<span className="MKtitle-text"> {hotelPage.name}</span>
             </p>
           </div>
-        </Row>
+        </>
         {/* avatar */}
-        <Row>
-          <div className="MKrow MKHotelRowAvatar">
-            <div className="MKHotelAvatar col-12 col-md-12">
+        <div>
+          {/* <div className="MKrow MKHotelRowAvatar">
+            <div className="MKHotelAvatar">
               <div className="MKbigHotelAvatar">
                 <img src={hotelPage.avatar} alt="" />
               </div>
@@ -82,8 +90,57 @@ function HotelPage(props) {
                 </div>
               </div>
             </div>
-          </div>
-        </Row>
+          </div> */}
+        </div>
+        <div className="MKAPCarousel">
+          <MDBCarousel
+            activeItem={1}
+            length={3}
+            // showControls={true}
+            // showIndicators={true}
+            // className="z-depth-1"
+          >
+            <MDBCarouselInner className="MKHPCarousel">
+              <MDBCarouselItem itemId="1">
+                <MDBView className="MKHPCarouselBox">
+                  <img
+                    className="MKHPCarouselimg"
+                    src={hotelPage.avatar}
+                    alt="First slide"
+                  />
+                  {/* <MDBMask overlay="black-light" /> */}
+                </MDBView>
+              </MDBCarouselItem>
+              <MDBCarouselItem itemId="2">
+                <MDBView className="MKAPCarouselBox">
+                  <img
+                    className="MKAPCarouselimg"
+                    src={hotelPage.avatar01}
+                    alt="Second slide"
+                  />
+                </MDBView>
+              </MDBCarouselItem>
+              <MDBCarouselItem itemId="3">
+                <MDBView className="MKAPCarouselBox">
+                  <img
+                    className="MKAPCarouselimg"
+                    src={hotelPage.avatar02}
+                    alt="Third slide"
+                  />
+                </MDBView>
+              </MDBCarouselItem>
+              <MDBCarouselItem itemId="4">
+                <MDBView className="MKAPCarouselBox">
+                  <img
+                    className="MKAPCarouselimg"
+                    src={hotelPage.avatar03}
+                    alt="Third slide"
+                  />
+                </MDBView>
+              </MDBCarouselItem>
+            </MDBCarouselInner>
+          </MDBCarousel>
+        </div>
         {/* booking form */}
         {/* <Row>
           <div className="MKbooking">
@@ -138,13 +195,13 @@ function HotelPage(props) {
           </div>
         </Row> */}
         {/* roomService */}
-        <Row>
+        <>
           <div className="row MKrowService">
-            <div className="MKroomService col-12 col-sm-12 col-md-6 col-xl-6 ">
+            <div className="MKroomService">
               <button type="button" className="MKcollapsible ">
                 設備＆服務
               </button>
-              <div className="MKcontent">
+              {/* <div className="MKcontent">
                 <div className="MKservice">
                   <ul className="MKservice">
                     <li>
@@ -195,13 +252,13 @@ function HotelPage(props) {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="MKcreditCard col-12 col-sm-12 col-md-6 col-xl-6 ">
               <button type="button" className="MKcollapsible">
                 付款方式
               </button>
-              <div className="MKcontent">
+              {/* <div className="MKcontent">
                 <div className="MKservice">
                   <ul className="MKservice">
                     <li>
@@ -232,12 +289,12 @@ function HotelPage(props) {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
-        </Row>
+        </>
         {/* hotel comments */}
-        <Row>
+        <>
           <div className="MKHotelRowComment">
             <div className="MKHotelComm">
               <div className="MKcom-header">
@@ -254,19 +311,19 @@ function HotelPage(props) {
                     </div>
                     <div className="MKstart">
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                     </div>
                     <div className="MKcomMsn">
@@ -286,19 +343,19 @@ function HotelPage(props) {
                     </div>
                     <div className="MKstart">
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                       <div className="">
-                        <i className="fas fa-star"></i>
+                        <AiFillStar />
                       </div>
                     </div>
                     <div className="MKcomMsn">
@@ -309,17 +366,18 @@ function HotelPage(props) {
                   </div>
                 </div>
               </div>
-              <div className="MKcommBtnH">
-                <div className="MKcomButton" type="submit">
+              <div className="MKHProwBtn">
+                <div className="MKHPutton" type="submit">
                   <div>
-                    <button id="MKcard-btn">我要評價</button>
+                    {/* 點擊按鈕跳對照id分頁 */}
+                    <button className="MKHPcard-btn">我要回覆</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </Row>
-      </Container>
+        </>
+      </>
     </>
   )
 }

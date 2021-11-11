@@ -4,41 +4,44 @@ import BlogListBanner from '../../components/BlogListBanner'
 import BlogHotTopicSection from '../../components/BlogHotTopicSection'
 import BlogListTag from '../../components/BlogListTag'
 import BlogListTitle from '../../components/BlogListTitle'
-import BlogListCardSection from '../../components/BlogListCardSection'
+import BlogListCardAll from '../../components/BlogListCardAll'
+import BlogListCardDog from '../../components/BlogListCardDog'
+import BlogListCardCat from '../../components/BlogListCardCat'
 import Pagination from '../../components/Pagination'
-// import MyFooter from '../../components/MyFooter'
 
 import MobileBlogHotTopic from '../../components/MobileBlogHotTopic'
 import MobileBlogListTitle from '../../components/MobileBlogListTitle'
-import MobileBlogListCardSection from '../../components/MobileBlogListCardSection'
+import MobileBlogListCardAll from '../../components/MobileBlogListCardAll'
+import MobileBlogListCardDog from '../../components/MobileBlogListCardDog'
+import MobileBlogListCardCat from '../../components/MobileBlogListCardCat'
 import './BlogList.scss'
 
 function BlogList(props) {
   //   const { auth } = props
   return (
     <>
-      <Container fluid className="p-0">
+      <div className="p-0">
         <BlogListBanner />
-      </Container>
+      </div>
 
-      <Container className="p-0">
+      <div className="p-0">
         <div id="ACblogTagSection">
           <BlogListTag>熱門文章</BlogListTag>
           <BlogListTag>所有文章</BlogListTag>
           <BlogListTag>狗奴必知</BlogListTag>
           <BlogListTag>貓奴必知</BlogListTag>
         </div>
-      </Container>
+      </div>
 
       {/* PC-hotTopic */}
-      <Container className="p-0">
+      <div className="p-0">
         <BlogHotTopicSection />
-      </Container>
+      </div>
 
       {/* mobile-hotTopic */}
-      <Container>
+      <div>
         <MobileBlogHotTopic />
-      </Container>
+      </div>
 
       {/* PC-All */}
       <Container className="p-0 d-md-block d-none">
@@ -48,26 +51,26 @@ function BlogList(props) {
           </BlogListTitle>
         </div>
         <div>
-          <BlogListCardSection className="d-md-block d-none" />
+          <BlogListCardAll className="d-md-block d-none" />
         </div>
       </Container>
 
       {/* mobile-All */}
-      <Container className="p-0 d-md-none d-block">
+      <div className="p-0 d-md-none d-block">
         <div>
           <MobileBlogListTitle>
             所有文章&nbsp;&nbsp;All Articles
           </MobileBlogListTitle>
         </div>
         <div>
-          <MobileBlogListCardSection className="d-md-none d-block" />
+          <MobileBlogListCardAll className="d-md-none d-block" />
         </div>
-      </Container>
+      </div>
 
       {/* PC mobile共用 */}
-      <div>
+      {/* <div>
         <Pagination />
-      </div>
+      </div> */}
 
       {/* PC-Dog */}
       <Container className="p-0 d-md-block d-none">
@@ -77,56 +80,55 @@ function BlogList(props) {
           </BlogListTitle>
         </div>
         <div>
-          <BlogListCardSection />
+          <BlogListCardDog />
         </div>
       </Container>
 
       {/* mobile-Dog */}
-      <Container className="p-0 d-md-none d-block">
+      <div className="p-0 d-md-none d-block">
         <div>
           <MobileBlogListTitle>
             狗奴必知&nbsp;&nbsp;Dog Person
           </MobileBlogListTitle>
         </div>
         <div>
-          <MobileBlogListCardSection className="d-md-none d-block" />
+          <MobileBlogListCardDog className="d-md-none d-block" />
         </div>
-      </Container>
-
-      {/* PC mobile共用 */}
-      <div>
-        <Pagination />
       </div>
 
+      {/* PC mobile共用 */}
+      {/* <div>
+        <Pagination />
+      </div> */}
+
       {/* PC-Cat */}
-      <Container className="p-0 d-md-block d-none">
+      <Container className="p-0 d-md-block d-none AClastSec">
         <div>
           <BlogListTitle>
             貓奴必知&nbsp;&nbsp;&nbsp;&nbsp;Cat Person
           </BlogListTitle>
         </div>
         <div>
-          <BlogListCardSection />
+          <BlogListCardCat />
         </div>
       </Container>
 
       {/* mobile-Cat */}
-      <Container className="p-0 d-md-none d-block">
+      <div className="p-0 d-md-none d-block">
         <div>
           <MobileBlogListTitle>
             貓奴必知&nbsp;&nbsp;Cat Person
           </MobileBlogListTitle>
         </div>
         <div>
-          <MobileBlogListCardSection className="d-md-none d-block" />
+          <MobileBlogListCardCat className="d-md-none d-block" />
         </div>
-      </Container>
+      </div>
 
       {/* PC mobile共用 */}
-      <div className="ACblogLastSec">
+      {/* <div className="ACblogLastSec">
         <Pagination />
-      </div>
-      {/* <MyFooter /> */}
+      </div> */}
     </>
   )
 }

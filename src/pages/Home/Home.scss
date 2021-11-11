@@ -62,7 +62,7 @@
 
 #ACadoptSection3Card {
   background: linear-gradient(to bottom, #e5e5e5 20%, #ffffff);
-  padding: 10% 0;
+  padding: 200px 0 50px 0;
   // width: 100%;
   // height: 550px;
   // margin-bottom:15%;
@@ -136,16 +136,20 @@
 
 // 毛孩雜貨：3張卡片
 #ACproductSection3Card {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 10%;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .ACnewArrCard {
   position: relative;
+  width: 300px;
+  height: 100%;
 }
 
 .ACnewArrCard img {
   width: 100%;
+  object-fit: cover;
 }
 
 .ACtag {
@@ -193,7 +197,7 @@
 .AChotelBN {
   position: absolute;
   top: 0;
-  left: 24%;
+  left: 350px;
   z-index: 20;
 }
 
@@ -212,14 +216,15 @@
   background: linear-gradient(to bottom, #f5df4d 20%, #ffffff);
   position: absolute;
   top: 0;
-  left: -8%;
+  left: -100px;
   z-index: 18;
 }
 
 .AChotelTitle {
   position: absolute;
   top: 15%;
-  left: 60%;
+  // left: 60%;
+  left: 860px;
   z-index: 20;
 }
 
@@ -232,7 +237,8 @@
 .AChotelText {
   position: absolute;
   top: 55%;
-  left: 59%;
+  // left: 59%;
+  left: 850px;
   z-index: 20;
 }
 
@@ -254,7 +260,8 @@
 .ACsalonBN {
   position: absolute;
   top: 0;
-  left: 46%;
+  // left: 46%;
+  left: 650px;
   z-index: 20;
 }
 
@@ -272,19 +279,22 @@
 .GrayDeco1 {
   position: absolute;
   top: 0;
-  left: -15%;
+  // left: -15%;
+  left: -200px;
 }
 
 .GrayDeco2 {
   position: absolute;
   top: 0;
-  left: 80%;
+  // left: 80%;
+  left: 1130px;
 }
 
 .ACsalonTitle {
   position: absolute;
   top: 15%;
-  left: 20%;
+  // left: 20%;
+  left: 290px;
   z-index: 20;
 }
 
@@ -297,7 +307,8 @@
 .ACsalonText {
   position: absolute;
   top: 55%;
-  left: 19%;
+  // left: 19%;
+  left: 280px;
   z-index: 20;
 }
 

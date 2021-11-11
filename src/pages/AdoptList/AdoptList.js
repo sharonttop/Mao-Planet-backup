@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Container, Row } from 'react-bootstrap'
 import './AdoptList.scss'
 import AdoptListBanner from './adoptlist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
+import { BsSearch } from 'react-icons/bs'
 
 //Card
 import AdoptCards from './AdoptCards'
+
 //pagination
 //data axios
 // import Axios from 'axios'
@@ -23,9 +24,9 @@ function AdoptList() {
   const [selectGender, setSelectGender] = useState('')
   return (
     <>
-      <Container fluid>
+      <>
         {/* banner */}
-        <Row>
+        <>
           <div className="MKbanner">
             <div className="MKbanner-left">
               <img src={AdoptListBanner} alt="" />
@@ -41,9 +42,9 @@ function AdoptList() {
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* RWD-Banner */}
-        <Row>
+        <>
           <div className="MKRWD-banner">
             <div className="MKrwd-banner-text">
               <p>毛孩找家</p>
@@ -56,9 +57,9 @@ function AdoptList() {
               </h5>
             </div>
           </div>
-        </Row>
+        </>
         {/* filter */}
-        <Row>
+        <>
           <div className="MKrowFilter">
             <div className="MKadopt-filter">
               <div className="MKfilter">
@@ -66,7 +67,7 @@ function AdoptList() {
                   <p>種類</p>
                   <select
                     value={selectType}
-                    id="MKad-filter"
+                    className="MKad-filter"
                     onChange={(e) => {
                       setSelectType(e.target.value)
                     }}
@@ -80,7 +81,7 @@ function AdoptList() {
                   <p>地區</p>
                   <select
                     value={selectLocation}
-                    id="MKad-filter"
+                    className="MKad-filter"
                     onChange={(e) => {
                       setSelectLocation(e.target.value)
                     }}
@@ -95,7 +96,7 @@ function AdoptList() {
                   <p>性別</p>
                   <select
                     value={selectGender}
-                    id="MKad-filter"
+                    className="MKad-filter"
                     onChange={(e) => {
                       setSelectGender(e.target.value)
                     }}
@@ -105,30 +106,21 @@ function AdoptList() {
                     <option value="女孩">女孩</option>
                   </select>
                 </div>
-                <div className="MKselector " id="MKad-filter">
-                  <button id="MKsearch-btn" type="submit">
-                    <i className="fas fa-search"></i>
+                <div className=" ">
+                  <button className="MKsearch-btn" type="submit">
+                    <BsSearch />
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        </Row>
+        </>
         {/* cards */}
-        <Row>
+        <>
           {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
           <AdoptCards />
-        </Row>
-        {/* pagination */}
-        <Row>
-          {/* <PaginationC
-            postsPerPage={postsPerPage}
-            totalPosts={petList.length}
-            paginate={paginate}
-          />
-          <PaginationC /> */}
-        </Row>
-      </Container>
+        </>
+      </>
     </>
   )
 }
