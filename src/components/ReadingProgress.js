@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ProgressBar } from 'react-bootstrap'
+import ProgressBar from 'react-bootstrap/ProgressBar'
 import throttle from 'lodash.throttle'
 import '../Styles/ReadingProgress.scss'
 
@@ -15,7 +15,7 @@ function getPageHeight() {
   )
 }
 
-function ReadingProgress() {
+function ReadingProgress(props) {
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {

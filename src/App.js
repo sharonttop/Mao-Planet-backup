@@ -45,6 +45,7 @@ import NotFoundPage from './pages/NotFoundPage'
 
 // 組合用元件
 import MyNavbar from './components/MyNavbar'
+import ReadingProgress from './components/ReadingProgress'
 import MyFooter from './components/MyFooter'
 import AuthHeader from './components/AuthHeader'
 import MainContent from './components/MainContent'
@@ -90,6 +91,7 @@ function App(props) {
       <>
         {/* LOGO+標題+導覽列+上方選單 */}
         <MyNavbar auth={auth} />
+        <ReadingProgress />
 
         {/* 主內容區 */}
         <MainContent>

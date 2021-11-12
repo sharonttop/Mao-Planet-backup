@@ -1,0 +1,36 @@
+.ACsearch-input {
+  padding-right: 16px;
+  padding-top: 2px;
+  // height: 10px;
+  position: relative;
+}
+
+.ACsearch-input::before {
+  display: block;
+  width: 10px;
+  height: 8px;
+  font-size: 0.9rem;
+  color: #e5e5e5;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  // line-height: 1rem;
+  // opacity: 0.2;
+  // z-index: 3;
+}
+
+.ACsearch-input > input {
+  width: 100%;
+  font-size: 0.9rem;
+  color: #646464;
+  border: 1.5px solid #f5df4d;
+  border-radius: 25px;
+  padding: 0 10px;
+  height: 32px;
+  position: relative;
+  // line-height: 22px;
+}
+
+.ACsearch-input > input:focus {
+  outline: none;
+}
