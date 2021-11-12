@@ -180,71 +180,79 @@ function Login(props) {
 
   const loginDisplay = (
     <>
-      <div className="LoginCatHand1">
-        <img src={CatHand1} style={{ width: '110px' }} alt="" />
-      </div>
-      <div className="LoginCatHand2">
-        <img src={CatHand2} style={{ width: '120px' }} alt="" />
-      </div>
-      <div className="card loginCard">
-        <div className="loginBanner">
-          <h2>登入會員</h2>
+      <div className="LoginAll">
+        <div className="LoginCatHand1">
+          <img src={CatHand1} style={{ width: '110px' }} alt="" />
         </div>
-        <div className="wrap">
-          <form
-            name="login_form"
-            onSubmit={handleSubmit}
-            onChange={handleFormChange}
-            onInvalid={handleFormInvalid}
-          >
-            <div className="loginForm-group">
-              <label>Email</label>
-              <input
-                name="email"
-                type="email"
-                state={fields.email}
-                onChange={handleFieldChange}
-                error={fieldErrors.email}
-                className="form-control"
-                placeholder="email"
-                required
-              />
-              {fieldErrors.email !== '' && (
-                <div className="error" style={{ fontSize: 0.9, color: 'red' }}>
-                  {fieldErrors.email}
-                </div>
-              )}
-            </div>
-            <div className="loginForm-group">
-              <label>密碼</label>
-              <input
-                name="password"
-                type="password"
-                state={fields.password}
-                onChange={handleFieldChange}
-                error={fieldErrors.password}
-                className="form-control"
-                placeholder="Password"
-                minLength="5"
-                maxLength="8"
-                required
-              />
-              {fieldErrors.password !== '' && (
-                <div className="error" style={{ fontSize: 0.9, color: 'red' }}>
-                  {fieldErrors.password}
-                </div>
-              )}
-            </div>
-            <div className="loginSignUpLink">
-              <Link to="/signup">
-                <FaPaw />
-                立即加入會員
-              </Link>
-            </div>
-            <button type="submit" className="btn loginBtn">
-              會員登入
-            </button>
-          </form>
+        <div className="card loginCard">
+          <div className="loginBanner">
+            <h2>登入會員</h2>
+          </div>
+          <div className="wrap">
+            <form
+              name="login_form"
+              onSubmit={handleSubmit}
+              onChange={handleFormChange}
+              onInvalid={handleFormInvalid}
+            >
+              <div className="loginForm-group">
+                <label>Email</label>
+                <input
+                  name="email"
+                  type="email"
+                  state={fields.email}
+                  onChange={handleFieldChange}
+                  error={fieldErrors.email}
+                  className="form-control"
+                  placeholder="email"
+                  required
+                />
+                {fieldErrors.email !== '' && (
+                  <div
+                    className="error"
+                    style={{ fontSize: 0.9, color: 'red' }}
+                  >
+                    {fieldErrors.email}
+                  </div>
+                )}
+              </div>
+              <div className="loginForm-group">
+                <label>密碼</label>
+                <input
+                  name="password"
+                  type="password"
+                  state={fields.password}
+                  onChange={handleFieldChange}
+                  error={fieldErrors.password}
+                  className="form-control"
+                  placeholder="Password"
+                  minLength="5"
+                  maxLength="8"
+                  required
+                />
+                {fieldErrors.password !== '' && (
+                  <div
+                    className="error"
+                    style={{ fontSize: 0.9, color: 'red' }}
+                  >
+                    {fieldErrors.password}
+                  </div>
+                )}
+              </div>
+              <div className="loginSignUpLink">
+                <Link to="/signup">
+                  <FaPaw />
+                  立即加入會員
+                </Link>
+              </div>
+              <button type="submit" className="btn loginBtn">
+                會員登入
+              </button>
+            </form>
+          </div>
+        </div>
+        <div className="LoginCatHand2">
+          <img src={CatHand2} style={{ width: '120px' }} alt="" />
         </div>
       </div>
     </>
