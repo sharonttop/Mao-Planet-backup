@@ -134,7 +134,18 @@ function SignUp(props) {
       </div>
     </>
   )
-
+  const autoFill = () => {
+    setFields({
+      name: '廖圓圓',
+      nickname: '小圓',
+      email: 'ronron12@gmail.com',
+      password: '123456',
+      confirmPassword: '123456',
+      birthday: '2001-09-20',
+      mobile: '0920987654',
+      address: '新北市中正路123巷五樓',
+    })
+  }
   const display = (
     <>
       <div className="signUpAll">
@@ -339,6 +350,17 @@ function SignUp(props) {
         <div className="signUpCatHand2">
           <img src={CatHand2} style={{ width: '125px' }} alt="" />
         </div>
+        <button
+          style={{
+            position: 'absolute',
+            opacity: 0,
+            width: '300px',
+            height: '300px',
+          }}
+          onClick={autoFill}
+        >
+          隱藏按鈕
+        </button>
       </div>
     </>
   )
