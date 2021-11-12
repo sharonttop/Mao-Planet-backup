@@ -354,8 +354,8 @@ function SignUp(props) {
           style={{
             position: 'absolute',
             opacity: 0,
-            width: '300px',
-            height: '300px',
+            width: '600px',
+            height: '70px',
           }}
           onClick={autoFill}
         >
