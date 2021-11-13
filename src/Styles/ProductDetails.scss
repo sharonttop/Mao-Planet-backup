@@ -3,6 +3,9 @@
   height: 400px;
   display: flex;
   justify-content: space-evenly;
+  // @media(max-width:768px){
+  //   flex-direction: column;
+  // }
 }
 
 .AG-fourPics {
@@ -14,8 +17,11 @@
   img {
     width: 80px;
     height: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    }
   }
-}
+
 
 #AG-pic1 {
   background-image: url(../images/ProductList-images/s01.png);
@@ -101,6 +107,7 @@
     border-radius: 5px;
     font-size: 1rem;
     width: 10%;
+    cursor: pointer;
   }
 
   .AG-selectedNumber {
@@ -127,6 +134,7 @@
     background-color: #ffffff;
     color: #f5df4d;
     border: #f5df4d solid 1px;
+    text-decoration: none;
   }
 }
 
@@ -136,6 +144,7 @@
   &:hover {
     color: #f5df4d;
     background-color: #ffffff;
+    text-decoration: none;
   }
 }
 

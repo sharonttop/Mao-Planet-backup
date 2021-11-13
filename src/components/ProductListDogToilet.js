@@ -5,7 +5,7 @@ import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
 import { Link } from 'react-router-dom'
 import Pagination from './Pagination'
-
+import HomeBlogSection from './HomeBlogSection'
 import DOG_PRODUCT from '../product-local-json/dog-product.json'
 import { NavItem } from 'react-bootstrap'
 import subHero_dogToilet from '../images/ProductList-images/dog-toilet.jpeg'
@@ -39,6 +39,8 @@ const ProductListDogToilet = (tag)=>{
         <Pagination />
       </div>
     </div>
+        <HomeBlogSection/>
+
     </>
     )
 }
