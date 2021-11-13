@@ -8,6 +8,7 @@ import Pagination from './Pagination'
 import DOG_PRODUCT from '../product-local-json/dog-product.json'
 import { NavItem } from 'react-bootstrap'
 import subHero_dogHealth from '../images/ProductList-images/dog-health.png'
+import HomeBlogSection from './HomeBlogSection'
 
 
 
@@ -25,7 +26,7 @@ const ProductListDogHealth = (tag)=>{
         <Link to="/productlist/dog/health"><ProductListTag >狗狗保健</ProductListTag></Link>
         <Link to="/productlist/dog/outdoor"><ProductListTag >狗狗出遊</ProductListTag></Link>
         </div>
-            <ProductListSubHero subHero={subHero_dogHealth}/>
+            <ProductListSubHero subHero={subHero_dogHealth} title={"狗狗保健"} article={"照顧毛孩的營養均衡 讓牠們天天健康活力滿滿 主子也放心"}/>
             <ProductListTitle subTitle={"狗狗保健"} engTitle={"Health"}/>
         <div className='AG-productCards'>
         {dogHealth.map((item) => {
@@ -39,6 +40,7 @@ const ProductListDogHealth = (tag)=>{
         <Pagination />
       </div>
     </div>
+    <HomeBlogSection/>
     </>
     )
 }

@@ -153,9 +153,9 @@ function App(props) {
               <Route path="/shopping/secondstep" exact>
                 <LuCartConfirmPage />
               </Route>
-              {/* <Route path="/productlist">
-                <ProductList />
-              </Route> */}
+              <Route path="/productlist">
+                <ProductCat />
+              </Route> 
               <Route path="/hotellist/hotelpage/:id?">
                 <HotelPage />
               </Route>

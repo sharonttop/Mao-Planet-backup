@@ -3,6 +3,9 @@
   height: 400px;
   display: flex;
   justify-content: space-evenly;
+  // @media(max-width:768px){
+  //   flex-direction: column;
+  // }
 }
 
 .AG-fourPics {

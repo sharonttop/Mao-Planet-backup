@@ -12,10 +12,13 @@ import { Link } from 'react-router-dom'
 import { useStateValue } from '../StateProvider'
 import { useState } from "react";
 import styled from 'styled-components'
+import relatedProduct from '../product-local-json/you-may-also-like.json'
 
 const StyledImg=styled.img`
     border: ${props => props.border }
 `
+
+const catRelatedData = relatedProduct['Cat-Related']
 
 const ProductDetailsCP19 = ({ ID, ProductImg, ProductTitle, ProductPrice }) => {
     const [{ basket }, dispatch] = useStateValue()
@@ -141,6 +144,18 @@ return (
 
     </div>
     </div>
+
+<ProductListTitle subTitle={"相關商品"} engTitle={"You may also like"}/>
+      <div className='AG-productCards'>
+        {catRelatedData.map((item) => {
+            return (
+                <>
+                <ProductCard ID={item.ID} ProductImg={item.URL} ProductTitle={item.title} ProductPrice={item.price} />
+                </>
+        )})}
+
+        </div>
+
     </>
     )
 }

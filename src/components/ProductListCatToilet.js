@@ -4,7 +4,7 @@ import ProductListTitle from './ProductListTitle'
 import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
 import { Link } from 'react-router-dom'
-
+import HomeBlogSection from './HomeBlogSection'
 import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import { NavItem } from 'react-bootstrap'
 import Pagination from './Pagination'
@@ -41,6 +41,7 @@ const ProductListCatToilet = (tag)=>{
         <Pagination />
       </div>
     </div>
+        <HomeBlogSection/>
     </>
     )
 }

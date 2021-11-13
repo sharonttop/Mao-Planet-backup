@@ -5,7 +5,7 @@ import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
 import { Link } from 'react-router-dom'
 import Pagination from './Pagination'
-
+import HomeBlogSection from './HomeBlogSection'
 import DOG_PRODUCT from '../product-local-json/dog-product.json'
 import { NavItem } from 'react-bootstrap'
 import subHero_dogFood from '../images/ProductList-images/dog-food.jpeg'
@@ -25,7 +25,7 @@ const ProductListDogFood = (tag)=>{
         <Link to="/productlist/dog/health"><ProductListTag >狗狗保健</ProductListTag></Link>
         <Link to="/productlist/dog/outdoor"><ProductListTag >狗狗出遊</ProductListTag></Link>
         </div>
-            <ProductListSubHero subHero={subHero_dogFood}/>
+            <ProductListSubHero subHero={subHero_dogFood} title={"狗狗美食"} article={"想讓主子吃得更好更健康，來逛逛我們精選的貓貓美食吧"}/>
             <ProductListTitle subTitle={"狗狗美食"} engTitle={"Foods"}/>
         <div className='AG-productCards'>
         {dogFood.map((item) => {
@@ -39,6 +39,8 @@ const ProductListDogFood = (tag)=>{
         <Pagination />
       </div>
     </div>
+    <HomeBlogSection/>
+
     </>
     )
 }

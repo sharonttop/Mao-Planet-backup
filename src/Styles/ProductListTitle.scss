@@ -3,6 +3,12 @@
   justify-content: center;
   margin: 5% auto 4%;
   width: 80%;
+  span {
+    @media(max-width:768px){
+      // font-size:0.8rem
+      display:none;
+    }
+  }
 }
 
 .AG-productListTitle {

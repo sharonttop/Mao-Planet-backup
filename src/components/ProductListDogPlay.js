@@ -3,7 +3,7 @@ import ProductListSubHero from './ProductListSubHero'
 import ProductListTitle from './ProductListTitle'
 import ProductCard from './ProductCard'
 import '../Styles/ProductList.scss'
-
+import HomeBlogSection from './HomeBlogSection'
 import DOG_PRODUCT from '../product-local-json/dog-product.json'
 import { NavItem } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -25,7 +25,7 @@ const ProductListDogPlay = (tag)=>{
         <Link to="/productlist/dog/health"><ProductListTag >狗狗保健</ProductListTag></Link>
         <Link to="/productlist/dog/outdoor"><ProductListTag >狗狗出遊</ProductListTag></Link>
         </div>
-            <ProductListSubHero subHero={subHero_dogPlay}/>
+            <ProductListSubHero subHero={subHero_dogPlay} title={"狗狗玩具"} article={"讓毛孩在家當個玩具富翁吧，一起終結毛孩憂鬱！"}/>
             <ProductListTitle subTitle={"狗狗玩具"} engTitle={"Toys"}/>
         <div className='AG-productCards'>
         {dogPlay.map((item) => {
@@ -39,6 +39,8 @@ const ProductListDogPlay = (tag)=>{
         <Pagination />
       </div>
     </div>
+        <HomeBlogSection/>
+
     </>
     )
 }
