@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
 }
+.LoginAll{
+    display: flex;
+    justify-content: center;
 
+}
 .loginCard {
+    position: relative;
     max-width: 360px;
     height: auto;
     /* min-height: 200px; */
@@ -76,14 +81,14 @@
 }
 .LoginCatHand1{
     position: absolute;
-    margin-left: 340px;
-    margin-top: 300px;
-    transform:rotate(10deg);
+    margin-left: -575px;
+    margin-top: 334px;
+    transform:rotate(17deg);
 }
 .LoginCatHand2{
     position: absolute;
-    margin-left: 900px;
-    margin-top: 0px;
+    margin-left: 575px;
+    margin-top: -25px;
     transform:rotate(10deg);
 }
 @media (max-width: 768px) { 
@@ -93,5 +98,7 @@
     .LoginCatHand2{
         display: none;
     }
-
+    .loginCard {
+        margin: 0px auto;
+    }
 }

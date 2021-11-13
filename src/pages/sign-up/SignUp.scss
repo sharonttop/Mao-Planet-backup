@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+.signUpAll{
+    display: flex;
+    justify-content: center;
+
+}
 .signUpForm {
     display:flex;
     align-items: flex-end;
@@ -118,16 +123,16 @@
     flex-grow: 1;
 }
 
-.MemberCatHand1{
+.signUpCatHand1{
     position: absolute;
-    margin-left: 250px;
+    margin-left:-750px;
     margin-top: 700px;
-    transform:rotate(10deg);
+    transform:rotate(15deg);
 }
-.MemberCatHand2{
+.signUpCatHand2{
     position: absolute;
-    margin-left: 1000px;
-    margin-top: -20px;
+    margin-left: 790px;
+    margin-top: -10px;
     transform:rotate(10deg);
 }
 
@@ -176,10 +181,10 @@
     margin-right : auto;
 
     }
-    .MemberCatHand1{
+    .signUpCatHand1{
         display:none;
     }
-    .MemberCatHand2{
+    .signUpCatHand2{
         display:none;
 
     }
