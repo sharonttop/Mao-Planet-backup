@@ -6,22 +6,21 @@ import { BsSearch } from 'react-icons/bs'
 
 //Card
 import AdoptCards from './AdoptCards'
+import { types } from 'sass'
 
-//pagination
-//data axios
-// import Axios from 'axios'
 function AdoptList() {
-  //data axios
-  // const [petList, setPetList] = useState([])
-  // useEffect(() => {
-  //   Axios.get('http://localhost:3002/api/getpetlist').then((response) => {
-  //     setPetList(response.data)
-  //   })
-  // }, [])
-
   const [selectType, setSelectType] = useState('')
   const [selectLocation, setSelectLocation] = useState('')
   const [selectGender, setSelectGender] = useState('')
+  const handleType = (e) => {
+    setSelectType(e.target.value)
+  }
+  const handleLocation = (e) => {
+    setSelectLocation(e.target.value)
+  }
+  const handleGender = (e) => {
+    setSelectGender(e.target.value)
+  }
   return (
     <>
       <>
@@ -68,9 +67,7 @@ function AdoptList() {
                   <select
                     value={selectType}
                     className="MKad-filter"
-                    onChange={(e) => {
-                      setSelectType(e.target.value)
-                    }}
+                    onChange={handleType}
                   >
                     <option value="">---請選擇---</option>
                     <option value="貓咪">貓咪</option>
@@ -82,9 +79,7 @@ function AdoptList() {
                   <select
                     value={selectLocation}
                     className="MKad-filter"
-                    onChange={(e) => {
-                      setSelectLocation(e.target.value)
-                    }}
+                    onChange={handleLocation}
                   >
                     <option value="">---請選擇---</option>
                     <option value="台北市">台北市</option>
@@ -97,9 +92,7 @@ function AdoptList() {
                   <select
                     value={selectGender}
                     className="MKad-filter"
-                    onChange={(e) => {
-                      setSelectGender(e.target.value)
-                    }}
+                    onChange={handleGender}
                   >
                     <option value="">---請選擇---</option>
                     <option value="男孩">男孩</option>
@@ -118,7 +111,11 @@ function AdoptList() {
         {/* cards */}
         <>
           {/* <AdoptCards petList={currentPosts} loading={loading} /> */}
-          <AdoptCards />
+          <AdoptCards
+            selectType={selectType}
+            selectLocation={selectLocation}
+            selectGender={selectGender}
+          />
         </>
       </>
     </>

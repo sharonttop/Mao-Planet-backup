@@ -1,11 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import './HotelPage.scss'
 import { AiFillStar } from 'react-icons/ai'
+import { FaLine } from 'react-icons/fa'
+import { BsScissors } from 'react-icons/bs'
+import { MdOutlineAtm } from 'react-icons/md'
+import {
+  FaSyringe,
+  FaCookieBite,
+  FaMusic,
+  FaSearch,
+  FaRegCreditCard,
+} from 'react-icons/fa'
+
 import ComAvatar1 from './adoptlist-01_300x300.jpg'
 import ComAvatar2 from './adoptlist-02_300x300.jpg'
 import { withRouter } from 'react-router-dom'
-import GoogleMap from './GoogleMap'
 import Axios from 'axios'
+// map
+import { Key } from './Key' // 引入 API key
+import GoogleMapReact from 'google-map-react'
+
+import { FcHome } from 'react-icons/fc'
+// comments
+import Comments from './Comments/Comments'
+// Collapse
+import Collapse from './Collapse'
+import Collapse1 from './Collapse1'
 import {
   MDBCarousel,
   MDBCarouselCaption,
@@ -42,7 +62,8 @@ function HotelPage(props) {
     avatar02: '',
     avatar03: '',
     name: '',
-    location: '',
+    lat: '',
+    lng: '',
     cell: '',
     address: '',
   })
@@ -59,6 +80,17 @@ function HotelPage(props) {
       }
     }
   }, [hotelList, props.match.params.id])
+  // map
+  const AnyReactComponent = ({ text }) => (
+    <div className="MKMapBox">
+      <div>
+        <FcHome className="MKMapIcon"> </FcHome>
+      </div>
+      <div className="MKMapInfo">{text}</div>
+    </div>
+  )
+  // detailBtn
+  const [isCollapsed, setIsCollapsed] = useState('collapsed')
   return (
     <>
       <>
@@ -70,27 +102,6 @@ function HotelPage(props) {
             </p>
           </div>
         </>
-        {/* avatar */}
-        <div>
-          {/* <div className="MKrow MKHotelRowAvatar">
-            <div className="MKHotelAvatar">
-              <div className="MKbigHotelAvatar">
-                <img src={hotelPage.avatar} alt="" />
-              </div>
-              <div className="MKsmallHotelAvatar">
-                <div className="MKsmallHotelAvatar">
-                  <img src={hotelPage.avatar01} alt="" />
-                </div>
-                <div className="MKsmallHotelAvatar">
-                  <img src={hotelPage.avatar02} alt="" />
-                </div>
-                <div className="MKsmallHotelAvatar">
-                  <img src={hotelPage.avatar03} alt="" />
-                </div>
-              </div>
-            </div>
-          </div> */}
-        </div>
         <div className="MKAPCarousel">
           <MDBCarousel
             activeItem={1}
@@ -196,108 +207,119 @@ function HotelPage(props) {
         </Row> */}
         {/* roomService */}
         <>
-          <div className="row MKrowService">
-            <div className="MKroomService">
-              <button type="button" className="MKcollapsible ">
-                設備＆服務
-              </button>
-              {/* <div className="MKcontent">
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fas fa-user-nurse detailIcon"></i>
-                    </li>
-                    <li>
-                      <p>疫苗注射</p>
-                    </li>
-                  </ul>
+          <div className="row MKrowService ">
+            <div className="MKroomService ">
+              <Collapse>
+                <div className="MKcontent">
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <FaSyringe />
+                      </li>
+                      <li>
+                        <p>疫苗注射</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <FaCookieBite />
+                      </li>
+                      <li>
+                        <p>下午茶餐點</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <FaMusic />
+                      </li>
+                      <li>
+                        <p>紓緩音療癒</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <FaSearch />
+                      </li>
+                      <li>
+                        <p>健檢</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <BsScissors />
+                      </li>
+                      <li>
+                        <p>毛髮修容</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fas fa-coffee detailIcon"></i>
-                    </li>
-                    <li>
-                      <p>下午茶餐點</p>
-                    </li>
-                  </ul>
-                </div>
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fas fa-headphones detailIcon"></i>
-                    </li>
-                    <li>
-                      <p>紓緩音療癒</p>
-                    </li>
-                  </ul>
-                </div>
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fas fa-search detailIcon"></i>
-                    </li>
-                    <li>
-                      <p>健檢</p>
-                    </li>
-                  </ul>
-                </div>
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fas fa-ruler detailIcon"></i>
-                    </li>
-                    <li>
-                      <p>毛髮修容</p>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
+              </Collapse>
             </div>
-            <div className="MKcreditCard col-12 col-sm-12 col-md-6 col-xl-6 ">
-              <button type="button" className="MKcollapsible">
-                付款方式
-              </button>
-              {/* <div className="MKcontent">
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fab fa-cc-visa"></i>
-                    </li>
-                    <li>
-                      <p>信用卡</p>
-                    </li>
-                  </ul>
+            <div className="MKcreditCard  ">
+              <Collapse1>
+                <div className="MKcontent ">
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <FaRegCreditCard />
+                      </li>
+                      <li>
+                        <p>信用卡</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <FaLine />
+                      </li>
+                      <li>
+                        <p>LINE Pay</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="MKservice">
+                    <ul className="MKservice">
+                      <li>
+                        <MdOutlineAtm />
+                      </li>
+                      <li>
+                        <p>ATM</p>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fab fa-line"></i>
-                    </li>
-                    <li>
-                      <p>LINE Pay</p>
-                    </li>
-                  </ul>
-                </div>
-                <div className="MKservice">
-                  <ul className="MKservice">
-                    <li>
-                      <i className="fas fa-cash-register"></i>
-                    </li>
-                    <li>
-                      <p>ATM</p>
-                    </li>
-                  </ul>
-                </div>
-              </div> */}
+              </Collapse1>
             </div>
           </div>
         </>
         {/* map */}
-        <GoogleMap />
+        <div style={{ height: '50vh', width: '70%', margin: '10rem auto' }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: Key }}
+            defaultCenter={{ lat: 25.0325308, lng: 121.546538 }}
+            defaultZoom={15}
+          >
+            <AnyReactComponent
+              lat={hotelPage.lat}
+              lng={hotelPage.lng}
+              text={hotelPage.name}
+              zoom={17}
+            />
+          </GoogleMapReact>
+        </div>
         {/* hotel comments */}
         <>
-          <div className="MKHotelRowComment">
+          {/* <div className="MKHotelRowComment">
             <div className="MKHotelComm">
               <div className="MKcom-header">
                 <h6 className="MKcom-header-title">旅宿評價</h6>
@@ -371,13 +393,13 @@ function HotelPage(props) {
               <div className="MKHProwBtn">
                 <div className="MKHPutton" type="submit">
                   <div>
-                    {/* 點擊按鈕跳對照id分頁 */}
                     <button className="MKHPcard-btn">我要回覆</button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Comments currentUserId="1" />
         </>
       </>
     </>

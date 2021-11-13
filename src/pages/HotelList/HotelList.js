@@ -1,20 +1,37 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Link } from 'react'
 import './HotelList.scss'
 
 import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import HotelCards from './HotelCard'
-import Carousel from './Carousel'
 import { BsSearch } from 'react-icons/bs'
 import Axios from 'axios'
-
+// map
+import GoogleMapReact from 'google-map-react'
+import { FcHome } from 'react-icons/fc'
+import { Key } from './Key' // 引入 API key
+// filter
 function HotelList() {
   const [hotelList, setHotelList] = useState([])
   useEffect(() => {
     Axios.get('http://localhost:3002/api/gethotellist').then((response) => {
       setHotelList(response.data)
+      console.log(response.data)
     })
   }, [])
+
+  // map
+  const AnyReactComponent = ({ text, sid }) => (
+    <div className="MKMapBox">
+      <a href={'/hotellist/hotelpage/' + sid}>
+        <div>
+          <FcHome className="MKMapIcon"> </FcHome>
+        </div>
+        <div className="MKMapInfo">{text}</div>
+      </a>
+    </div>
+  )
+
   return (
     <>
       <>
@@ -97,15 +114,29 @@ function HotelList() {
           </div>
         </>
         {/* map */}
-        <>
-          <div className="MKrow-map">
-            <iframe></iframe>
-          </div>
-        </>
+        <div
+          className="MKmap"
+          style={{ height: '50vh', width: '70%', margin: '10rem auto' }}
+        >
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: Key }}
+            defaultCenter={{ lat: 25.0325308, lng: 121.546538 }}
+            defaultZoom={15}
+          >
+            {hotelList.map((v) => (
+              <AnyReactComponent
+                lat={v.lat}
+                lng={v.lng}
+                text={v.name}
+                zoom={1}
+                sid={v.sid}
+              />
+            ))}
+          </GoogleMapReact>
+        </div>
         {/* HotelCardList */}
         <HotelCards />
         {/* pagination */}
-        {/* <Carousel /> */}
       </>
     </>
   )

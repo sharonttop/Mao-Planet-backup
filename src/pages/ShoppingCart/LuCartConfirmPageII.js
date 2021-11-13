@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
-import './LuCartConfirmPage.scss'
+import './LuCartConfirmPageII.scss'
 import { useStateValue } from '../../StateProvider'
 import { getBasketTotal } from '../../reducer'
 import CartCheckItem from '../../components/CartCheckItem'
-import axios from 'axios'
+
 import { Link } from 'react-router-dom'
 
 function ConfirmPage(props) {
@@ -16,7 +16,7 @@ function ConfirmPage(props) {
       <div className="container main-contant py-5">
         <div className="form-row processrow">
           <div className="col-md-4">
-            <div className="row alert" role="alert">
+            <div className="row alert justify-content-center" role="alert">
               <div className="Lprocesstag2">
                 <div className="Lprogressnum1">1</div>
               </div>
@@ -26,7 +26,7 @@ function ConfirmPage(props) {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row alert" role="alert">
+            <div className="row alert justify-content-center" role="alert">
               <div className="Lprocesstag3">
                 <div className="Lprogressnum1">2</div>
               </div>
@@ -36,7 +36,7 @@ function ConfirmPage(props) {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row alert" role="alert">
+            <div className="row alert justify-content-center" role="alert">
               <div className="Lprocesstag">
                 <div className="Lprogressnum3">3</div>
               </div>
@@ -48,65 +48,67 @@ function ConfirmPage(props) {
         </div>
         {/* 商品確認區 */}
         <div className="card text-center">
-          <div className="card-header">資料確認</div>
+          <div className="card-header CustomerHeader">資料確認</div>
         </div>
         <div className="row mt-4">
-          <div className="col-sm-6">
+          <div className="col-md-6">
             <div className="card">
-              <div className="card-header text-center">訂單資訊</div>
+              <div className="card-header text-center CustomerHeader">
+                訂單資訊
+              </div>
               <div className="card-body">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th scope="row">訂單編號</th>
-                      <td>Mark</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">配送方式</th>
-                      <td>Mark</td>
+                      <th scope="row" className="col-md-4">配送方式</th>
+                      <td>宅配</td>
                     </tr>
                     <tr>
                       <th scope="row">付款方式</th>
-                      <td>Mark</td>
+                      <td>現金付款</td>
                     </tr>
                     <tr>
                       <th scope="row">消費金額</th>
-                      <td>Mark</td>
+                      <td>$540</td>
                     </tr>
                     <tr>
                       <th scope="row">訂單備註</th>
-                      <td>Mark</td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
-          <div className="col-sm-6">
+          <div className="col-md-6">
             <div className="card">
-              <div className="card-header text-center">收貨人資訊</div>
+              <div className="card-header text-center CustomerHeader">
+                收貨人資訊
+              </div>
               <div className="card-body">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th scope="row">收貨人姓名</th>
-                      <td>Mark</td>
+                      <th scope="row" className="col-md-4">
+                        收貨人姓名
+                      </th>
+                      <td>盧小宇</td>
                     </tr>
                     <tr>
                       <th scope="row">配送地址</th>
-                      <td>Mark</td>
+                      <td>台北市大安區貓貓街777號</td>
                     </tr>
                     <tr>
                       <th scope="row">取件超商</th>
-                      <td>Mark</td>
+                      <td></td>
                     </tr>
                     <tr>
                       <th scope="row">連絡電話</th>
-                      <td>Mark</td>
+                      <td>0927000111</td>
                     </tr>
                     <tr>
                       <th scope="row">電子郵件</th>
-                      <td>Mark</td>
+                      <td>mao777@gmail.com</td>
                     </tr>
                   </tbody>
                 </table>
@@ -117,29 +119,39 @@ function ConfirmPage(props) {
         <div className="mt-3">
           <div className="col-mb-12">
             <div className="card">
-              <div className="card-header text-center">商品資訊</div>
+              <div className="card-header text-center CustomerHeader">
+                商品資訊
+              </div>
               <div className="card-body">
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th scope="col">商品名稱</th>
-                      <th scope="col">單價NT$</th>
-                      <th scope="col">個數</th>
-                      <th scope="col">總金額</th>
+                      <th scope="col" className="col-md-6">
+                        商品名稱
+                      </th>
+                      <th scope="col" className="col-md-2">
+                        單價NT$
+                      </th>
+                      <th scope="col" className="col-md-2">
+                        個數
+                      </th>
+                      <th scope="col" className="col-md-2">
+                        總金額
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <th scope="row">LINSLINS | 仙人掌咬繩玩具</th>
+                      <td>$190</td>
+                      <td>1</td>
+                      <td>$190</td>
                     </tr>
                     <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
+                      <th scope="row">Bite Me | 金可頌 (可藏食)</th>
+                      <td>$350</td>
+                      <td>1</td>
+                      <td>$350</td>
                     </tr>
                   </tbody>
                 </table>

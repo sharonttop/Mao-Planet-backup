@@ -33,11 +33,11 @@ function HomeCarousel() {
             length={3}
             showControls={false}
             showIndicators={false}
-            className="z-depth-1"
+            className="z-depth-1 ACcarousel"
           >
             <MDBCarouselInner>
               <MDBCarouselItem itemId="1">
-                <MDBView>
+                <MDBView className="ACview">
                   <img
                     className="ACsliderPic d-block"
                     src={slider1}

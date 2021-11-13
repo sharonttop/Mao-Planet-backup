@@ -16,7 +16,7 @@ function ConfirmPage(props) {
       <div className="container main-contant py-5">
         <div className="form-row processrow">
           <div className="col-md-4">
-            <div className="row alert" role="alert">
+            <div className="row alert justify-content-center" role="alert">
               <div className="Lprocesstag2">
                 <div className="Lprogressnum1">1</div>
               </div>
@@ -26,7 +26,7 @@ function ConfirmPage(props) {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row alert" role="alert">
+            <div className="row alert justify-content-center" role="alert">
               <div className="Lprocesstag">
                 <div className="Lprogressnum1">2</div>
               </div>
@@ -36,7 +36,7 @@ function ConfirmPage(props) {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="row alert" role="alert">
+            <div className="row alert justify-content-center" role="alert">
               <div className="Lprocesstag3">
                 <div className="Lprogressnum3">3</div>
               </div>
@@ -105,7 +105,7 @@ function ConfirmPage(props) {
           <div class="card col-md-6 px-0">
             <div class="card-header LDataInputheader">顧客資料</div>
             <div class="card-body">
-              <form class="needs-validation mt-3" novalidate>
+              <form class="needs-validation mt-2" novalidate>
                 <div class="form">
                   <div class="form-group">
                     <label for="name">顧客姓名</label>
@@ -140,7 +140,7 @@ function ConfirmPage(props) {
                     />
                     <div class="invalid-feedback">請輸入電話號碼</div>
                   </div>
-                  <div class="form-check form-check-inline">
+                  {/* <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
                       type="checkbox"
@@ -150,8 +150,8 @@ function ConfirmPage(props) {
                     <label class="form-check-label" for="inlineCheckbox1">
                       使用已存會員資料
                     </label>
-                  </div>
-                  <div class="mb-3 mt-3">
+                  </div> */}
+                  <div class="mb-3 mt-4">
                     <label for="Textarea">訂單備註</label>
                     <textarea
                       class="form-control"
@@ -172,7 +172,7 @@ function ConfirmPage(props) {
                 <div class="form">
                   <div>
                     <div>已選擇的送貨方式: 宅配</div>
-                    <div class="form-check form-check-inline">
+                    {/* <div class="form-check form-check-inline">
                       <input
                         class="form-check-input"
                         type="checkbox"
@@ -182,9 +182,9 @@ function ConfirmPage(props) {
                       <label class="form-check-label" for="inlineCheckbox1">
                         使用已存會員資料
                       </label>
-                    </div>
+                    </div> */}
                   </div>
-                  <div class="form-group col-md-10 mt-3">
+                  <div class="form-group col-md-10 mt-4">
                     <label for="name">收件人姓名</label>
                     <input
                       type="text"

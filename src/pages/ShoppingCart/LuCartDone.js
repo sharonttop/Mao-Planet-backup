@@ -26,8 +26,8 @@ function Done(props) {
               <div className="card-body mx-auto">
                 <div className="list-unstyled OrderNotice">
                   <li>已收到您的訂單</li>
-                  <li>訂單編號</li>
-                  <li>商品預計於2021/09/05開始配送</li>
+                  <li>訂單編號M20211114</li>
+                  <li>商品預計於2021/11/20開始配送</li>
                   <li>十分感謝您的訂購，敬請耐心等候商品到貨</li>
                 </div>
               </div>
@@ -35,9 +35,9 @@ function Done(props) {
                 <Link to="/MyOrder" className="btn mx-auto Backtoshop">
                   前往我的訂單
                 </Link>
-                <Link to="/About" className="btn mx-auto Backtotoppage">
+                <a href="/home" className="btn mx-auto Backtotoppage">
                   返回首頁
-                </Link>
+                </a>
               </div>
             </div>
           </div>

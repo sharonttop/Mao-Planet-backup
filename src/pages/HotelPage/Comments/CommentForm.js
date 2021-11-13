@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../AdoptPage.scss'
+import '../HotelPage.scss'
 const CommentForm = ({
   handleSubmit,
   submitLabel,
