@@ -45,7 +45,6 @@ import NotFoundPage from './pages/NotFoundPage'
 
 // 組合用元件
 import MyNavbar from './components/MyNavbar'
-import ReadingProgress from './components/ReadingProgress'
 import MyFooter from './components/MyFooter'
 import AuthHeader from './components/AuthHeader'
 import MainContent from './components/MainContent'
@@ -54,7 +53,6 @@ import ScrollButton from './components/ScrollButton'
 //import BreadCrumb from './components/BreadCrumb'
 import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
 // import ProductDetailsCP18 from './components/ProductDetailsCP18'
-
 
 function App(props) {
   const [auth, setAuth] = useState(false)
@@ -91,7 +89,6 @@ function App(props) {
       <>
         {/* LOGO+標題+導覽列+上方選單 */}
         <MyNavbar auth={auth} />
-        <ReadingProgress />
 
         {/* 主內容區 */}
         <MainContent>
@@ -137,14 +134,14 @@ function App(props) {
               <Route path="/productlist/cat/outdoor" exact>
                 <ProductListCatOutdoor />
               </Route>
-              
+
               <Route path="/productlist/cat/cp-18" exact>
                 <ProductDetailsCP18 />
               </Route>
               <Route path="/productlist/cat/cp-19" exact>
                 <ProductDetailsCP19 />
               </Route>
-              
+
               <Route path="/productlist/cat/play/2" exact>
                 <ProductListCatPlayPage2 />
               </Route>

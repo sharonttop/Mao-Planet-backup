@@ -4,7 +4,6 @@ import { BiSearch, BiUser, BiCartAlt } from 'react-icons/bi'
 import { useStateValue } from '../StateProvider'
 import Avatar from './Avatar'
 import SearchBar from './SearchBar'
-import ReadingProgress from './ReadingProgress'
 import logo from '../images/logo.svg'
 import '../Styles/MyNavbar.scss'
 
@@ -140,10 +139,6 @@ function MyNavbar(props) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
-      <div>
-        <ReadingProgress />
-      </div>
     </>
   )
 }
