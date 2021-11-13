@@ -47,7 +47,7 @@ function HomeBlogSection(props) {
       </div>
 
       {/* mobile: 套carousel */}
-      <div id="m-ACblogSection" classNmae="mt-3 p-0 d-md-none d-block">
+      <div id="m-ACblogSection" className="mt-3 p-0 d-md-none d-block">
         <MobileHomeBlogSection />
       </div>
 

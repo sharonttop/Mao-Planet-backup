@@ -17,11 +17,11 @@
 
 /* avatar */
 
-.MKrowAvatar {
-  margin: 0 auto;
-  width: 60%;
-  border-radius: 30px;
-}
+// .MKrowAvatar {
+//   margin: 0 auto;
+//   width: 60%;
+//   border-radius: 30px;
+// }
 
 // .MKadoptPageAvatar {
 //   width: 100%;
@@ -31,28 +31,35 @@
 //   display: flex;
 //   justify-content: space-between;
 // }
+// avatar
 .MKAPCarousel {
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 800px;
 }
 .MKAPCarouselBox {
-width: 100%;
-height: 60%;
+  margin: 0 auto;
+
+  overflow: hidden;
+  max-width: 800px;
 }
 
 .MKAPCarouselimg {
+  margin: 0 auto;
   width: 100%;
-  max-height: 650px;
+  height: 650px;
   border-radius: 30px 30px 0 0;
   object-fit: fill;
+  object-position: center center;
 }
 /* detail part */
 .MKrowDetail {
   width: 65%;
+  margin-top: 8rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 8rem;
-  box-shadow: 2px 2px 10px rgba(94, 91, 91, 0.126);
+  padding-top: 3rem;
+  box-shadow: 3px 2px 10px rgba(94, 91, 91, 0.326);
   align-items: center;
   align-content: center;
 }
@@ -68,10 +75,8 @@ height: 60%;
   list-style: none;
   justify-content: space-evenly;
   margin-top: 1rem;
-  padding-left: 4rem;
   align-content: center;
   align-items: center;
-  padding-left: 5rem;
 }
 
 .MKdetail-icon {
@@ -93,7 +98,7 @@ height: 60%;
 }
 /* comment */
 .MKrowComment {
-  width: 80%;
+  width: 65%;
   margin: 10rem auto;
   padding: 3rem 0;
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.126);
@@ -111,13 +116,13 @@ height: 60%;
 }
 .MKcom-box {
   display: flex;
-  width: 100%;
+  width: 800px;
   margin-top: 2rem;
   padding: 2rem;
   box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.301);
+  margin: 0 auto;
   justify-items: center;
 }
-
 .MKcom-name {
   color: #f5df4d;
   font-size: 1rem;
@@ -125,12 +130,12 @@ height: 60%;
 }
 .MKcom-msn > h6 {
   font-weight: 400;
-  width: 13rem;
+  width: 100%;
 }
 .MKcom-avatar {
   width: 2rem;
   height: 2rem;
-  border: 1px solid #4994be;
+  border: 1px solid #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,20 +145,91 @@ height: 60%;
   color: #4994be;
   padding-left: auto;
 }
-.MKcommBtn {
-  width: 80%;
+// Replay Part
+.MKrepliesBox {
+  margin-top: 2rem;
+  width: 600px;
+}
+
+.MKrepliesBox1 {
+  margin-top: 2rem;
+  width: 800px;
+}
+.MKcomReply {
+  min-width: 600px;
   margin: 0 auto;
-  margin-top: 3rem;
 }
-.MKcomButton:hover {
-  background-color: #f5df4d;
+.abc {
+  display: flex;
+  max-width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  padding: 2rem;
+  box-shadow: 1px 2px 10px rgba(94, 91, 91, 0.301);
+  justify-items: center;
 }
-.MKcomButton {
-  width: 200px;
+.MKreplybtn {
+  color: #939597;
+}
+.MKReplyContext {
+}
+.commentTextarea {
+  margin-top: 1rem;
+  width: 100%;
+  height: 3rem;
+}
+.MKAPbutton {
+  margin-top: 1rem;
+  margin-left: auto;
+  // margin-bottom: 5rem;
+  width: 172px;
   height: 35px;
   border: 2px solid #f5df4d;
   border-radius: 90px;
   text-align: center;
+  background-color: #fff;
+  &:hover {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+
+  &:focus {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+
+  &:active {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+
+  &:visited {
+    background-color: #f5df4d;
+    border-color: #fff;
+    color: white;
+  }
+}
+// .MKALbutton:hover {
+//   background-color: #f5df4d;
+// }
+
+.MKAPcard-btn {
+  background-color: transparent;
+  width: 100%;
+  height: 30px;
+  color: #646464;
+  border: none;
+  font-size: 1rem;
+  // position: relative;
+}
+.MKAPcard-btn:hover {
+  color: #fff;
 }
 .button-G {
   margin-left: 10px;
@@ -235,5 +311,27 @@ height: 60%;
     margin-top: 3rem;
     display: flex;
     justify-content: center;
+  }
+  .MKReplyContext {
+    width: 50%;
+    padding: 0;
+  }
+  .abc {
+    width: 356px;
+    margin: 0;
+    margin-bottom: 1rem;
+    
+    padding: 0;
+    padding-top:1rem;
+
+    // margin: auto ;
+  }
+  .MKcomReply {
+    width: 350px;
+    // margin: 0;
+  }
+  .commentTextarea{
+    width: 200px;
+    max-height: 4rem;
   }
 }

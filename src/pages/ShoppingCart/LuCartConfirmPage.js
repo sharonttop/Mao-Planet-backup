@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { withRouter } from 'react-router-dom'
 import './LuCartConfirmPage.scss'
 import { useStateValue } from '../../StateProvider'
+import { getBasketTotal } from '../../reducer'
 import CartCheckItem from '../../components/CartCheckItem'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function ConfirmPage(props) {
   const [{ basket }, dispatch] = useStateValue()
+
   return (
     <>
       {/* banner區 */}
       <div className="container main-contant py-5">
-        <div className="form-row text-center">
+        <div className="form-row processrow">
           <div className="col-md-4">
             <div className="row alert" role="alert">
-              <div className="Lprocesstag">
+              <div className="Lprocesstag2">
                 <div className="Lprogressnum1">1</div>
               </div>
               <div>
@@ -23,8 +27,8 @@ function ConfirmPage(props) {
           </div>
           <div className="col-md-4">
             <div className="row alert" role="alert">
-              <div className="Lprocesstag2">
-                <div className="Lprogressnum2">2</div>
+              <div className="Lprocesstag">
+                <div className="Lprogressnum1">2</div>
               </div>
               <div>
                 <div className="Lprogresstitle2">填寫資料</div>
@@ -70,6 +74,7 @@ function ConfirmPage(props) {
                           title={item.title}
                           image={item.image}
                           price={item.price}
+                          quantity={item.quantity}
                         />
                       ))}
                     </tr>
@@ -78,7 +83,7 @@ function ConfirmPage(props) {
                         運費
                       </td>
                       <td className="align-middle text-right">
-                        <strong>$60</strong>
+                        <strong>$0</strong>
                       </td>
                     </tr>
                     <tr>
@@ -86,7 +91,7 @@ function ConfirmPage(props) {
                         合計
                       </td>
                       <td className="align-middle text-right">
-                        <strong>0</strong>
+                        <strong>{getBasketTotal(basket)}</strong>
                       </td>
                     </tr>
                   </tbody>
@@ -219,14 +224,9 @@ function ConfirmPage(props) {
           </div>
         </div>
         {/* 信用卡區 */}
-        {/* <div class="card mt-3">
-          <div class="card-header LDataInputheader">
-            <div class="">
-              <h5 class="card-title text-center">信用卡資料</h5>
-            </div>
-          </div>
+        <div class="card mt-3">
           <div class="mt-3">
-            <form class="CreditCardForm">
+            {/* <form class="CreditCardForm">
               <div class="form-row justify-content-center">
                 <div class="col-md-4">
                   <h6>持卡人姓名</h6>
@@ -275,34 +275,38 @@ function ConfirmPage(props) {
                   我同意網站服務條款及隱私政策
                 </label>
               </div>
-              <div class="text-center mt-3">
-                <a href="/" class="btn btn-outline-warning">
-                  送出訂單
-                </a>
-              </div>
+            </form> */}
+            <div class="text-center mt-3">
+              <Link to="/shopping/finalstep">
+                <div className="col-md-12">
+                  <button type="button" className="btn LOrderbtn">
+                    訂單確認
+                  </button>
+                </div>
+              </Link>
+            </div>
 
-              <h6 class="mt-3">
-                【注意事項，下單前請務必詳閱】
-                <br />
-                ※ 發票注意事項
-                統編發票皆為電子發票，皆會寄至您當初留的email，信件中會有一附帶的PDF檔，可自行印出即可。
-                <br />
-                ※ 由於商品大小尺寸一同販售，
-                請在下單前先務必確認您訂購的機型尺寸顏色正確再完成結帳付款的動作。
-                <br />
-                ※ 如需取消訂單
-                請於訂單通知已確認前提出，包裹寄出後如有多次未取紀錄我方將保留相關出貨決定權且不另行通知。
-                請愛護自身權益。
-                <br />
-                ※ 訂單相關進度及售後等問題 可加入 FB:
-                MaoPlanet，客服人員將於服務時間內盡快依序回覆，客服人員將於服務時間內盡快依序回覆。在線回覆時間：週一至週五
-                (10:30~18:00)，例假日暫停出貨及客服
-                <br />※ 如商品有缺貨或停產等訂單無法出貨之情況，
-                我們將使用Email進行通知，請務必留意相關訊息，謝謝您，祝您購物愉快！
-              </h6>
-            </form>
+            <div class="mt-3 noticetext">
+              【注意事項，下單前請務必詳閱】
+              <br />
+              ※ 發票注意事項
+              統編發票皆為電子發票，皆會寄至您當初留的email，信件中會有一附帶的PDF檔，可自行印出即可。
+              <br />
+              ※ 由於商品大小尺寸一同販售，
+              請在下單前先務必確認您訂購的機型尺寸顏色正確再完成結帳付款的動作。
+              <br />
+              ※ 如需取消訂單
+              請於訂單通知已確認前提出，包裹寄出後如有多次未取紀錄我方將保留相關出貨決定權且不另行通知。
+              請愛護自身權益。
+              <br />
+              ※ 訂單相關進度及售後等問題 可加入 FB:
+              MaoPlanet，客服人員將於服務時間內盡快依序回覆，客服人員將於服務時間內盡快依序回覆。在線回覆時間：週一至週五
+              (10:30~18:00)，例假日暫停出貨及客服
+              <br />※ 如商品有缺貨或停產等訂單無法出貨之情況，
+              我們將使用Email進行通知，請務必留意相關訊息，謝謝您，祝您購物愉快！
+            </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   )

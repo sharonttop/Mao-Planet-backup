@@ -43,7 +43,7 @@ function ReadingProgress() {
 
   return (
     <div className="ACbarPosition">
-      <ProgressBar min={0} max={100} now={progress} className="ACprogressBar" />
+      <ProgressBar min={0} max={100} now={progress} className="progress" />
     </div>
   )
 }

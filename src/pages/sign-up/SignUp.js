@@ -134,209 +134,233 @@ function SignUp(props) {
       </div>
     </>
   )
-
+  const autoFill = () => {
+    setFields({
+      name: '廖圓圓',
+      nickname: '小圓',
+      email: 'ronron12@gmail.com',
+      password: '123456',
+      confirmPassword: '123456',
+      birthday: '2001-09-20',
+      mobile: '0920987654',
+      address: '新北市中正路123巷五樓',
+    })
+  }
   const display = (
     <>
-      <div className="MemberCatHand1">
-        <img src={CatHand1} style={{ width: '110px' }} alt="" />
-      </div>
-      <div className="MemberCatHand2">
-        <img src={CatHand2} style={{ width: '125px' }} alt="" />
-      </div>
-      <div className="card signCard">
-        <div className="signUpBanner">
-          <h2>註冊</h2>
+      <div className="signUpAll">
+        <div className="signUpCatHand1">
+          <img src={CatHand1} style={{ width: '110px' }} alt="" />
         </div>
-        <div className="wrap">
-          <form
-            className="signUpForm"
-            name="fake_form"
-            onSubmit={handleSubmit}
-            onChange={handleFormChange}
-            onInvalid={handleFormInvalid}
-          >
-            <div className="info">
-              <div className="signUpForm-group">
-                <label>姓名</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  name="name"
-                  value={fields.name}
-                  onChange={handleFieldChange}
-                  placeholder="name"
-                  required
-                />
-                {fieldErrors.name !== '' && (
-                  <div
-                    className="error"
-                    style={{ fontSize: 0.9, color: 'red' }}
-                  >
-                    {fieldErrors.name}
-                  </div>
-                )}
+        <div className="card signCard">
+          <div className="signUpBanner">
+            <h2>註冊</h2>
+          </div>
+          <div className="wrap">
+            <form
+              className="signUpForm"
+              name="fake_form"
+              onSubmit={handleSubmit}
+              onChange={handleFormChange}
+              onInvalid={handleFormInvalid}
+            >
+              <div className="info">
+                <div className="signUpForm-group">
+                  <label>姓名</label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="name"
+                    value={fields.name}
+                    onChange={handleFieldChange}
+                    placeholder="name"
+                    required
+                  />
+                  {fieldErrors.name !== '' && (
+                    <div
+                      className="error"
+                      style={{ fontSize: 0.9, color: 'red' }}
+                    >
+                      {fieldErrors.name}
+                    </div>
+                  )}
+                </div>
+                <div className="signUpForm-group">
+                  <label>暱稱</label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    name="nickname"
+                    value={fields.nickname}
+                    onChange={handleFieldChange}
+                    placeholder="nickname"
+                    required
+                  />
+                  {fieldErrors.nickname !== '' && (
+                    <div
+                      className="error"
+                      style={{ fontSize: 0.9, color: 'red' }}
+                    >
+                      {fieldErrors.nickname}
+                    </div>
+                  )}
+                </div>
+                <div className="signUpForm-group">
+                  <label>Email</label>
+                  <input
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    value={fields.email}
+                    onChange={handleFieldChange}
+                    placeholder="email"
+                    required
+                  />
+                  {fieldErrors.email !== '' && (
+                    <div
+                      className="error"
+                      style={{ fontSize: 0.9, color: 'red' }}
+                    >
+                      {fieldErrors.email}
+                    </div>
+                  )}
+                </div>
+                <div className="signUpForm-group">
+                  <label>密碼</label>
+                  <input
+                    className="form-control"
+                    type="password"
+                    name="password"
+                    value={fields.password}
+                    onChange={handleFieldChange}
+                    required
+                    minLength="5"
+                    placeholder="Password"
+                  />
+                  {fieldErrors.password !== '' && (
+                    <div
+                      className="error"
+                      style={{ fontSize: 0.9, color: 'red' }}
+                    >
+                      {fieldErrors.password}
+                    </div>
+                  )}
+                </div>
+                <div className="signUpForm-group">
+                  <label>確認密碼</label>
+                  <input
+                    className="form-control"
+                    type="password"
+                    name="confirmPassword"
+                    value={fields.confirmPassword}
+                    onChange={handleFieldChange}
+                    required
+                    minLength="5"
+                    placeholder="confirmPassword"
+                  />
+                  {fieldErrors.confirmPassword !== '' && (
+                    <div
+                      className="error"
+                      style={{ fontSize: 0.9, color: 'red' }}
+                    >
+                      {fieldErrors.confirmPassword}
+                    </div>
+                  )}
+                </div>
+                <div className="signUpForm-group">
+                  <label>生日</label>
+                  <input
+                    className="form-control"
+                    type="date"
+                    name="birthday"
+                    value={fields.birthday}
+                    onChange={handleFieldChange}
+                    placeholder="brithday"
+                  />
+                  <br />
+                  <label>手機</label>
+                  <input
+                    className="form-control"
+                    type="mobile"
+                    name="mobile"
+                    value={fields.mobile}
+                    onChange={handleFieldChange}
+                    placeholder="mobile"
+                  />
+                </div>
+                <div className="signUpForm-group">
+                  <label>地址</label>
+                  <input
+                    className="form-control"
+                    name="address"
+                    value={fields.address}
+                    onChange={handleFieldChange}
+                    placeholder="address"
+                  />
+                </div>
               </div>
-              <div className="signUpForm-group">
-                <label>暱稱</label>
+              <div className="full-upload">
+                <div className="signUpAvatar">
+                  <img
+                    src={
+                      imgSrc
+                        ? IMG_PATH + '/' + imgSrc
+                        : IMG_PATH + '/default-avatar.svg'
+                    }
+                    alt=""
+                    id="img01"
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="btn img-upload"
+                  onClick={(e) => document.querySelector('#avatar').click()}
+                >
+                  上傳照片
+                </button>
                 <input
+                  type="hidden"
                   className="form-control"
-                  type="text"
-                  name="nickname"
-                  value={fields.nickname}
-                  onChange={handleFieldChange}
-                  placeholder="nickname"
-                  required
-                />
-                {fieldErrors.nickname !== '' && (
-                  <div
-                    className="error"
-                    style={{ fontSize: 0.9, color: 'red' }}
-                  >
-                    {fieldErrors.nickname}
-                  </div>
-                )}
-              </div>
-              <div className="signUpForm-group">
-                <label>Email</label>
-                <input
-                  className="form-control"
-                  type="email"
-                  name="email"
-                  value={fields.email}
-                  onChange={handleFieldChange}
-                  placeholder="email"
-                  required
-                />
-                {fieldErrors.email !== '' && (
-                  <div
-                    className="error"
-                    style={{ fontSize: 0.9, color: 'red' }}
-                  >
-                    {fieldErrors.email}
-                  </div>
-                )}
-              </div>
-              <div className="signUpForm-group">
-                <label>密碼</label>
-                <input
-                  className="form-control"
-                  type="password"
-                  name="password"
-                  value={fields.password}
-                  onChange={handleFieldChange}
-                  required
-                  minLength="5"
-                  placeholder="Password"
-                />
-                {fieldErrors.password !== '' && (
-                  <div
-                    className="error"
-                    style={{ fontSize: 0.9, color: 'red' }}
-                  >
-                    {fieldErrors.password}
-                  </div>
-                )}
-              </div>
-              <div className="signUpForm-group">
-                <label>確認密碼</label>
-                <input
-                  className="form-control"
-                  type="password"
-                  name="confirmPassword"
-                  value={fields.confirmPassword}
-                  onChange={handleFieldChange}
-                  required
-                  minLength="5"
-                  placeholder="confirmPassword"
-                />
-                {fieldErrors.confirmPassword !== '' && (
-                  <div
-                    className="error"
-                    style={{ fontSize: 0.9, color: 'red' }}
-                  >
-                    {fieldErrors.confirmPassword}
-                  </div>
-                )}
-              </div>
-              <div className="signUpForm-group">
-                <label>生日</label>
-                <input
-                  className="form-control"
-                  type="date"
-                  name="birthday"
-                  value={fields.birthday}
-                  onChange={handleFieldChange}
-                  placeholder="brithday"
-                />
-                <br />
-                <label>手機</label>
-                <input
-                  className="form-control"
-                  type="mobile"
-                  name="mobile"
-                  value={fields.mobile}
-                  onChange={handleFieldChange}
-                  placeholder="mobile"
+                  name="avatar"
+                  value={imgSrc}
                 />
               </div>
-              <div className="signUpForm-group">
-                <label>地址</label>
-                <input
-                  className="form-control"
-                  name="address"
-                  value={fields.address}
-                  onChange={handleFieldChange}
-                  placeholder="address"
-                />
+              <div className="signUp-group">
+                <div className="advertise">
+                  <img src={IMG_PATH + '/Hostel icon.svg'} alt="" />
+                  <img src={IMG_PATH + '/Cart icon.svg'} alt="" />
+                  <img src={IMG_PATH + '/gift icon.svg'} alt="" />
+                </div>
+                <button type="submit" className="btn signUpBtn">
+                  會員註冊
+                </button>
               </div>
-            </div>
-            <div className="full-upload">
-              <div className="signUpAvatar">
-                <img
-                  src={
-                    imgSrc
-                      ? IMG_PATH + '/' + imgSrc
-                      : IMG_PATH + '/default-avatar.svg'
-                  }
-                  alt=""
-                  id="img01"
-                />
-              </div>
-              <button
-                type="button"
-                className="btn img-upload"
-                onClick={(e) => document.querySelector('#avatar').click()}
-              >
-                上傳照片
-              </button>
+            </form>
+            <form name="form1" style={{ display: 'none' }}>
               <input
-                type="hidden"
-                className="form-control"
+                type="file"
+                id="avatar"
                 name="avatar"
-                value={imgSrc}
+                accept="image/*"
+                onChange={doUpload}
               />
-            </div>
-            <div className="signUp-group">
-              <div className="advertise">
-                <img src={IMG_PATH + '/Hostel icon.svg'} alt="" />
-                <img src={IMG_PATH + '/Cart icon.svg'} alt="" />
-                <img src={IMG_PATH + '/gift icon.svg'} alt="" />
-              </div>
-              <button type="submit" className="btn signUpBtn">
-                會員註冊
-              </button>
-            </div>
-          </form>
-          <form name="form1" style={{ display: 'none' }}>
-            <input
-              type="file"
-              id="avatar"
-              name="avatar"
-              accept="image/*"
-              onChange={doUpload}
-            />
-          </form>
+            </form>
+          </div>
         </div>
+        <div className="signUpCatHand2">
+          <img src={CatHand2} style={{ width: '125px' }} alt="" />
+        </div>
+        <button
+          style={{
+            position: 'absolute',
+            opacity: 0,
+            width: '350px',
+            height: '70px',
+          }}
+          onClick={autoFill}
+        >
+          隱藏按鈕
+        </button>
       </div>
     </>
   )

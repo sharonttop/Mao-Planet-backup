@@ -39,6 +39,8 @@ import Member from './pages/member/Member'
 // import ReadingProgress from './components/ReadingProgress'
 import LuCartConfirmPage from './pages/ShoppingCart/LuCartConfirmPage'
 import LuCheckoutPage from './pages/ShoppingCart/LuCheckoutPage'
+import LuCartConfirmPageII from './pages/ShoppingCart/LuCartConfirmPageII'
+import LuCartDone from './pages/ShoppingCart/LuCartDone'
 import NotFoundPage from './pages/NotFoundPage'
 
 // 組合用元件
@@ -51,7 +53,6 @@ import ScrollButton from './components/ScrollButton'
 //import BreadCrumb from './components/BreadCrumb'
 import MultiLevelBreadCrumb from './components/MultiLevelBreadCrumb'
 // import ProductDetailsCP18 from './components/ProductDetailsCP18'
-
 
 function App(props) {
   const [auth, setAuth] = useState(false)
@@ -133,14 +134,14 @@ function App(props) {
               <Route path="/productlist/cat/outdoor" exact>
                 <ProductListCatOutdoor />
               </Route>
-              
+
               <Route path="/productlist/cat/cp-18" exact>
                 <ProductDetailsCP18 />
               </Route>
               <Route path="/productlist/cat/cp-19" exact>
                 <ProductDetailsCP19 />
               </Route>
-              
+
               <Route path="/productlist/cat/play/2" exact>
                 <ProductListCatPlayPage2 />
               </Route>
@@ -153,9 +154,15 @@ function App(props) {
               <Route path="/shopping/secondstep" exact>
                 <LuCartConfirmPage />
               </Route>
-              <Route path="/productlist">
-                <ProductCat />
-              </Route> 
+              <Route path="/shopping/finalstep" exact>
+                <LuCartConfirmPageII />
+              </Route>
+              <Route path="/shopping/donepage" exact>
+                <LuCartDone />
+              </Route>
+              {/* <Route path="/productlist">
+                <ProductList />
+              </Route> */}
               <Route path="/hotellist/hotelpage/:id?">
                 <HotelPage />
               </Route>

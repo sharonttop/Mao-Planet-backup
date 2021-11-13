@@ -25,13 +25,12 @@
   left: 20%;
 }
 .MKbanner-text > p {
-  font-size: 1.5rem;
-  font-weight: medium;
-  text-align: end;
-}
-.MKbanner-text > h5 {
   font-size: 1rem;
-  font-weight: 300;
+  // font-weight: medium;
+  text-align: end;
+  color: #646464;
+}
+.MKbanner-text > h2 {
   text-align: end;
 }
 /* RWD-banner */
@@ -117,7 +116,7 @@
 /* list  cards  */
 
 .MKrow-list {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;

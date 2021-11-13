@@ -5,7 +5,6 @@ import HotelListBanner from './hotellist-banner_300x300.jpg'
 import { withRouter } from 'react-router-dom'
 import HotelCards from './HotelCard'
 import Carousel from './Carousel'
-
 import { BsSearch } from 'react-icons/bs'
 import Axios from 'axios'
 
@@ -100,10 +99,7 @@ function HotelList() {
         {/* map */}
         <>
           <div className="MKrow-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3004.8517337052526!2d121.51392975777993!3d25.047523761341026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9727e339109%3A0xc34a31ce3a4abecb!2z6Ie65YyX6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1634912525150!5m2!1szh-TW!2stw"
-              loading="lazy"
-            ></iframe>
+            <iframe></iframe>
           </div>
         </>
         {/* HotelCardList */}

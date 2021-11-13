@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-// import ReadingProgress from '../../components/ReadingProgress'
+import ReadingProgress from '../../components/ReadingProgress'
 
 import ArticlePic1 from '../../images/BlogArticle/ArticlePic1_805x500.jpg'
 import ArticlePic2 from '../../images/BlogArticle/ArticlePic2_805x500.jpg'
@@ -19,6 +19,7 @@ function BlogArticle1(props) {
 
   return (
     <>
+      <ReadingProgress />
       <div id="ACblogContent" className="d-flex justify-content-center p-0">
         <Row>
           <div className="ACblogArticle-container col-md-9 col-11">

@@ -119,7 +119,7 @@ function HomeCarousel() {
               </div>
             </div>
             <div className="ACjoinMemberBtn mx-md-4 mt-1">
-              <Link to="/member">
+              <Link to="/signup">
                 <Button
                   variant="outline-primary"
                   className="ACYellowOutlineBtn"

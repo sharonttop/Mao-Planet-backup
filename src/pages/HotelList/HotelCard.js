@@ -48,7 +48,7 @@ function HotelCard() {
         <div className="MKrow-list">
           {paginatedPosts.map((v, i) => {
             return (
-              <li key={i} className="MKDisplayLi">
+              <li key={i} className="MKDisplayLi ">
                 <div className="MKcard">
                   <div className="MKcard-context">
                     <div className="MKavatar">
