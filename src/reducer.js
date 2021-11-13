@@ -17,11 +17,6 @@ const reducer = (state, action) => {
         ...state,
         basket: [...state.basket, item2],
       }
-    case 'EMPTY_BASKET':
-      return {
-        ...state,
-        basket: [],
-      }
     case 'ADD_TO_HEART':
       // console.log(action.item)
       const item3 = { ...action.item, quantity: 1 }

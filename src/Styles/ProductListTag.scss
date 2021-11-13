@@ -19,4 +19,9 @@
     background-color: #f5df4d;
     color: #ffffff;
   }
+
+  @media(max-width:768px){
+    padding: 3px 26px;
+    margin-left: 5px;
+  }
 }

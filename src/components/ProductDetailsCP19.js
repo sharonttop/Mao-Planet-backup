@@ -10,22 +10,49 @@ import CAT_PRODUCT from '../product-local-json/cat-product.json'
 import '../Styles/ProductCard.scss'
 import { Link } from 'react-router-dom'
 import { useStateValue } from '../StateProvider'
+import { useState } from "react";
+import styled from 'styled-components'
+import relatedProduct from '../product-local-json/you-may-also-like.json'
 
+const StyledImg=styled.img`
+    border: ${props => props.border }
+`
 
+const catRelatedData = relatedProduct['Cat-Related']
 
 const ProductDetailsCP19 = ({ ID, ProductImg, ProductTitle, ProductPrice }) => {
     const [{ basket }, dispatch] = useStateValue()
     const cp19Data = CAT_PRODUCT["Cat-Play-2"][2]
+    const [bigPic,setBigPic]=useState(`${cp19Data.pics[0]}`)
     console.log(cp19Data)
+    const [border,setBorder] = useState("AG-pic1")
 
+
+    const handleImgClick = (e)=> {
+        setBorder(e.target.id)
+        setBigPic(e.target.src)
+    }
+    
     const addToBasket = () => {
         dispatch({
           type: 'ADD_TO_BASKET',
           item: {
-            id: ID,
-            image: ProductImg,
-            title: ProductTitle,
-            price: ProductPrice,
+            id: cp19Data.ID,
+            image: cp19Data.URL,
+            title: cp19Data.title,
+            price: cp19Data.price,
+          },
+        })
+      }
+
+      const addToHeart = () => {
+        dispatch({
+          type: 'ADD_TO_HEART',
+          item: {
+            id: cp19Data.ID,
+            image: cp19Data.URL,
+            title: cp19Data.title,
+            price: cp19Data.price,
           },
         })
       }
@@ -42,12 +69,12 @@ return (
     </div>
     <div className="AG-addToCartContainer">
       <div className="AG-fourPics">
-          <img id="AG-pic1" src={`${cp19Data.pics[0]}`}></img>
-          <img id="AG-pic2" src={`${cp19Data.pics[1]}`}></img>
-          <img id="AG-pic3" src={`${cp19Data.pics[2]}`}></img>
-          <img id="AG-pic4" src={`${cp19Data.pics[3]}`}></img>
+          <StyledImg id="AG-pic1" src={`${cp19Data.pics[0]}`} border={ border === 'AG-pic1' ? "#939597 solid 3px" : "none"} onClick={handleImgClick}></StyledImg>
+          <StyledImg id="AG-pic2" src={`${cp19Data.pics[1]}`} border={ border === 'AG-pic2' ? "#939597 solid 3px" : "none"} onClick={handleImgClick}></StyledImg>
+          <StyledImg id="AG-pic3" src={`${cp19Data.pics[2]}`} border={ border === 'AG-pic3' ? "#939597 solid 3px" : "none"} onClick={handleImgClick}></StyledImg>
+          <StyledImg id="AG-pic4" src={`${cp19Data.pics[3]}`} border={ border === 'AG-pic4' ? "#939597 solid 3px" : "none"} onClick={handleImgClick}></StyledImg>
       </div>
-      <div className="AG-bigPic"><img src={`${cp19Data.pics[0]}`}></img></div>
+      <div className="AG-bigPic"><img src={bigPic}></img></div>
       <div className="AG-textAndBtnArea">
           <div className="AG-productTitle">{cp19Data.title}</div>
           <div className="AG-promo">
@@ -62,7 +89,7 @@ return (
               <a>+</a>
           </div>
           <a className="AG-toCart" onClick={addToBasket}>加入購物車</a>
-          <a className="AG-toList"><FaRegHeart/> 加入追蹤清單</a>
+          <a className="AG-toList" onClick={addToHeart}><FaRegHeart/> 加入追蹤清單</a>
       </div>
     </div>
     <div className="AG-toggleTitleContainer">
@@ -117,6 +144,18 @@ return (
 
     </div>
     </div>
+
+<ProductListTitle subTitle={"相關商品"} engTitle={"You may also like"}/>
+      <div className='AG-productCards'>
+        {catRelatedData.map((item) => {
+            return (
+                <>
+                <ProductCard ID={item.ID} ProductImg={item.URL} ProductTitle={item.title} ProductPrice={item.price} />
+                </>
+        )})}
+
+        </div>
+
     </>
     )
 }

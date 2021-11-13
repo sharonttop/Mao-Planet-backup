@@ -12,10 +12,13 @@ import { Link } from 'react-router-dom'
 import { useStateValue } from '../StateProvider'
 import { useState } from 'react'
 import styled from 'styled-components'
+import relatedProduct from '../product-local-json/you-may-also-like.json'
 
 const StyledImg = styled.img`
   border: ${(props) => props.border};
 `
+
+const catRelatedData = relatedProduct['Cat-Related']
 
 const ProductDetailsCP18 = ({ ID, ProductImg, ProductTitle, ProductPrice }) => {
   const [{ basket }, dispatch] = useStateValue()
@@ -23,16 +26,11 @@ const ProductDetailsCP18 = ({ ID, ProductImg, ProductTitle, ProductPrice }) => {
   const [bigPic, setBigPic] = useState(`${cp18Data.pics[0]}`)
   console.log(cp18Data)
   const [border, setBorder] = useState('AG-pic1')
-  //   const [heartNum, setHeartNum] = useState(0)
 
   const handleImgClick = (e) => {
     setBorder(e.target.id)
     setBigPic(e.target.src)
   }
-
-  //   const handleHeartClick = () => {
-  //     setHeartNum((num) => num + 1)
-  //   }
 
   const addToBasket = () => {
     dispatch({
@@ -45,6 +43,7 @@ const ProductDetailsCP18 = ({ ID, ProductImg, ProductTitle, ProductPrice }) => {
       },
     })
   }
+
   const addToHeart = () => {
     dispatch({
       type: 'ADD_TO_HEART',
@@ -178,6 +177,21 @@ const ProductDetailsCP18 = ({ ID, ProductImg, ProductTitle, ProductPrice }) => {
             <img src={`${cp18Data.bigPics[4]}`} />
           </div>
         </div>
+      </div>
+      <ProductListTitle subTitle={'相關商品'} engTitle={'You may also like'} />
+      <div className="AG-productCards">
+        {catRelatedData.map((item) => {
+          return (
+            <>
+              <ProductCard
+                ID={item.ID}
+                ProductImg={item.URL}
+                ProductTitle={item.title}
+                ProductPrice={item.price}
+              />
+            </>
+          )
+        })}
       </div>
     </>
   )
