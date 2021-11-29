@@ -138,7 +138,7 @@ function SignUp(props) {
     setFields({
       name: '廖圓圓',
       nickname: '小圓',
-      email: 'ronron12@gmail.com',
+      email: 'ronron5684@gmail.com',
       password: '123456',
       confirmPassword: '123456',
       birthday: '2001-09-20',

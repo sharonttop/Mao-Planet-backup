@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import { BiSearch, BiUser, BiHeart, BiCartAlt } from 'react-icons/bi'
 import { useStateValue } from '../StateProvider'
 import Avatar from './Avatar'
-import SearchBar from './SearchBar'
+// import SearchBar from './SearchBar'
 import logo from '../images/logo.svg'
 import '../Styles/MyNavbar.scss'
 
@@ -105,13 +105,13 @@ function MyNavbar(props) {
           </Nav>
 
           <Nav className="mb-4 d-flex d-none d-md-row-block px-md-2">
-            <Nav.Link
+            {/* <Nav.Link
               href="#/"
               className="ACnavIcon d-flex justify-content-center align-items-center"
             >
               <SearchBar />
               <BiSearch />
-            </Nav.Link>
+            </Nav.Link> */}
             {!auth && (
               <Nav.Link as={NavLink} to="/login" className="ACnavIcon">
                 <BiUser />
