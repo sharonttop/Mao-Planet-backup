@@ -110,7 +110,7 @@ function PetId(props) {
       </div>
       {inputList.map((item, i) => {
         return (
-          <div className="card petIdCard">
+          <div className="card petIdCard ml-2 mr-2">
             <div className="petIdBanner">
               <h2>毛孩ID</h2>
             </div>

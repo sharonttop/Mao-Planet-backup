@@ -121,6 +121,7 @@ function SignUp(props) {
     })
     const data = await r.json()
     console.log(data)
+    autoFillClear()
     alert('註冊成功')
     props.history.push('/login')
   }
@@ -138,13 +139,26 @@ function SignUp(props) {
     setFields({
       name: '廖圓圓',
       nickname: '小圓',
-      email: 'ronron12@gmail.com',
+      email: 'ronron2022@gmail.com',
       password: '123456',
       confirmPassword: '123456',
       birthday: '2001-09-20',
       mobile: '0920987654',
       address: '新北市中正路123巷五樓',
     })
+  }
+  const autoFillClear = () => {
+    setFields({
+      name: '',
+      nickname: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      birthday: '',
+      mobile: '',
+      address: '',
+    })
+    setImgSrc('')
   }
   const display = (
     <>
