@@ -10,4 +10,8 @@ src/App.css
 public
 .vscode
 src/images/.DS_Store
+PetId1.js
+petIdTest.html
+PetIdTest.js
+test.html
 .gitignore
