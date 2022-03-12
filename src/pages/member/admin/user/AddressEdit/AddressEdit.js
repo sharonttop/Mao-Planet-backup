@@ -16,18 +16,18 @@ function AddressEdit(props) {
 
   //編輯功能--------------------------------------
   const [editFields, setEditFields] = useState({
-    name: '',
-    mobile: '',
-    address: '',
+    shipping_name: '',
+    shipping_mobile: '',
+    shipping_address: '',
   })
   // 2.存入錯誤訊息用
   const [editFieldsErrors, setEditFieldsErrors] = useState({
-    name: '',
-    mobile: '',
-    address: '',
+    shipping_name: '',
+    shipping_mobile: '',
+    shipping_address: '',
   })
 
-  console.log({ conf })
+  // console.log({ conf })
 
   const [isLoading, setIsLoading] = useState(true)
   // 自動1秒後關閉指示的spinner
@@ -38,8 +38,10 @@ function AddressEdit(props) {
   }, [isLoading])
 
   const token = localStorage.getItem('token')
-  //抓取後端資料
-  const getAddressData = () => {
+
+  // 若已存取過寄送資料，進入頁面直接顯示
+  useEffect(() => {
+    setIsLoading(true)
     ;(async () => {
       const r = await fetch(AUTH_TOKEN, {
         method: 'GET',
@@ -51,6 +53,24 @@ function AddressEdit(props) {
 
       setEditFields(obj)
     })()
+  }, [])
+
+  //打勾後，抓取之前登入的會員資料
+  const getAddressData = () => {
+    ;(async () => {
+      const r = await fetch(AUTH_TOKEN, {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer ' + token,
+        }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
+      })
+      const obj = await r.json()
+      setEditFields({
+        shipping_name: obj.name,
+        shipping_mobile: obj.mobile,
+        shipping_address: obj.address,
+      })
+    })()
   }
 
   // 專門用來處理每個欄位的輸入用
@@ -58,7 +78,6 @@ function AddressEdit(props) {
   const handleFieldChange = (e) => {
     const name = e.target.name
     const value = e.target.value
-    // const type = e.target.type
 
     // 預設值為輸入值
     let newValue = value
@@ -68,6 +87,7 @@ function AddressEdit(props) {
       ...editFields,
       [name]: newValue,
     }
+    console.log('updatedFields', updatedFields)
 
     // 3. 設定回原狀態物件
     setEditFields(updatedFields)
@@ -102,18 +122,27 @@ function AddressEdit(props) {
     setEditFieldsErrors(updatedFieldErrors)
   }
 
-  // 在 表單完成驗証 之後，才會觸發==========================
+  // 編輯或新增，傳送寄送資料到後端存取
   const handleSubmit = async (e) => {
     // 阻擋form的預設送出行為
     e.preventDefault()
 
-    // 利用FormData Api 得到各欄位的值 or 利用狀態值
-    // FormData 利用的是表單元素的 name
     const formData = new FormData(e.target)
-    console.log(formData.get('name'))
-    console.log(formData.get('mobile'))
-    console.log(formData.get('address'))
+    console.log(formData.get('shipping_name'))
+    console.log(formData.get('shipping_mobile'))
+    console.log(formData.get('shipping_address'))
 
+    const usp = new URLSearchParams(new FormData(document.edit_form))
+    const r = await fetch(AUTH_TOKEN, {
+      method: 'PUT',
+      body: usp.toString(),
+      headers: {
+        Authorization: 'Bearer ' + token,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
+    })
+    const data = await r.json()
+    console.log(data)
     alert('已更新儲存')
     props.history.push('/admin')
   }
@@ -165,8 +194,8 @@ function AddressEdit(props) {
                 <input
                   className="form-control"
                   type="text"
-                  name="name"
-                  value={editFields.name}
+                  name="shipping_name"
+                  value={editFields.shipping_name}
                   onChange={handleFieldChange}
                   placeholder="name"
                   required
@@ -189,8 +218,8 @@ function AddressEdit(props) {
                 <input
                   className="form-control"
                   type="mobile"
-                  name="mobile"
-                  value={editFields.mobile}
+                  name="shipping_mobile"
+                  value={editFields.shipping_mobile}
                   onChange={handleFieldChange}
                   placeholder="mobile"
                 />
@@ -199,8 +228,8 @@ function AddressEdit(props) {
                 <label>收件地址</label>
                 <input
                   className="form-control"
-                  name="address"
-                  value={editFields.address}
+                  name="shipping_address"
+                  value={editFields.shipping_address}
                   onChange={handleFieldChange}
                   placeholder="address"
                 />
