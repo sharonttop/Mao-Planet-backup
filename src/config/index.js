@@ -8,7 +8,9 @@ let config = {}
 export const API_HOST = 'http://localhost:3004'
 
 export const UPLOAD_AVATAR = API_HOST + '/try-upload2'
+export const UPLOAD_PETID = API_HOST + '/try-uploads'
 export const IMG_PATH = API_HOST + '/img'
+export const PETID_IMG_PATH = API_HOST + '/tmp_uploads/'
 export const REGISTER = API_HOST + '/register'
 export const LOGIN_JWT = API_HOST + '/login-jwt'
 export const JWT_GET_DATA = API_HOST + '/get-data-jwt'
@@ -25,6 +27,7 @@ config = {
   AUTH_TOKEN,
   PASSWORD_CHANGE,
   PETID_COUPON,
+  UPLOAD_PETID,
 }
 export default config
 

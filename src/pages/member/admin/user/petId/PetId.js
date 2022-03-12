@@ -1,100 +1,147 @@
 import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import config, { UPLOAD_PETID, PETID_COUPON } from '../../../../../config'
 import { Button, Modal } from 'react-bootstrap'
-import conf, {
-  IMG_PATH,
-  UPLOAD_AVATAR,
-  PETID_COUPON,
-  // JWT_GET_DATA,
-} from '../../../../../config'
+import PetIdCard from './PetIdCard'
 
-import axios from 'axios'
-
-//引入圖片
-import petIdRemoveMark from '../../../../../images/PetID/petIdRemoveMark80x80.svg'
-import petIdAddMark from '../../../../../images/PetID/petIdAddMark80x80.svg'
 import petIdCoupon from '../../../../../images/PetID/petIdCoupon.svg'
 import petIdCouponAD from '../../../../../images/PetID/petIdCouponAD.svg'
 import { FaPaw } from 'react-icons/fa'
+import axios from 'axios'
 
-import './PetId.scss'
-
-function PetId(props) {
-  console.log({ conf })
-  const [isLoading, setIsLoading] = useState(true)
-  // 自動1秒後關閉指示的spinner
-  useEffect(() => {
-    if (isLoading) {
-      setTimeout(() => setIsLoading(false), 1000)
-    }
-  }, [isLoading])
-
-  const loading = (
-    <>
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border" role="status">
-          <span className="sr-only">Loading...</span>
-        </div>
-      </div>
-    </>
-  )
-
-  const [inputList, setInputList] = useState([
-    { id: '', petImgSrc: '', petName: '', breed: '', petBirthday: '' },
-  ])
-  //上傳照片
-  const [petImgSrc, setPetImgSrc] = useState('')
-
-  //下拉選單:汪喵
-  const [selectedOption, setSelectedOption] = useState('')
-
+function PetIdTest(prop) {
+  const [isFirstTime, setIsFirstTime] = useState(true)
   //彈出視窗
   const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  const handleChange = (e, index) => {
-    const { name, value } = e.target
-    const list = [...inputList]
-    list[index][name] = value
-    setInputList(list)
-  }
+  // console.log(config)
+  //下拉選單:汪喵
+  const member_id = JSON.parse(localStorage.getItem('member')).id
 
-  const handleAddInput = () => {
-    setInputList([
-      ...inputList,
-      { id: '', petImgSrc: '', petName: '', breed: '', petBirthday: '' },
-    ])
-  }
+  const [petInputList, setPetInputList] = useState([
+    {
+      pet_map_key: 1,
+      pet_avatar: '',
+      pet_name: '',
+      pet_breed: '',
+      pet_birthday: '',
+      isFileUpload: false,
+    },
+  ])
 
-  const handleRemoveInput = (index) => {
-    const list = [...inputList]
-    list.splice(index, 1)
-    setInputList(list)
-  }
+  const [delArray, setDelArray] = useState([])
 
-  const doUpload = async (e) => {
-    //Using Fetch
-    var formData = new FormData()
-    var fileField = e.target
-    // var fileField = document.querySelector("input[type='file']");無法確認選到哪個
-    formData.append('avatar', fileField.files[0])
-    console.log(fileField.files[0])
+  console.log('petInputList', petInputList)
+  // console.log('...petInputList.id', petInputList[0].id)
 
-    // const fd = new FormData()
-    const r = await axios.post(UPLOAD_AVATAR, formData)
+  // 若已存取過寵物資料，進入頁面直接顯示
+  /*
+  useEffect(() => {
+    ;(async () => {
+      const r = await fetch(UPLOAD_PETID)
+      const obj = await r.json()
+      console.log('getPetData', obj)
 
-    console.log(r.data)
-    // console.log(r.data.filename)
-    setPetImgSrc(r.data.filename)
-    // handleChange(e, i)
-  }
+      // setEditFields(obj)
+    })()
+  }, [])
+  */
 
-  // ****** 更新折價券(後端測試) ******
   const token = localStorage.getItem('token')
 
-  const display = (
+  useEffect(() => {
+    ;(async () => {
+      const r = await fetch(UPLOAD_PETID, {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer ' + token,
+        }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
+      })
+      const getPetIdData = await r.json()
+      if (getPetIdData && getPetIdData.length > 0) {
+        setPetInputList(getPetIdData)
+        setIsFirstTime(false)
+      }
+      // console.log('已存的petId', { ...getPetIdData })
+      // console.log(petInputList)
+      // const getPetDataObj = { ...getPetIdData }
+      // console.log('getPetDataObj', getPetDataObj)
+
+      // console.log('petData', petData)
+      // setPetInputList({
+      //   id: '',
+      //   petImgSrc: getPetIdData[0].pet_avatar,
+      //   petName: getPetIdData[0].pet_name,
+      //   breed: getPetIdData[0].pet_breed,
+      //   petBirthday: getPetIdData[0].pet_birthday,
+      // })
+    })()
+  }, [])
+
+  useEffect(() => {
+    console.log('delArray', delArray)
+  }, [delArray])
+
+  const handleSubmit = async (e) => {
+    // 阻擋form的預設送出行為
+    e.preventDefault()
+
+    const formData = new FormData(e.target)
+    console.log(formData.get('pet_avatar[]'))
+    console.log(formData.get('pet_name[]'))
+    console.log(formData.get('pet_breed[]'))
+    console.log(formData.get('pet_birthday[]'))
+
+    const fd = new FormData(document.petId_form)
+    fd.append('user_id', member_id)
+    fd.append('delArray', JSON.stringify(delArray))
+
+    //新增petCoupon到後端資料表
+    if (isFirstTime) {
+      fetch(PETID_COUPON, {
+        method: 'PUT',
+        // body: usp.toString(),
+        headers: {
+          Authorization: 'Bearer ' + token,
+          'Content-Type': 'application/x-www-form-urlencoded',
+        }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
+      })
+      handleShow() //彈出視窗
+    }
+
+    const r = await fetch(UPLOAD_PETID, {
+      method: 'POST',
+      body: fd,
+    })
+    const data = await r.json()
+
+    console.log('data', data)
+
+    // alert('已更新儲存')
+    /*
+  下面這個為何不行？？
+    const usp = new URLSearchParams(new FormData(document.petId_form))
+
+    const r = await fetch(UPLOAD_PETID, {
+      method: 'POST',
+      body: usp.toString(),
+      headers: {
+        Authorization: 'Bearer ' + token,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
+    })
+    const data = await r.json()
+    console.log(data)
+    alert('已更新儲存')
+    */
+
+    // console.log(r.data)
+  }
+
+  return (
     <>
       <div className="petIdCouponAD">
         <img
@@ -108,119 +155,32 @@ function PetId(props) {
           }}
         />
       </div>
-      {inputList.map((item, i) => {
-        return (
-          <div className="card petIdCard ml-2 mr-2">
-            <div className="petIdBanner">
-              <h2>毛孩ID</h2>
-            </div>
-            <div key={i} className="wrap">
-              {/* <input
-              type="hidden"
-              className="form-control"
-              name="avatar"
-              value={petImgSrc}
-            /> */}
-              <form name="form1" style={{ display: 'none' }}>
-                <input
-                  className="form-control"
-                  type="file"
-                  id="avatar"
-                  name="avatar"
-                  accept="image/*"
-                  onChange={doUpload}
-                  data_key={i}
-                />
-              </form>
-              <form className="petIdForm" name="petId_form">
-                <div
-                  className="petIdAvatar"
-                  onClick={(e) => document.querySelector('#avatar').click()}
-                >
-                  <img
-                    src={
-                      petImgSrc
-                        ? IMG_PATH + '/' + petImgSrc
-                        : IMG_PATH + '/default-avatar.svg'
-                    }
-                    alt=""
-                    id="img01"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="hidden"
-                    className="form-control"
-                    name="avatar"
-                    value={petImgSrc}
-                  />
-                </div>
-
-                <div className="petIdForm-group">
-                  <label>毛孩名</label>
-                  <input
-                    style={{ fontSize: 0.9 }}
-                    className="form-control"
-                    type="text"
-                    name="petName"
-                    placeholder="Pet Name"
-                    value={item.petName}
-                    onChange={(e) => handleChange(e, i)}
-                  />
-                </div>
-                <div className="petIdForm-group">
-                  <label>汪喵</label>
-                  <select
-                    style={{ fontSize: 0.9 }}
-                    className="form-control"
-                    name="breed"
-                    value={selectedOption}
-                    onChange={(e) => {
-                      setSelectedOption(e.target.value)
-                      handleChange(e, i)
-                    }}
-                  >
-                    {/* 第一個值會用state的初始值 */}
-                    <option value="">Cat/Dog</option>
-                    <option value="貓">貓</option>
-                    <option value="狗">狗</option>
-                  </select>
-                </div>
-                <div className="petIdForm-group">
-                  <label>毛孩生日</label>
-                  <input
-                    style={{ fontSize: '1rem' }}
-                    className="form-control"
-                    type="date"
-                    name="petBirthday"
-                    placeholder="Pet Birthday"
-                    value={item.petBirthday}
-                    onChange={(e) => handleChange(e, i)}
-                  />
-                </div>
-                {inputList.length !== 1 && (
-                  <img
-                    className="petIdRemoveMark"
-                    src={petIdRemoveMark}
-                    alt=""
-                    onClick={() => handleRemoveInput(i)}
-                  />
-                )}
-                {inputList.length - 1 === i && (
-                  <img
-                    className="petIdAddMark"
-                    src={petIdAddMark}
-                    alt=""
-                    onClick={handleAddInput}
-                  />
-                )}
-              </form>
-            </div>
-          </div>
-        )
-      })}
+      <form name="petId_form" className="" onSubmit={handleSubmit}>
+        {petInputList &&
+          petInputList.map((v, i) => (
+            <PetIdCard
+              key={v.pet_map_key} //下面這個為何不行？key不能傳到子層
+              inputIndex={i}
+              petInputList={petInputList}
+              setPetInputList={setPetInputList}
+              delArray={delArray}
+              setDelArray={setDelArray}
+            />
+          ))}
+        <Button
+          type="submit"
+          variant="primary"
+          className="btn petIdBtn"
+          style={{
+            fontFamily: 'Noto Sans TC',
+            marginLeft: 'auto',
+          }}
+        >
+          建立毛孩ID
+        </Button>
+      </form>
       {/* Coupon彈出視窗 */}
-      <Button
+      {/* <Button
         variant="primary"
         className="btn petIdBtn"
         onClick={() => {
@@ -241,7 +201,7 @@ function PetId(props) {
         }}
       >
         建立毛孩ID
-      </Button>
+      </Button> */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header
           style={{
@@ -293,8 +253,6 @@ function PetId(props) {
       {/* <pre>{JSON.stringify(inputList, null, 2)}</pre> */}
     </>
   )
-
-  return <>{isLoading ? loading : display}</>
 }
 
-export default withRouter(PetId)
+export default withRouter(PetIdTest)

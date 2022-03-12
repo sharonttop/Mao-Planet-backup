@@ -6,6 +6,7 @@
 .petIdCard {
   margin-bottom: 20px;
   max-width: 730px;
+  width: 96%;
   height: auto;
   /* min-height: 200px; */
   padding-bottom: 20px;
@@ -18,7 +19,7 @@
   background-color: #ffffff;
 }
 
-.petIdForm {
+.petIdFormInput {
   display: flex;
   // align-items: flex-end;
   // position: relative;
@@ -96,6 +97,17 @@
 
 .petIdRemoveMark {
   width: 40px;
+  cursor: pointer;
+  // position: absolute;
+  // left: 350px;
+  // bottom: -10px;
+}
+.petIdRemoveMark > img {
+  width: 100%;
+  height: 100%;
+  // position: absolute;
+  // left: 350px;
+  // bottom: -10px;
 }
 .petIdAddMark {
   width: 40px;
@@ -153,8 +165,8 @@
     max-width: 230px;
     // margin:auto 0 auto 0;
   }
-  .petIdForm {
-    display: block;
+  .petIdFormInput {
+    flex-direction: column;
   }
   .signUp-group {
     width: 100%;

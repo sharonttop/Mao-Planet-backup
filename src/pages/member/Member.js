@@ -7,6 +7,7 @@ import InfoEdit from './admin/user/InfoEdit/InfoEdit'
 import AddressEdit from './admin/user/AddressEdit/AddressEdit'
 import PasswordChange from './admin/user/PasswordChange/PasswordChange'
 import PetId from './admin/user/petId/PetId'
+// import PetIdTest from './admin/user/petId/PetIdTest'
 import './Member.scss'
 // 引入圖片和元件
 import MemberBackground from '../../images/Member/memberBackground3.svg'
