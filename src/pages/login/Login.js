@@ -7,9 +7,9 @@ import CatHand2 from '../../images/Login/cat hand2.svg'
 import './Login.scss'
 
 function Login(props) {
-  console.log(props)
+  // console.log(props)
 
-  console.log({ conf })
+  // console.log({ conf })
 
   const { auth, setAuth } = props
   // (從login引入useState作法)
@@ -35,8 +35,13 @@ function Login(props) {
   const [isLoading, setIsLoading] = useState(true)
   // 自動1秒後關閉指示的spinner
   useEffect(() => {
+    let timer = null
     if (isLoading) {
-      setTimeout(() => setIsLoading(false), 1000)
+      timer = setTimeout(() => setIsLoading(false), 1000)
+    }
+
+    return function () {
+      if (timer) clearTimeout(timer)
     }
   }, [isLoading])
 
