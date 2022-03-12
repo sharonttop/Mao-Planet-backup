@@ -4,7 +4,7 @@ import {
   withRouter,
   // Redirect,
 } from 'react-router-dom'
-import conf, { PASSWORD_CHANGE, API_HOST } from '../../../../../config'
+import conf, { PASSWORD_CHANGE } from '../../../../../config'
 import './PasswordChange.scss'
 //背景引入
 import CatHand1 from '../../../../../images/Login/cat hand1.svg'
