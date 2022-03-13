@@ -1,26 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import config, { UPLOAD_PETID, PETID_COUPON } from '../../../../../config'
+import { UPLOAD_PETID, PETID_COUPON } from '../../../../../config'
 import { Button, Modal } from 'react-bootstrap'
 import PetIdCard from './PetIdCard'
 
 import petIdCoupon from '../../../../../images/PetID/petIdCoupon.svg'
 import petIdCouponAD from '../../../../../images/PetID/petIdCouponAD.svg'
 import { FaPaw } from 'react-icons/fa'
-import axios from 'axios'
 
 function PetIdTest(prop) {
-  const [isFirstTime, setIsFirstTime] = useState(true)
-  //彈出視窗
-  const [show, setShow] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  // 自動1秒後關閉指示的spinner
+  useEffect(() => {
+    if (isLoading) {
+      setTimeout(() => setIsLoading(false), 1000)
+    }
+  }, [isLoading])
 
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-
-  // console.log(config)
-  //下拉選單:汪喵
-  const member_id = JSON.parse(localStorage.getItem('member')).id
-
+  const loading = (
+    <>
+      <div className="d-flex justify-content-center">
+        <div className="spinner-border" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+      </div>
+    </>
+  )
   const [petInputList, setPetInputList] = useState([
     {
       pet_map_key: 1,
@@ -31,25 +36,23 @@ function PetIdTest(prop) {
       isFileUpload: false,
     },
   ])
+  // console.log('petInputList', petInputList)
 
+  //是否為第一次新增petId，要跳出發送折價券標的彈出視窗
+  const [isFirstTime, setIsFirstTime] = useState(true)
+  //折價券彈出視窗
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+
+  // 紀錄點選要刪除的input存成Array
   const [delArray, setDelArray] = useState([])
-
-  console.log('petInputList', petInputList)
-  // console.log('...petInputList.id', petInputList[0].id)
+  // 追蹤儲存點選刪除的input的console.log('delArray', delArray)
+  // useEffect(() => {
+  //   console.log('delArray', delArray)
+  // }, [delArray])
 
   // 若已存取過寵物資料，進入頁面直接顯示
-  /*
-  useEffect(() => {
-    ;(async () => {
-      const r = await fetch(UPLOAD_PETID)
-      const obj = await r.json()
-      console.log('getPetData', obj)
-
-      // setEditFields(obj)
-    })()
-  }, [])
-  */
-
   const token = localStorage.getItem('token')
 
   useEffect(() => {
@@ -63,43 +66,29 @@ function PetIdTest(prop) {
       const getPetIdData = await r.json()
       if (getPetIdData && getPetIdData.length > 0) {
         setPetInputList(getPetIdData)
-        setIsFirstTime(false)
+        setIsFirstTime(false) //過去有建立過就不用發折價券，有fetch到資料就設定fales
       }
-      // console.log('已存的petId', { ...getPetIdData })
-      // console.log(petInputList)
-      // const getPetDataObj = { ...getPetIdData }
-      // console.log('getPetDataObj', getPetDataObj)
-
-      // console.log('petData', petData)
-      // setPetInputList({
-      //   id: '',
-      //   petImgSrc: getPetIdData[0].pet_avatar,
-      //   petName: getPetIdData[0].pet_name,
-      //   breed: getPetIdData[0].pet_breed,
-      //   petBirthday: getPetIdData[0].pet_birthday,
-      // })
     })()
   }, [])
 
-  useEffect(() => {
-    console.log('delArray', delArray)
-  }, [delArray])
+  //抓客人id
+  const member_id = JSON.parse(localStorage.getItem('member')).id
 
   const handleSubmit = async (e) => {
-    // 阻擋form的預設送出行為
-    e.preventDefault()
-
+    e.preventDefault() // 阻擋form的預設送出行為
+    /*確認有無取到表單的值
     const formData = new FormData(e.target)
     console.log(formData.get('pet_avatar[]'))
     console.log(formData.get('pet_name[]'))
     console.log(formData.get('pet_breed[]'))
     console.log(formData.get('pet_birthday[]'))
+    */
 
     const fd = new FormData(document.petId_form)
-    fd.append('user_id', member_id)
-    fd.append('delArray', JSON.stringify(delArray))
+    fd.append('user_id', member_id) //從token抓取客戶id存到表單送到後端
+    fd.append('delArray', JSON.stringify(delArray)) //將陣列變成JSON格式傳到後端
 
-    //新增petCoupon到後端資料表
+    //若為第一次建立id，新增petCoupon到後端資料表coupon_petid欄位
     if (isFirstTime) {
       fetch(PETID_COUPON, {
         method: 'PUT',
@@ -112,36 +101,17 @@ function PetIdTest(prop) {
       handleShow() //彈出視窗
     }
 
+    //上傳更新,寵物Id資料
     const r = await fetch(UPLOAD_PETID, {
       method: 'POST',
       body: fd,
     })
     const data = await r.json()
-
     console.log('data', data)
-
-    // alert('已更新儲存')
-    /*
-  下面這個為何不行？？
-    const usp = new URLSearchParams(new FormData(document.petId_form))
-
-    const r = await fetch(UPLOAD_PETID, {
-      method: 'POST',
-      body: usp.toString(),
-      headers: {
-        Authorization: 'Bearer ' + token,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
-    })
-    const data = await r.json()
-    console.log(data)
-    alert('已更新儲存')
-    */
-
-    // console.log(r.data)
+    if (!isFirstTime) alert('已更新儲存')
   }
 
-  return (
+  const display = (
     <>
       <div className="petIdCouponAD">
         <img
@@ -159,7 +129,8 @@ function PetIdTest(prop) {
         {petInputList &&
           petInputList.map((v, i) => (
             <PetIdCard
-              key={v.pet_map_key} //下面這個為何不行？key不能傳到子層
+              key={v.pet_map_key ? v.pet_map_key : petInputList[i].pet_id}
+              //後端fetch來的資料沒有含pet_map_key，若沒有pet_map_key就用sql自動生成的pet_id來代替
               inputIndex={i}
               petInputList={petInputList}
               setPetInputList={setPetInputList}
@@ -176,32 +147,10 @@ function PetIdTest(prop) {
             marginLeft: 'auto',
           }}
         >
-          建立毛孩ID
+          更新毛孩ID
         </Button>
       </form>
       {/* Coupon彈出視窗 */}
-      {/* <Button
-        variant="primary"
-        className="btn petIdBtn"
-        onClick={() => {
-          //新增petCoupon到後端資料表
-          fetch(PETID_COUPON, {
-            method: 'PUT',
-            // body: usp.toString(),
-            headers: {
-              Authorization: 'Bearer ' + token,
-              'Content-Type': 'application/x-www-form-urlencoded',
-            }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
-          })
-          handleShow() //彈出視窗
-        }}
-        style={{
-          fontFamily: 'Noto Sans TC',
-          marginLeft: 'auto',
-        }}
-      >
-        建立毛孩ID
-      </Button> */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header
           style={{
@@ -249,10 +198,9 @@ function PetIdTest(prop) {
           </Link>
         </Modal.Footer>
       </Modal>
-      {/* 轉成JSON測試有無收到值 */}
-      {/* <pre>{JSON.stringify(inputList, null, 2)}</pre> */}
     </>
   )
+  return <>{isLoading ? loading : display}</>
 }
 
 export default withRouter(PetIdTest)
