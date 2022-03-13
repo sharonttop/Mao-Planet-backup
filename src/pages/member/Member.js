@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
 // 子頁面區域元件
-// import UserOrder from './admin/user/UserOrder'
 import InfoEdit from './admin/user/InfoEdit/InfoEdit'
 import AddressEdit from './admin/user/AddressEdit/AddressEdit'
 import PasswordChange from './admin/user/PasswordChange/PasswordChange'
 import PetId from './admin/user/petId/PetId'
-// import PetIdTest from './admin/user/petId/PetIdTest'
 import './Member.scss'
 // 引入圖片和元件
 import MemberBackground from '../../images/Member/memberBackground3.svg'
@@ -168,9 +166,6 @@ function Member(props) {
                       onClick={() => {
                         logout()
                         window.location.href = '/home'
-
-                        //props.history.push('/home')
-                        //window.location.reload() //強制刷新頁面
                       }}
                       className="btn btn-primary logoutMemberBtn"
                     >
