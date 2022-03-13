@@ -214,16 +214,18 @@ function PetIdCard(props) {
               onChange={handlePetIdChange}
             />
           </div>
-          {petInputList.length !== 1 && (
-            <div className="petIdRemoveMark" onClick={handleRemoveInput}>
-              <img alt="" src={petIdRemoveMark} />
-            </div>
-          )}
-          {petInputList.length - 1 === inputIndex && (
-            <div className="petIdAddMark" onClick={handleAddInput}>
-              <img alt="" src={petIdAddMark} />
-            </div>
-          )}
+          <div className="d-flex">
+            {petInputList.length !== 1 && (
+              <div className="petIdRemoveMark" onClick={handleRemoveInput}>
+                <img alt="" src={petIdRemoveMark} />
+              </div>
+            )}
+            {petInputList.length - 1 === inputIndex && (
+              <div className="petIdAddMark" onClick={handleAddInput}>
+                <img alt="" src={petIdAddMark} />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>
