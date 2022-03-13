@@ -27,8 +27,6 @@ function AddressEdit(props) {
     shipping_address: '',
   })
 
-  // console.log({ conf })
-
   const [isLoading, setIsLoading] = useState(true)
   // 自動1秒後關閉指示的spinner
   useEffect(() => {
@@ -50,8 +48,20 @@ function AddressEdit(props) {
         }, //設定檔頭，確認Authorization是否有送出Bearer格式的token，'Bearer '一定後面要空一格
       })
       const obj = await r.json()
+      console.log('obj.shipping_name !== null', obj.shipping_name !== null)
+      console.log('obj.shipping_mobile !== null', obj.shipping_mobile !== null)
+      console.log(
+        'obj.shipping_address !== null',
+        obj.shipping_address !== null
+      )
 
-      setEditFields(obj)
+      if (
+        obj.shipping_name !== null ||
+        obj.shipping_mobile !== null ||
+        obj.shipping_address !== null
+      ) {
+        setEditFields(obj)
+      }
     })()
   }, [])
 
