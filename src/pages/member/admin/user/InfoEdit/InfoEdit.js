@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import {
-  // Link,
-  withRouter,
-  // Redirect,
-} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import conf, {
   IMG_PATH,
   UPLOAD_AVATAR,
-  // SIGN_UP,
   AUTH_TOKEN,
-  // JWT_GET_DATA,
 } from '../../../../../config'
 import dayjs from 'dayjs'
 
@@ -49,7 +43,7 @@ function InfoEdit(props) {
   }, [isLoading])
 
   const token = localStorage.getItem('token')
-  //-------抓客人資料(測試後端)
+  //抓客人資料(後端)
   useEffect(() => {
     setIsLoading(true)
     ;(async () => {
@@ -66,20 +60,7 @@ function InfoEdit(props) {
     })()
   }, [])
 
-  //抓取登入客人資料(前端)-----------
-
-  // ------抓客人資料(前端)
-  // useEffect(() => {
-  //   setIsLoading(true)
-  //   ;(async () => {
-  //     const r = await fetch(SIGN_UP + '/' + userId)
-  //     const obj = await r.json()
-  //     setEditFields(obj)
-  //     setEditImgSrc(obj.avatar)
-  //   })()
-  // }, [])
-
-  //==============================================
+  //送出大頭照編輯內容
   const doUpload = async () => {
     const fd = new FormData(document.form1)
     const r = await axios.post(UPLOAD_AVATAR, fd)
@@ -143,6 +124,7 @@ function InfoEdit(props) {
 
     // 利用FormData Api 得到各欄位的值 or 利用狀態值
     // FormData 利用的是表單元素的 name
+    /* 確認有無取到表單的值
     const formData = new FormData(e.target)
     console.log(formData.get('name'))
     console.log(formData.get('nickname'))
@@ -150,24 +132,9 @@ function InfoEdit(props) {
     console.log(formData.get('birthday'))
     console.log(formData.get('mobile'))
     console.log(formData.get('address'))
+    */
 
     const usp = new URLSearchParams(new FormData(document.edit_form))
-    // ****** 修改(前端) ******
-    // const userId = JSON.parse(
-    //   localStorage.getItem('member')
-    // ).id
-    //---
-    // // console.log(usp.toString());
-    // const r = await fetch(SIGN_UP + '/' + userId, {
-    //   method: 'PUT',
-    //   body: usp.toString(),
-    //   headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded',
-    //   },
-    // })
-    // const data = await r.json()
-    // console.log(data)
-    // ****** 修改(後端測試) ******
     const r = await fetch(AUTH_TOKEN, {
       method: 'PUT',
       body: usp.toString(),
@@ -180,8 +147,6 @@ function InfoEdit(props) {
     console.log(data)
     alert('已更新儲存')
     props.history.push('/admin')
-
-    //---
   }
 
   const loading = (
