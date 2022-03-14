@@ -2,10 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import { AUTH_TOKEN, IMG_PATH } from '../config'
 import { withRouter } from 'react-router-dom'
 
+// 自定義React Hooks紀錄先前狀態
 function usePrevious(value) {
+  //創建一個接受值的Hook，使用useRef Hook創建一個ref，最後使用useEffect記住最新值
   const ref = useRef()
   useEffect(() => {
     ref.current = value
+    //紀錄先前的紀錄
   })
   return ref.current
 }
@@ -23,7 +26,6 @@ function Avatar(props) {
   //delay發動
   // const delay = (ms = 5000) => new Promise((r) => setTimeout(r, ms))
   const avatarReload = async () => {
-    // await delay()//delay發動
     const r = await fetch(AUTH_TOKEN, {
       method: 'GET',
       headers: {
@@ -34,10 +36,11 @@ function Avatar(props) {
     setAvatar(obj.avatar)
   }
 
-  //-------抓客人資料(測試後端)
   useEffect(() => {
     if (prevPathName !== props.location.pathname) avatarReload()
+    //prevPathName用usePrevious儲存前一location.pathname變數，當比對和現在的location.pathname不同時，就會執行couponReload()重新fetch後端資訊
   }, [props.location.pathname])
+  //[props.location.pathname]紀錄改變時才觸發條件
 
   const avatarStyle = {
     width: '35px',

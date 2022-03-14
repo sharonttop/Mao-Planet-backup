@@ -4,10 +4,13 @@ import { AUTH_TOKEN } from '../config'
 import { withRouter } from 'react-router-dom'
 import setPetIdCouponMark from '../images/Member/setPetIdCouponMark.svg'
 
+// 自定義React Hooks紀錄先前狀態
 function usePrevious(value) {
+  //創建一個接受值的Hook，使用useRef Hook創建一個ref，最後使用useEffect記住最新值
   const ref = useRef()
   useEffect(() => {
     ref.current = value
+    //紀錄先前的紀錄
   })
   return ref.current
 }
@@ -30,11 +33,11 @@ function PetIdCouponMark(props) {
     })()
   }
 
-  //-------抓客人資料(測試後端)
   useEffect(() => {
     if (prevPathName !== props.location.pathname) couponReload()
+    //prevPathName用usePrevious儲存前一location.pathname變數，當比對和現在的location.pathname不同時，就會執行couponReload()重新fetch後端資訊
   }, [props.location.pathname])
-  //[props.location.pathname]
+  //[props.location.pathname]紀錄改變時才觸發條件
 
   return (
     <>
@@ -52,34 +55,3 @@ function PetIdCouponMark(props) {
 }
 
 export default withRouter(PetIdCouponMark)
-
-//從前端localStorage抓，必須要登出在登入才有反應
-
-// import React from 'react'
-// // import { PETID_COUPON } from '../config'
-// import setPetIdCouponMark from '../images/Member/setPetIdCouponMark.svg'
-// // import { withRouter } from 'react-router-dom'
-
-// function PetIdCouponMark(props) {
-//   const ShowPetIdCouponMark = JSON.parse(
-//     localStorage.getItem('member')
-//   ).coupon_petid
-
-//   //寫在前端必須要重新登入才會消失
-
-// return (
-//   <>
-//     {' '}
-//     <img
-//       id="couponMark"
-//       src={setPetIdCouponMark}
-//       style={{
-//         visibility: ShowPetIdCouponMark == null ? 'visible' : 'hidden',
-//       }}
-//       alt=""
-//     />
-//   </>
-// )
-// }
-
-// export default PetIdCouponMark
